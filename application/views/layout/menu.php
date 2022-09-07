@@ -2,7 +2,6 @@
 $site                       = $this->konfigurasi_model->listing(); 
 $site_nav                   = $this->konfigurasi_model->listing();
 $nav_profil                 = $this->nav_model->nav_profil();
-$nav_download               = $this->nav_model->nav_download();
 $nav_berita                 = $this->nav_model->nav_berita();
 $nav_agenda                 = $this->nav_model->nav_agenda();
 $nav_layanan                = $this->nav_model->nav_layanan();
@@ -70,10 +69,6 @@ $nav_layanan                = $this->nav_model->nav_layanan();
                     <li class="sub-active"><a href="<?php echo base_url('video'); ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Galeri Video</a></li>                   
                 </ul>
             </li>
-            
-
-            <!-- DOWNLOAD -->
-            <li><a href="<?php echo base_url('download') ?>">UNDUHAN</a></li>
             
             <!-- kontak  -->
             <li><a href="<?php echo base_url('kontak') ?>">KONTAK</a></li>
