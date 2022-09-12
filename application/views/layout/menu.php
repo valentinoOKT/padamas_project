@@ -29,17 +29,6 @@ $nav_layanan                = $this->nav_model->nav_layanan();
             <!-- home -->
             <li><a href="<?php echo base_url() ?>" class="active">BERANDA</a></li>
 
-            <!-- berita -->
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BERITA <span class="caret"></span></a>
-                <ul class="dropdown-menu sub-menu">
-                    <?php foreach($nav_berita as $nav_berita) { ?>
-                    <li class="sub-active"><a href="<?php echo base_url('berita/kategori/'.$nav_berita->slug_kategori) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_berita->nama_kategori ?></a></li>
-                    <?php } ?>
-                    <li class="sub-active"><a href="<?php echo base_url('berita') ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Indeks Berita</a></li>                   
-                </ul>
-            </li>
-
             <!-- LAYANAN -->
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LAYANAN<span class="caret"></span></a>
@@ -66,7 +55,7 @@ $nav_layanan                = $this->nav_model->nav_layanan();
                 <ul class="dropdown-menu sub-menu">
                     
                     <li class="sub-active"><a href="<?php echo base_url('galeri'); ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Galeri Foto</a></li>
-                    <li class="sub-active"><a href="<?php echo base_url('video'); ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Galeri Video</a></li>                   
+    
                 </ul>
             </li>
             

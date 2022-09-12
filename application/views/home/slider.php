@@ -19,15 +19,6 @@
                     <div class="col-md-6"></div>
                     <!-- .col-md-6 -->
                     <div class="col-md-6">
-                        <div class="slider-content">
-                            <!-- <h3><?php echo $site->namaweb ?></h3> -->
-                            <h2><?php echo $slider->judul_galeri ?></h2>
-                            <p><?php echo strip_tags($slider->isi) ?></p>
-                            <div class="slider-btn">
-                                <a href="<?php echo $slider->website ?>" class="btn btn-default">Baca selengkapnya...</a>
-                            </div>
-                            <!-- .slider-btn -->
-                        </div>
                         <!-- .carousel-caption -->
                     </div>
                     <!-- .col-md-6 -->

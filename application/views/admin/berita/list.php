@@ -38,7 +38,6 @@ if($this->uri->segment(3) != "") {
     </th>
     <th width="10%">GAMBAR</th>
     <th width="35%">JUDUL</th>
-    <th width="15%">KATEGORI</th>
     <th width="10%">JENIS</th>
     <th width="10%">STATUS</th>
     <th width="10%">AUTHOR</th>
@@ -68,20 +67,8 @@ if($this->uri->segment(3) != "") {
     <?php echo $berita->judul_berita ?> <sup><i class="fa fa-pencil"></i></sup>
     </a>
       <small>
-        <br>Posted: <?php echo date('d M Y H:i: s',strtotime($berita->tanggal_post)) ?>
         <br>Published: <?php echo date('d M Y H:i: s',strtotime($berita->tanggal_publish)) ?>
-        <?php if($berita->jenis_berita=="Promo") { ?>
-          <br>Promo: <span class="text-danger"><strong><?php echo date('d M Y',strtotime($berita->tanggal_mulai)) ?> s/d <?php echo date('d M Y ',strtotime($berita->tanggal_selesai)) ?></strong></span>
-        <?php } ?>
-        <br>Urutan: <?php echo $berita->urutan ?>
-        <br>Icon: <i class="<?php echo $berita->icon ?>"></i> <?php echo $berita->icon ?>
-        <br>Tgl posting: <?php echo date('d-m-Y',strtotime($berita->tanggal_publish)) ?>
       </small>
-    </td>
-    <td>
-    <a href="<?php echo base_url('admin/berita/kategori/'.$berita->id_kategori) ?>">
-    <?php echo $berita->nama_kategori ?><sup><i class="fa fa-link"></i></sup>
-    </a>
     </td>
     <td>
     <a href="<?php echo base_url('admin/berita/jenis_berita/'.$berita->jenis_berita) ?>">

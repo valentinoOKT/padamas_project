@@ -56,14 +56,6 @@ if($this->session->flashdata('sukses')) {
                                 <i class="flaticon-vibrating-phone"></i>
                                 <div class="contact-content">
                                     <p><?php echo $site->telepon; ?></p>
-                                    <p><?php echo $site->hp; ?></p>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="flaticon-message"></i>
-                                <div class="contact-content">
-                                    <p><?php echo $site->email; ?></p>
-                                    <p><?php echo $site->email_cadangan; ?></p>
                                 </div>
                             </li>
                         </ul>
@@ -72,7 +64,6 @@ if($this->session->flashdata('sukses')) {
                             <li><a href="<?php echo $site->facebook; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="<?php echo $site->twitter; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                             <li><a href="<?php echo $site->instagram; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="<?php echo $site->google_plus; ?>"><i class="fa fa-google" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                     <!-- .col-md-4 -->

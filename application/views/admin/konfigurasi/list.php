@@ -80,11 +80,6 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
     <input type="url" name="facebook" placeholder="http://facebook.com/namakamu" value="<?php echo $site->facebook ?>" class="form-control">
     </div>
     
-    <div class="form-group">
-    <label>Twitter <i class="fa fa-twitter"></i></label>
-   <input type="url" name="twitter" placeholder="http://twitter.com/namakamu" value="<?php echo $site->twitter ?>" class="form-control">
-    </div>
-    
      <div class="form-group">
     <label>Instagram <i class="fa fa-instagram"></i></label>
    <input type="url" name="instagram" placeholder="http://instagram.com/namakamu" value="<?php echo $site->instagram ?>" class="form-control">

@@ -76,51 +76,6 @@
             </ul>
           </li> 
 
-          <!-- BERITA DAN INFORMASI -->
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-download"></i>
-              <p>FILE DOWNLOAD <i class="right fa fa-angle-left"></i></p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="<?php echo base_url('admin/download') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Download</p></a>
-              </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/download/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Download</p></a>
-              </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/kategori_download') ?>" class="nav-link"><i class="fa fa-tags nav-icon"></i><p>Kategori Download</p></a>
-              </li>
-            </ul>
-          </li> 
-
-          <!-- VIDEO -->
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-youtube"></i>
-              <p>VIDEO YOUTUBE <i class="right fa fa-angle-left"></i></p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="<?php echo base_url('admin/video') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Video Youtube</p></a>
-              </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/video/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Video Youtube</p></a>
-              </li>
-            </ul>
-          </li>
-
-          <!-- AGENDA KEGIATAN -->
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-calendar"></i>
-              <p>AGENDA <i class="right fa fa-angle-left"></i></p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="<?php echo base_url('admin/agenda') ?>" class="nav-link"><i class="fa fa-sitemap nav-icon"></i><p>Data Agenda/Event</p></a>
-              </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/agenda/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Agenda/Event</p></a>
-              </li>
-              
-            </ul>
-          </li>
-
           <!-- CLIENT -->
           <li class="nav-item">
             <a href="<?php echo base_url('admin/client') ?>" class="nav-link">

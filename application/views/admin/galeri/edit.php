@@ -90,10 +90,6 @@ echo form_open_multipart(base_url('admin/galeri/edit/'.$galeri->id_galeri));
 <textarea name="isi" id="isi" class="form-control konten" placeholder="Isi galeri"><?php echo $galeri->isi ?></textarea>
 </div>
 
-<div class="form-group">
-<label>Link/website terkait Galeri</label>
-<input type="url" name="website" class="form-control" placeholder="http://website.com" value="<?php echo $galeri->website ?>">
-</div>
 
 <div class="form-group">
 <input type="submit" name="submit" class="btn btn-success btn-lg" value="Simpan Data">

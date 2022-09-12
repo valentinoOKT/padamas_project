@@ -118,17 +118,6 @@ class Berita extends CI_Controller {
    		}
 	}
 
-	// Kategori berita
-	public function kategori($id_kategori)	{
-		$berita 	= $this->berita_model->kategori_admin($id_kategori);
-		$kategori 	= $this->kategori_model->detail($id_kategori);
-
-		$data = array(	'title'			=> 'Kategori berita: '.$kategori->nama_kategori.' ('.count($berita).')',
-						'berita'		=> $berita,
-						'isi'			=> 'admin/berita/list');
-		$this->load->view('admin/layout/wrapper', $data, FALSE);		
-	}
-
 	// Author berita
 	public function author($id_user)	{
 		$berita 	= $this->berita_model->author_admin($id_user);

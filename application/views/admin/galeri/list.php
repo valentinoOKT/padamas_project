@@ -32,7 +32,6 @@ echo form_open(base_url('admin/galeri/proses'));
     <th>Gambar</th>
     <th>Judul</th>
     <th>Kategori - Posisi</th>
-    <th>Website</th>
     <th>Author</th>
     <th>Tanggal</th>
     <th width="15%">Action</th>
@@ -63,7 +62,6 @@ echo form_open(base_url('admin/galeri/proses'));
 
     </td>
     <td><?php echo $galeri->nama_kategori_galeri ?> - <?php echo $galeri->jenis_galeri ?></td>
-    <td><?php echo $galeri->website ?></td>
     <td><?php echo $galeri->nama ?></td>
     <td><?php echo $galeri->tanggal ?></td>
     <td>
