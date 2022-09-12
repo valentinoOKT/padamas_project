@@ -65,9 +65,9 @@ $nav_profil     = $this->nav_model->nav_profil();
         <!-- .copyright-txt -->
         <div class="social-box">
             <ul class="social-icon-rounded">
-                <li><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                <li><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="<?php echo $site->facebook; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="<?php echo $site->instagram; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="<?php echo $site->youtube; ?>"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
             </ul>
         </div>
         <!-- .social-box -->
