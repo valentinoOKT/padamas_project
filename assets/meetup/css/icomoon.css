@@ -1134,10 +1134,10 @@
 .icon-thumbs-down:before {
   content: "\f165";
 }
-.icon-youtube-square:before {
+.icon-twitter-square:before {
   content: "\f166";
 }
-.icon-youtube:before {
+.icon-twitter:before {
   content: "\f167";
 }
 .icon-xing:before {
@@ -1146,7 +1146,7 @@
 .icon-xing-square:before {
   content: "\f169";
 }
-.icon-youtube-play:before {
+.icon-twitter-play:before {
   content: "\f16a";
 }
 .icon-dropbox:before {
@@ -4905,7 +4905,7 @@
 .icon-wrap_text:before {
   content: "\e25b";
 }
-.icon-youtube_searched_for:before {
+.icon-twitter_searched_for:before {
   content: "\e8fa";
 }
 .icon-zoom_in:before {

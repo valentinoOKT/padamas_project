@@ -34,7 +34,7 @@
         <?php echo $berita->isi ?>
         <ul class="list-inline socailLink">
           <li><a href="<?php echo $site->facebook ?>" class="bg-color-1" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-          <li><a href="<?php echo $site->twitter ?>" class="bg-color-2"  target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="<?php echo $site->youtube ?>" class="bg-color-2"  target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
           <li><a href="<?php echo $site->instagram ?>" class="bg-color-3"  target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
         </ul>
       </div>

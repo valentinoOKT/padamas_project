@@ -37,7 +37,7 @@
 		</div>
 
 		<div class="form-group row">
-			<label class="col-sm-3 control-label text-right">Upload Foto/Logo</label>
+			<label class="col-sm-3 control-label text-right">Upload Foto Profil</label>
 			<div class="col-sm-9">
 
 				<input type="file" name="gambar" id="gambar" class="form-control" placeholder="gambar" value="<?php echo $user->gambar ?>">

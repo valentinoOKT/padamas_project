@@ -234,7 +234,7 @@ Version 4.7.10 (2018-04-03)
     Added a `hasFocus` method to the editor that checks if the editor has focus.
     Added correct icon to the Nonbreaking Plugin menu item.
     Fixed so the `getContent`/`setContent` methods work even if the editor is not initialized.
-    Fixed a bug with the Media Plugin where query strings were being stripped from youtube links.
+    Fixed a bug with the Media Plugin where query strings were being stripped from twitter links.
     Fixed a bug where image styles were changed/removed when opening and closing the Image Plugin dialog.
     Fixed a bug in the Table Plugin where some table cell styles were not correctly added to the content html.
     Fixed a bug in the Spellchecker Plugin where it wasn't possible to change the spellchecker language.
@@ -816,7 +816,7 @@ Version 4.3.3 (2016-01-14)
     Added new insertCustomChar event that gets fired when a character is inserted by the charmap plugin.
     Fixed bug where table cells started with a superfluous &nbsp; in IE10+.
     Fixed bug where table plugin would retain all BR tags when cells were merged.
-    Fixed bug where media plugin would strip underscores from youtube urls.
+    Fixed bug where media plugin would strip underscores from twitter urls.
     Fixed bug where IME input would fail on IE 11 if you typed within a table.
     Fixed bug where double click selection of a word would remove the space before the word on insert contents.
     Fixed bug where table plugin would produce exceptions when hovering tables with invalid structure.
@@ -828,7 +828,7 @@ Version 4.3.2 (2015-12-14)
     Fixed bug where resizing table cells did not fire a node change event or add an undo level.
     Fixed bug where double click selection of text on IE 11 wouldn't work properly.
     Fixed bug where codesample plugin would incorrectly produce br elements inside code elements.
-    Fixed bug where media plugin would strip dashes from youtube urls.
+    Fixed bug where media plugin would strip dashes from twitter urls.
     Fixed bug where it was possible to move the caret into the table resize bars.
     Fixed bug where drag/drop into a cE=false element was possible on IE.
 Version 4.3.1 (2015-11-30)
@@ -896,7 +896,7 @@ Version 4.2.6 (2015-09-28)
     Fixed bug where IME would loose focus on IE 11 due to the double trailing br bug fix.
     Fixed bug where the proxy url in imagetools was incorrect. Patch contributed by Wong Ho Wang.
 Version 4.2.5 (2015-08-31)
-    Added fullscreen capability to embedded youtube and vimeo videos.
+    Added fullscreen capability to embedded twitter and vimeo videos.
     Fixed bug where the uploadImages call didn't work on IE 10.
     Fixed bug where image place holders would be uploaded by uploadImages call.
     Fixed bug where images marked with bogus would be uploaded by the uploadImages call.

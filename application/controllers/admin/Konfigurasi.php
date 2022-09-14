@@ -44,7 +44,7 @@ class Konfigurasi extends CI_Controller {
 							'keywords'			=> $i->post('keywords'),
 							'metatext'			=> $i->post('metatext'),
 							'facebook'			=> $i->post('facebook'),
-							'twitter'			=> $i->post('twitter'),
+							'youtube'			=> $i->post('youtube'),
 							'instagram'			=> $i->post('instagram'),
 							'google_map'		=> $i->post('google_map'),
 							'id_user'			=> $this->session->userdata('id'));

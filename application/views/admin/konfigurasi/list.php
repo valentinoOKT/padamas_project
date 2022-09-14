@@ -68,10 +68,6 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
     <input type="text" name="fax" placeholder="021-000000" value="<?php echo $site->fax ?>" class="form-control">
     </div>
     
-     <div class="form-group">
-    <label>Mobile / Celluler</label>
-    <input type="text" name="hp" placeholder="021-000000" value="<?php echo $site->hp ?>" class="form-control">
-    </div>
     
     <h3>Social network</h3><hr>
     
@@ -84,6 +80,11 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
     <label>Instagram <i class="fa fa-instagram"></i></label>
    <input type="url" name="instagram" placeholder="http://instagram.com/namakamu" value="<?php echo $site->instagram ?>" class="form-control">
     </div>
+
+    <div class="form-group">
+    <label>Youtube <i class="fa fa-youtube"></i></label>
+    <input type="url" name="youtube" placeholder="http://youtube.com/namakamu" value="<?php echo $site->youtube ?>" class="form-control">
+    </div>
     
 </div>
 
@@ -94,10 +95,6 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
     <textarea name="keywords" rows="3" class="form-control" placeholder="Kata kunci / keywords"><?php echo $site->keywords ?></textarea>
     </div>
     
-    <div class="form-group">
-    <label>Metatext</label>
-    <textarea name="metatext" rows="5" class="form-control" placeholder="Kode metatext"><?php echo $site->metatext ?></textarea>
-    </div>
     
     <h3>Google Map</h3><hr>
     <div class="form-group">

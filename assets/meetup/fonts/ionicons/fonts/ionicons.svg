@@ -1304,7 +1304,7 @@ d="M271 144v-1l99 -175h-103c-1 0 -2 0 -2 1l-99 173v2l156 272h104zM179 232v-1l-81
 d="M289 380c11 0 21 1 31 4l-128 -213v-171c-10 4 -21 4 -32 4s-22 0 -32 -4v171l-128 213c10 -4 21 -4 32 -4s22 0 32 4l96 -160l96 160c10 -4 22 -4 33 -4z" />
     <glyph glyph-name="ion-logo-yen" unicode="&#xf34e;" horiz-adv-x="384" 
 d="M384 416l-112 -208h48v-48h-73l-15 -31v-17h88v-48h-88v-96h-80v96h-88v48h88v17l-14 31h-74v48h48l-112 208h80l112 -221l112 221h80z" />
-    <glyph glyph-name="ion-logo-youtube" unicode="&#xf34f;" horiz-adv-x="512" 
+    <glyph glyph-name="ion-logo-twitter" unicode="&#xf34f;" horiz-adv-x="512" 
 d="M509 299c2 -36 3 -71 3 -107s-1 -71 -3 -107c0 -45 -33 -81 -74 -81c-58 -3 -118 -4 -179 -4s-121 1 -179 4c-41 0 -74 36 -74 81c-2 36 -3 71 -3 107s2 71 4 107c0 45 32 81 73 81c55 3 112 4 170 4h9h9c58 0 115 -1 170 -4c41 0 74 -36 74 -81zM207 94l145 98l-145 99
 v-197z" />
     <glyph glyph-name="ion-md-add-circle-outline" unicode="&#xf158;" 
