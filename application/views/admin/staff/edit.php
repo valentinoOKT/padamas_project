@@ -34,16 +34,6 @@
                 <input type="number" name="urutan" class="form-control" placeholder="Urutan" value="<?php echo $staff->urutan ?>">
               </div>
             </div>
-            
-            <div class="col-md-6">
-              <div class="form-group">
-              <label>Tampilkan di website?</label>
-              <select name="status_staff" class="form-control">
-                <option value="No">No</option>
-              <option value="Yes" <?php if($staff->status_staff=="Yes") { echo "selected"; } ?>>Yes</option>
-              </select>
-            </div>
-          </div>
         </div>
         
       </div>

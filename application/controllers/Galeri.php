@@ -30,7 +30,7 @@ class Galeri extends CI_Controller {
 		$galeri 	= $this->galeri_model->galeri($config['per_page'], $page);
 		// End paginasi
 
-		$data = array(	'title'		=> 'Galeri - '.$site->namaweb,
+		$data = array(	'title'		=> 'Galeri ',
 						'deskripsi'	=> 'Galeri - '.$site->namaweb,
 						'keywords'	=> 'Galeri - '.$site->namaweb,
 						'pagin' 	=> $this->pagination->create_links(),

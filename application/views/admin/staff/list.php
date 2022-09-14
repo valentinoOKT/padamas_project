@@ -38,7 +38,6 @@ echo form_open(base_url('admin/staff/proses'));
         </th>
         <th style="vertical-align: middle;" class="text-center" width="25%">NAMA</th>
         <th style="vertical-align: middle;" class="text-center" width="20%">JABATAN</th>
-        <th style="vertical-align: middle;" class="text-center">STATUS</th>
         <th style="vertical-align: middle;" class="text-center">URUTAN</th>
         <th width="15%"></th>
     </tr>
@@ -59,7 +58,6 @@ echo form_open(base_url('admin/staff/proses'));
         <small>Telepon: <?php echo $staff->telepon ?>
         <br>Email: <?php echo $staff->email ?></small></td>
     <td><?php echo $staff->jabatan ?></td>
-    <td><?php echo $staff->status_staff ?></td>
     <td><?php echo $staff->urutan ?></td>
     <td>
       <div class="btn-group">

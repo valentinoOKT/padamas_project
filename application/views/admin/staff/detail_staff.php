@@ -76,11 +76,6 @@
 					<td><?php echo $staff->urutan ?></td>
 				</tr>
 				<tr>
-					<td>Staff Ditampilkan?</td>
-					<td>:</td>
-					<td><?php echo $staff->status_staff ?></td>
-				</tr>
-				<tr>
 					<td>Jabatan</td>
 					<td>:</td>
 					<td><?php echo $staff->jabatan ?></td>

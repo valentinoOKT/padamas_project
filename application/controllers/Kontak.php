@@ -30,7 +30,7 @@ class Kontak extends CI_Controller {
 		if($valid->run() === FALSE) {
 		// End validasi
 
-		$data = array(	'title'		=> 'Kontak '.$site->namaweb.' | '.$site->tagline,
+		$data = array(	'title'		=> 'Kontak ',
 						'deskripsi'	=> 'Kontak '.$site->namaweb.' | '.$site->tagline.' '.$site->tentang,
 						'keywords'	=> 'Kontak '.$site->namaweb.' | '.$site->tagline.' '.$site->keywords,
 						'site'		=> $site,

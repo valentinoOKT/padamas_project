@@ -102,7 +102,6 @@ class Galeri extends CI_Controller {
 	        				'isi'				=> $i->post('isi'),
 	        				'jenis_galeri'		=> $i->post('jenis_galeri'),
 	        				'gambar'			=> $upload_data['uploads']['file_name'],
-	        				'website'			=> $i->post('website'),
 	        				'status_text'		=> $i->post('status_text'),
 	        				'urutan'		=> $i->post('urutan')
 	        				);
@@ -182,7 +181,6 @@ class Galeri extends CI_Controller {
 	        				'isi'				=> $i->post('isi'),
 	        				'jenis_galeri'		=> $i->post('jenis_galeri'),
 	        				'gambar'			=> $upload_data['uploads']['file_name'],
-	        				'website'			=> $i->post('website'),
 	        				'status_text'		=> $i->post('status_text'),
 	        				'urutan'		=> $i->post('urutan')
 	        				);
@@ -198,7 +196,6 @@ class Galeri extends CI_Controller {
 	        				'judul_galeri'		=> $i->post('judul_galeri'),
 	        				'isi'				=> $i->post('isi'),
 	        				'jenis_galeri'		=> $i->post('jenis_galeri'),
-	        				'website'			=> $i->post('website'),
 	        				'status_text'		=> $i->post('status_text'),
 	        				'urutan'		=> $i->post('urutan')
 	        				);
