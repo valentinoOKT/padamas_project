@@ -28,7 +28,7 @@ class User extends CI_Controller {
 		$user 	= $this->user_model->listing();
 		$total 	= $this->user_model->total();
 
-		$data = array(	'title'		=> 'User dan Wilayah ('.$total->total.' data)',
+		$data = array(	'title'		=> 'User ('.$total->total.' data)',
 						'user'		=> $user,
 						'isi'		=> 'admin/user/list'
 					);

@@ -1,12 +1,6 @@
 
 <div class="row">
 <div class="col-md-6">
-    
-
-<p>
-
-    <?php include('tambah.php') ?>
-</p>
 </div>
 </div>
 <?php
@@ -14,10 +8,8 @@ echo form_open(base_url('admin/staff/proses'));
 ?>
 <p class="text-right">
 <div class="btn-group">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-      <i class="fa fa-plus"></i> Tambah Staff
-    </button>
+    <a href="<?php echo base_url('admin/staff/tambah') ?>" class="btn btn-success btn-lg">
+    <i class="fa fa-plus"></i> Tambah Baru</a>
 
     
     <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >

@@ -1,6 +1,6 @@
 <?php echo form_open_multipart(base_url('admin/staff/tambah'),'id="tambah"') ?>
 
-        <div class="row">
+        <div class="row" id="exampleModal">
           <div class="col-md-5">
             <div class="form-group has-error">
               <label class="text-danger">Nama staff <span class="text-danger">*</span></label>

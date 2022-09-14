@@ -2,10 +2,6 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="<?php echo base_url('admin/Dashboard') ?>" class="brand-link">
-      <img src="<?php echo $this->website->icon() ?>"
-           alt="<?php echo $this->website->namaweb(); ?>"
-           class="brand-image img-circle elevation-3"
-           style="opacity: .8">
       <span class="brand-text font-weight-light"><?php echo $this->konfigurasi_model->listing()->singkatan; ?></span>
     </a>
 

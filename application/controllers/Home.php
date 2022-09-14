@@ -58,7 +58,7 @@ class Home extends CI_Controller {
 		$page 		= ($this->uri->segment(3)) ? ($this->uri->segment(3) - 1) * $config['per_page'] : 0;
 		$berita 	= $this->berita_model->berita($config['per_page'], $page);
 
-		$data = array(	'title'				=> $site->namaweb.' - '.$site->tagline,
+		$data = array(	'title'				=> $site->singkatan.' - '.$site->tagline,
 						'deskripsi'			=> $site->deskripsi,
 						'keywords'			=> $site->keywords,
 						'site'				=> $site,
