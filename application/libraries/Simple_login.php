@@ -40,8 +40,8 @@ class Simple_login
 				$pengalihan = $this->CI->session->userdata('pengalihan');
 				redirect($pengalihan,'refresh');
 			}else{
-				// Jika ga ada, default masuk ke halaman dasbor
-				redirect(base_url('admin/dasbor'),'refresh');
+				// Jika ga ada, default masuk ke halaman Dashboard
+				redirect(base_url('admin/Dashboard'),'refresh');
 			}
 		}else{
 			// Kalau ga ada user yg cocok, suruh login lagi

@@ -5,10 +5,6 @@
 // 	redirect('auth/login', 'refresh');
 // }
 
-// Load kunjungan
-$alsite 			= current_url();
-$alamat_kunjungan 	= str_replace('index.php/','',$alsite);
-$this->kunjungan->counter($alamat_kunjungan);
 
 require_once('head.php');
 require_once('header.php');

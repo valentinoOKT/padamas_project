@@ -112,26 +112,6 @@ class Nav_model extends CI_Model {
 		return $query->result();
 	}
 
-	// Listing
-	public function nav_video() {
-		$this->db->select('*');
-		$this->db->from('video');
-		$this->db->order_by('id_video','DESC');
-		$this->db->order_by('urutan','DESC');
-		$this->db->limit(8);
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Listing
-	public function nav_agenda() {
-		$this->db->select('*');
-		$this->db->from('agenda');
-		$this->db->order_by('mulai','DESC');
-		$this->db->limit(8);
-		$query = $this->db->get();
-		return $query->result();
-	}
 
 	// Kategori
 	public function nav_bidang() {
@@ -173,100 +153,6 @@ class Nav_model extends CI_Model {
 								'status_berita'	=> 'Publish'));
 		$this->db->group_by('berita.id_kategori');
 		$this->db->order_by('kategori.urutan','ASC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Listing data
-	public function nav_kategori_statistik() {
-		$this->db->select('kategori_statistik.*, 
-							statistik.id_statistik');
-		$this->db->from('kategori_statistik');
-		// Join dg 2 tabel
-		$this->db->join('statistik','statistik.id_kategori_statistik = kategori_statistik.id_kategori_statistik');
-		// End join
-		$this->db->where('statistik.status_statistik','Publish');
-		$this->db->group_by('kategori_statistik.id_kategori_statistik');
-		$this->db->order_by('kategori_statistik.urutan','ASC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Listing data
-	public function nav_tahun_kategori_statistik($id_kategori_statistik) {
-		$this->db->select('*');
-		$this->db->from('statistik');
-		$this->db->where(array(	'status_statistik'		=> 'Publish',
-								'id_kategori_statistik'	=> $id_kategori_statistik));
-		$this->db->group_by('tahun');
-		$this->db->order_by('tahun','DESC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Listing data
-	public function nav_bulan_kategori_statistik($id_kategori_statistik,$tahun) {
-		$this->db->select('*');
-		$this->db->from('statistik');
-		$this->db->where(array(	'status_statistik'		=> 'Publish',
-								'tahun'					=> $tahun,
-								'id_kategori_statistik'	=> $id_kategori_statistik));
-		$this->db->where('bulan <>','');
-		$this->db->group_by('bulan');
-		$this->db->order_by('id_statistik','DESC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Listing data
-	public function nav_statistik() {
-		$this->db->select('statistik.*, kategori_statistik.nama_kategori_statistik, users.first_name');
-		$this->db->from('statistik');
-		// Join dg 2 tabel
-		$this->db->join('kategori_statistik','kategori_statistik.id_kategori_statistik = statistik.id_kategori_statistik','LEFT');
-		$this->db->join('users','users.id = statistik.id_user','LEFT');
-		// End join
-		$this->db->where('statistik.status_statistik','Publish');
-		$this->db->limit(10);
-		$this->db->order_by('id_statistik','DESC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Listing data
-	public function nav_tahun_statistik() {
-		$this->db->select('*');
-		$this->db->from('statistik');
-		$this->db->where('status_statistik','Publish');
-		$this->db->limit(10);
-		$this->db->group_by('tahun');
-		$this->db->order_by('tahun','DESC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Listing data
-	public function nav_bulan_statistik($thn) {
-		$this->db->select('*');
-		$this->db->from('statistik');
-		$this->db->where('status_statistik','Publish');
-		$this->db->where('tahun',$thn);
-		$this->db->where('bulan <>','');
-		$this->db->limit(12);
-		$this->db->group_by('bulan');
-		$this->db->order_by('tahun','DESC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Navigasi download
-	public function nav_download() {
-		$this->db->select('download.*,kategori_download.nama_kategori_download,kategori_download.slug_kategori_download');
-		$this->db->from('download');
-		$this->db->join('kategori_download','kategori_download.id_kategori_download = download.id_kategori_download');
-		$this->db->where(array(	'jenis_download'	=> 'Download'));
-		$this->db->group_by('download.id_kategori_download');
-		$this->db->order_by('kategori_download.urutan','ASC');
 		$query = $this->db->get();
 		return $query->result();
 	}

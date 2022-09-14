@@ -560,7 +560,7 @@ INSERT INTO `kunjungan` (`id_kunjungan`, `alamat`, `ip_address`, `hari`, `waktu`
 (203, 'http://localhost/bkkbn/masuk', '::1', '2019-03-07', '2019-03-07 12:12:54', '2019-03-07 05:12:54'),
 (204, 'http://localhost/bkkbn/masuk', '::1', '2019-03-07', '2019-03-07 20:14:44', '2019-03-07 13:14:44'),
 (205, 'http://localhost/bkkbn/index.php', '::1', '2019-03-07', '2019-03-07 20:46:31', '2019-03-07 13:46:31'),
-(206, 'http://localhost/bkkbn/provinsi/dasbor', '::1', '2019-03-07', '2019-03-07 21:09:42', '2019-03-07 14:09:42'),
+(206, 'http://localhost/bkkbn/provinsi/Dashboard', '::1', '2019-03-07', '2019-03-07 21:09:42', '2019-03-07 14:09:42'),
 (207, 'http://localhost/bkkbn/provinsi/panduan', '::1', '2019-03-08', '2019-03-08 06:14:51', '2019-03-07 23:14:51'),
 (208, 'http://localhost/bkkbn/profil/password', '::1', '2019-03-08', '2019-03-08 06:25:58', '2019-03-07 23:25:58'),
 (209, 'http://localhost/bkkbn/provinsi/hasil', '::1', '2019-03-08', '2019-03-08 06:41:11', '2019-03-07 23:41:11'),

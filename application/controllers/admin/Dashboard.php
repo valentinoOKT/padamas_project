@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dasbor extends CI_Controller {
+class Dashboard extends CI_Controller {
 
 	public function __construct()
 	{
@@ -13,22 +13,22 @@ class Dasbor extends CI_Controller {
 		$this->simple_login->check_login($pengalihan);
 		$this->load->model('staff_model');
 		$this->load->model('staff_model');
-		$this->load->model('dasbor_model');
+		$this->load->model('Dashboard_model');
 	}
 
-	// Halaman dasbor
+	// Halaman Dashboard
 	public function index()
 	{
 		$staff 					= $this->staff_model->listing();
 
-		$data = array(	'title'					=> 'Halaman Dasbor',
+		$data = array(	'title'					=> 'Halaman Dashboard',
 						'staff'					=> $staff,
-						'isi'					=> 'admin/dasbor/list'
+						'isi'					=> 'admin/Dashboard/list'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
 	}
 
 }
 
-/* End of file Dasbor.php */
-/* Location: ./application/controllers/admin/Dasbor.php */
+/* End of file Dashboard.php */
+/* Location: ./application/controllers/admin/Dashboard.php */

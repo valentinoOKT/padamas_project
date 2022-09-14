@@ -8,7 +8,6 @@ class Akun extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->log_user->add_log();
 		$this->load->model('user_model');
 		$this->load->model('staff_model');
 		// Tambahkan proteksi halaman

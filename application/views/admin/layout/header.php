@@ -9,7 +9,7 @@
         <a href="<?php echo base_url() ?>" target="_blank" class="nav-link">Beranda Website</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?php echo base_url('admin/dasbor') ?>" class="nav-link">Dasbor</a>
+        <a href="<?php echo base_url('admin/Dashboard') ?>" class="nav-link">Dashboard</a>
       </li>
     </ul>
     <!-- Right navbar links -->

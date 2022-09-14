@@ -8,7 +8,6 @@ class Kategori extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('kategori_model');
-		$this->log_user->add_log();
 		// Tambahkan proteksi halaman
 		$url_pengalihan = str_replace('index.php/', '', current_url());
 		$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);

@@ -23,7 +23,7 @@ class Berita_model extends CI_Model {
 	}
 
 	// Listing data
-	public function dasbor() {
+	public function Dashboard() {
 		$this->db->select('berita.*, users.nama, kategori.nama_kategori, kategori.slug_kategori');
 		$this->db->from('berita');
 		// Join dg 2 tabel

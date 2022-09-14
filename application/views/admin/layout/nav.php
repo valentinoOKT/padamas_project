@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="<?php echo base_url('admin/dasbor') ?>" class="brand-link">
+    <a href="<?php echo base_url('admin/Dashboard') ?>" class="brand-link">
       <img src="<?php echo $this->website->icon() ?>"
            alt="<?php echo $this->website->namaweb(); ?>"
            class="brand-image img-circle elevation-3"
@@ -31,9 +31,9 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-          <!-- DASBOR -->
+          <!-- Dashboard -->
           <li class="nav-item">
-            <a href="<?php echo base_url('admin/dasbor') ?>" class="nav-link">
+            <a href="<?php echo base_url('admin/Dashboard') ?>" class="nav-link">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 DASHBOARD
@@ -151,7 +151,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?php echo base_url('admin/dasbor') ?>">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('admin/Dashboard') ?>">Dashboard</a></li>
               <li class="breadcrumb-item"><a href="<?php echo base_url('admin/'.$this->uri->segment(2)) ?>"><?php echo ucfirst(str_replace('_',' ',$this->uri->segment(2))) ?></a></li>
               <li class="breadcrumb-item active"><?php echo character_limiter($title,10) ?></li>
             </ol>

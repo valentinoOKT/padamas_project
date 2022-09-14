@@ -5,9 +5,9 @@
       <span class="info-box-icon bg-info elevation-1"><i class="fa fa-newspaper-o"></i></span>
 
       <div class="info-box-content">
-        <span class="info-box-text">Berita</span>
+        <span class="info-box-text">Produk dan Layanan</span>
         <span class="info-box-number">
-          <?php echo $this->dasbor_model->berita()->total; ?>
+          <?php echo $this->Dashboard_model->berita()->total; ?>
           <small>Post</small>
         </span>
       </div>
@@ -22,7 +22,7 @@
 
       <div class="info-box-content">
         <span class="info-box-text">Staff</span>
-        <span class="info-box-number"><?php echo $this->dasbor_model->staff()->total; ?></span>
+        <span class="info-box-number"><?php echo $this->Dashboard_model->staff()->total; ?></span>
       </div>
       <!-- /.info-box-content -->
     </div>
@@ -40,7 +40,7 @@
 
       <div class="info-box-content">
         <span class="info-box-text">Galeri</span>
-        <span class="info-box-number"><?php echo $this->dasbor_model->galeri()->total; ?></span>
+        <span class="info-box-number"><?php echo $this->Dashboard_model->galeri()->total; ?></span>
       </div>
       <!-- /.info-box-content -->
     </div>
@@ -56,7 +56,7 @@
       <div class="info-box-content">
         <span class="info-box-text">Pengguna</span>
         <span class="info-box-number">
-          <?php echo $this->dasbor_model->user()->total; ?>
+          <?php echo $this->Dashboard_model->user()->total; ?>
           <small>User</small>
         </span>
       </div>
@@ -65,13 +65,5 @@
     <!-- /.info-box -->
   </div>
   <!-- /.col -->
-  <!-- /.col -->
-
-  <!-- fix for small devices only -->
-  <div class="clearfix hidden-md-up"></div>
-
-
-  <!-- /.col -->
-</div>
 <!-- /.row -->
 
