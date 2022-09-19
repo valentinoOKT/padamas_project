@@ -69,7 +69,7 @@ class Nav_model extends CI_Model {
 	public function nav_layanan() {
 		$this->db->select('*');
 		$this->db->from('berita');
-		$this->db->where(array(	'jenis_berita'	=> 'Layanan',
+		$this->db->where(array(	'jenis_berita'	=> 'Rental',
 								'status_berita'	=> 'Publish'));
 		$this->db->order_by('urutan','ASC');
 		$query = $this->db->get();
@@ -80,7 +80,7 @@ class Nav_model extends CI_Model {
 	public function nav_topik() {
 		$this->db->select('*');
 		$this->db->from('berita');
-		$this->db->where(array(	'jenis_berita'	=> 'Topik Prioritas',
+		$this->db->where(array(	'jenis_berita'	=> 'Service',
 								'status_berita'	=> 'Publish'));
 		$this->db->order_by('urutan','ASC');
 		$query = $this->db->get();

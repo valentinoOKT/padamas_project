@@ -63,7 +63,7 @@ if($this->session->flashdata('sukses')) {
                         <ul class="social-icon-rounded contact-social-icon">
                             <li><a href="<?php echo $site->facebook; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="<?php echo $site->instagram; ?>" style="background-color:  #cd486b"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="<?php echo $site->youtube; ?> " class="bg-color-3"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                            <li><a href="<?php echo $site->youtube; ?> " class="bg-color-3"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                     <!-- .col-md-4 -->

@@ -226,7 +226,6 @@ class Berita extends CI_Controller {
 						'keywords'	=> $berita->judul_berita,
 						'berita'	=> $berita,
 						'listing'	=> $listing,
-						'kategori'	=> $kategori,
 						'site'		=> $site,
 						'isi'		=> 'berita/read');
 		$this->load->view('layout/wrapper', $data, FALSE);

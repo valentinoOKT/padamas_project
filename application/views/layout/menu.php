@@ -1,7 +1,7 @@
 <?php 
 $site                       = $this->konfigurasi_model->listing(); 
 $site_nav                   = $this->konfigurasi_model->listing();
-$nav_profil                 = $this->nav_model->nav_profil();
+$nav_topik                 = $this->nav_model->nav_topik();
 $nav_berita                 = $this->nav_model->nav_berita();
 $nav_layanan                = $this->nav_model->nav_layanan();
 ?>
@@ -28,9 +28,9 @@ $nav_layanan                = $this->nav_model->nav_layanan();
             <!-- home -->
             <li><a href="<?php echo base_url() ?>" class="active">BERANDA</a></li>
 
-            <!-- LAYANAN -->
+            <!-- RENTAL -->
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LAYANAN<span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">RENTAL<span class="caret"></span></a>
                 <ul class="dropdown-menu sub-menu">
                     <?php foreach($nav_layanan as $nav_layanan) { ?>
                     <li class="sub-active"><a href="<?php echo base_url('berita/layanan/'.$nav_layanan->slug_berita) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_layanan->judul_berita ?></a></li>
@@ -38,27 +38,20 @@ $nav_layanan                = $this->nav_model->nav_layanan();
                 </ul>
             </li>
 
-            <!-- PROFIL -->
+            <!-- SERVICE -->
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROFIL<span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVICE<span class="caret"></span></a>
                 <ul class="dropdown-menu sub-menu">
-                    <?php foreach($nav_profil as $nav_profil) { ?>
-                    <li class="sub-active"><a href="<?php echo base_url('berita/profil/'.$nav_profil->slug_berita) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_profil->judul_berita ?></a></li>
+                    <?php foreach($nav_topik as $nav_topik) { ?>
+                    <li class="sub-active"><a href="<?php echo base_url('berita/profil/'.$nav_topik->slug_berita) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_topik->judul_berita ?></a></li>
                     <?php } ?> 
                 </ul>
             </li>
 
-            <!-- galeri -->
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GALERI <span class="caret"></span></a>
-                <ul class="dropdown-menu sub-menu">
-                    
-                    <li class="sub-active"><a href="<?php echo base_url('galeri'); ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Galeri Foto</a></li>
-    
-                </ul>
-            </li>
+            <!-- GALERI -->
+            <li><a href="<?php echo base_url('galeri') ?>">GALERI</a></li>
             
-            <!-- kontak  -->
+            <!-- KONTAK  -->
             <li><a href="<?php echo base_url('kontak') ?>">KONTAK</a></li>
         </ul>
         <div class="menu-right-option pull-right">

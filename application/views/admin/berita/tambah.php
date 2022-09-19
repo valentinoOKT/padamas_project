@@ -25,15 +25,6 @@ echo form_open_multipart(base_url('admin/berita/tambah'));
 
 </div>
 
-<div class="col-md-4">
-
-<div class="form-group form-group-lg">
-<label>Icon berita/profil/layanan</label>
-<input type="text" name="icon" class="form-control" placeholder="Icon berita/profil/layanan" value="<?php echo set_value('icon') ?>">
-</div>
-
-</div>
-
 <div class="col-md-6">
 
 <div class="form-group form-group-lg">
@@ -69,30 +60,13 @@ echo form_open_multipart(base_url('admin/berita/tambah'));
 <div class="form-group">
 <label>Jenis Berita</label>
 <select name="jenis_berita" class="form-control">
-	<option value="Berita">Berita</option>
-	<option value="Profil">Profil</option>
-  <option value="Layanan">Layanan</option>
+	<option value="Rental">Rental</option>
+	<option value="Service">Service</option>
 </select>
 
 </div>
 </div>
 
-
-
-<div class="col-md-3">
-
-<div class="form-group">
-<label>Kategori Berita</label>
-<select name="id_kategori" class="form-control">
-
-	<?php foreach($kategori as $kategori) { ?>
-	<option value="<?php echo $kategori->id_kategori ?>"><?php echo $kategori->nama_kategori ?></option>
-	<?php } ?>
-
-</select>
-
-</div>
-</div>
 
 <div class="col-md-3">
 <div class="form-group">
@@ -100,14 +74,6 @@ echo form_open_multipart(base_url('admin/berita/tambah'));
 <input type="file" name="gambar" class="form-control" placeholder="Upload gambar">
 </div>
 </div>
-
-<div class="col-md-3">
-<div class="form-group">
-<label>Urutan</label>
-<input type="number" name="urutan" class="form-control" placeholder="Urutan" value="<?php echo set_value('urutan') ?>">
-</div>
-</div>
-
 
 <div class="col-md-12">
 

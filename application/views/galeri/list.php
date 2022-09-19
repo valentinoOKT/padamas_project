@@ -19,9 +19,6 @@
                                         <div class="overlay-project"></div>
                                         <!-- .overlay-project -->
                                         <img src="<?php echo base_url('assets/upload/image/thumbs/'.$galeri->gambar) ?>" alt="recent-project-img-1" class="img img-fluid img-thumbnail">
-                                        <div class="project-plus">
-                                            <a href="<?php echo base_url('assets/upload/image/'.$galeri->gambar) ?>" data-rel="lightcase:myCollection"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                                        </div>
                                         <div class="recent-project-content">
                                             <p><a href="#"><?php echo $galeri->judul_galeri; ?></a></p>
                                         </div>
@@ -37,7 +34,6 @@
                         <!-- .isotope-items -->
                         <div class="load-more-option">
                             <?php if(isset($pagin)) { echo $pagin; }  ?>
-                        </div>
                         <!-- .load-more-option -->
                     </div>
                     <!-- .recent-project -->

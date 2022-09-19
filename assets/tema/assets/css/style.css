@@ -3774,6 +3774,24 @@ div#filters {
 }
 .load-more-option{
 	text-align: center;
+	
+	padding: 1em 0;
+}
+.load-more-option a,
+.load-more-option strong {
+	border: 1px solid silver;
+	border-radius: 8px;
+	color: black;
+	padding: 0.5em;
+	margin-right: 0.5em;
+	text-decoration: none;
+}
+
+.load-more-option a:hover,
+.load-more-option strong {
+	border: 1px solid #008cba;
+	background-color: #008cba;
+	color: white;
 }
 .load-more-option .btn-default{
 	font-size: 15px;

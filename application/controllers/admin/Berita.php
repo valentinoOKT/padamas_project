@@ -162,7 +162,7 @@ class Berita extends CI_Controller {
 	        $i 		= $this->input;
 	        $slug 	= url_title($i->post('judul_berita'),'dash',TRUE);
 
-	        $data = array(	'id_kategori'	=> $i->post('id_kategori'),
+	        $data = array(	
 	        				'id_user'		=> $this->session->userdata('id_user'),
 	        				'slug_berita'	=> $slug,
 	        				'judul_berita'	=> $i->post('judul_berita'),
@@ -174,7 +174,6 @@ class Berita extends CI_Controller {
 	        				'tanggal_publish'=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
 	        				// 'tanggal_mulai'		=> $i->post('tanggal_mulai'),
 	        				// 'tanggal_selesai'		=> $i->post('tanggal_selesai'),
-	        				'urutan'	=> $i->post('urutan'),
 	        				'tanggal_post'	=> date('Y-m-d H:i:s'),
 	        				);
 	        $this->berita_model->tambah($data);
@@ -184,7 +183,7 @@ class Berita extends CI_Controller {
 			$i 		= $this->input;
 	        $slug 	= url_title($i->post('judul_berita'),'dash',TRUE);
 
-	        $data = array(	'id_kategori'	=> $i->post('id_kategori'),
+	        $data = array(	
 	        				'id_user'		=> $this->session->userdata('id_user'),
 	        				'slug_berita'	=> $slug,
 	        				'judul_berita'	=> $i->post('judul_berita'),
@@ -195,7 +194,6 @@ class Berita extends CI_Controller {
 	        				'tanggal_publish'=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
 	        				// 'tanggal_mulai'		=> $i->post('tanggal_mulai'),
 	        				// 'tanggal_selesai'		=> $i->post('tanggal_selesai'),
-	        				'urutan'	=> $i->post('urutan'),
 	        				'tanggal_post'	=> date('Y-m-d H:i:s'),
 	        				);
 	        $this->berita_model->tambah($data);
