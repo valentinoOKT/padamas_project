@@ -62,6 +62,7 @@ echo form_open_multipart(base_url('admin/berita/tambah'));
 <select name="jenis_berita" class="form-control">
 	<option value="Rental">Rental</option>
 	<option value="Service">Service</option>
+  <option value="Profil">Profil</option>
 </select>
 
 </div>

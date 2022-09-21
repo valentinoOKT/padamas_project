@@ -48,10 +48,7 @@
               <li class="nav-item"><a href="<?php echo base_url('admin/berita') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Layanan</p></a>
               </li>
               <li class="nav-item"><a href="<?php echo base_url('admin/berita/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Layanan</p></a>
-              </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/kategori') ?>" class="nav-link"><i class="fa fa-tags nav-icon"></i><p>Kategori layanan</p></a>
-              </li>
-              
+              </li>             
             </ul>
           </li> 
 

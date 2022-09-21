@@ -5,7 +5,7 @@
       <span class="info-box-icon bg-info elevation-1"><i class="fa fa-newspaper-o"></i></span>
 
       <div class="info-box-content">
-        <span class="info-box-text">Produk dan Layanan</span>
+        <span class="info-box-text">Layanan</span>
         <span class="info-box-number">
           <?php echo $this->Dashboard_model->berita()->total; ?>
           <small>Post</small>

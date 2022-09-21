@@ -25,7 +25,7 @@ $nav_layanan                = $this->nav_model->nav_layanan();
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <!-- home -->
+            <!-- HOME -->
             <li><a href="<?php echo base_url() ?>" class="active">BERANDA</a></li>
 
             <!-- RENTAL -->
@@ -54,20 +54,6 @@ $nav_layanan                = $this->nav_model->nav_layanan();
             <!-- KONTAK  -->
             <li><a href="<?php echo base_url('kontak') ?>">KONTAK</a></li>
         </ul>
-        <div class="menu-right-option pull-right">
-            
-
-            <div class="search-box">
-                <i class="fa fa-search first_click" aria-hidden="true" style="display: block;"></i>
-                <i class="fa fa-times second_click" aria-hidden="true" style="display: none;"></i>
-            </div>
-            <div class="search-box-text">
-                <form action="http://demos.codexcoder.com/labartisan/html/GreenForest/search">
-                    <input type="text" name="search" id="all-search" placeholder="Search Here">
-                </form>
-            </div>
-        </div>
-        <!-- .header-search-box -->
     </div>
     <!-- .navbar-collapse -->
 </nav>
