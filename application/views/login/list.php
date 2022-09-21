@@ -56,13 +56,6 @@
           <input type="password" name="password" class="form-control" placeholder="Password">
         </div>
         <div class="row">
-          <div class="col-12">
-            <div class="checkbox icheck">
-              <label>
-                <input type="checkbox"> Ingat Saya
-              </label>
-            </div>
-          </div>
           <!-- /.col -->
           <div class="col-12">
             <button type="submit" class="btn btn-primary btn-block btn-lg">Login</button>

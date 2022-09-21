@@ -987,19 +987,8 @@ section{
 	width: 50px;
 	margin-top: -25px;
 	margin-left: -25px;
-   -ms-transform: rotate(45deg); 
-   	-webkit-transform: rotate(45deg);
-    transform: rotate(45deg); 
-	-webkit-animation: loading-center-absolute 1.5s infinite;
-	animation: loading-center-absolute 1.5s infinite;
+   
 
-}
-.object{
-	width: 25px;
-	height: 25px;
-	background-color: #FFF;
-	float: left;
-	
 }
 
 

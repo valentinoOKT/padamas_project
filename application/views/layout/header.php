@@ -1,6 +1,28 @@
 <?php
 $site = $this->konfigurasi_model->listing();
 ?>
+<style>
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
 <div class="box-style">
 <div class="color-btn">
 <a href="#"><i class="fa fa-cog fa-spin" aria-hidden="true"></i></a>
@@ -95,10 +117,7 @@ $site = $this->konfigurasi_model->listing();
 <div id="loading">
 <div id="loading-center">
 <div id="loading-center-absolute">
-<div class="object" id="object_one"></div>
-<div class="object" id="object_two"></div>
-<div class="object" id="object_three"></div>
-<div class="object" id="object_four"></div>
+<div class="loader"></div>
 </div>
 </div>
 </div>
