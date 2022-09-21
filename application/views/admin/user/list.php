@@ -26,7 +26,6 @@ echo form_open(base_url('admin/user/proses'));
     <th>NAMA</th>
     <th>USERNAME</th>
     <th>AKSES LEVEL</th>
-    <th>BAGIAN</th>
     <th>EMAIL</th>
     <th>ACTION</th>
   </tr>
@@ -46,7 +45,6 @@ echo form_open(base_url('admin/user/proses'));
     <td><?php echo $user->nama ?></td>
     <td><?php echo $user->username ?></td>
     <td><?php echo $user->akses_level ?></td>
-    <td><?php if($user->id_bagian==0) { echo "Semua Bagian"; }else{ echo $user->nama_bagian; } ?></td>
     <td><?php echo $user->email ?></td>
     <td>
       <div class="btn-group">

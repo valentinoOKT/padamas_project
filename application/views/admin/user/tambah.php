@@ -36,19 +36,7 @@ echo form_open(base_url('admin/user/tambah'));
 		</div>
 	</div>
 
-	<div class="col-md-3">
-		<div class="form-group">
-			<label>Bagian dan Unit Kerja <span class="text-danger">*</span></label>
-			<select name="id_bagian" class="form-control">
-				<option value="0">Semua Bagian dan Unit Kerja</option>
-				<?php foreach($bagian as $bagian) { ?>
-				<option value="<?php echo $bagian->id_bagian ?>">
-					<?php echo $bagian->nama_bagian ?>
-				</option>
-				<?php } ?>
-			</select>
-		</div>
-	</div>
+
 
 	<div class="col-md-6">
 		<div class="form-group">

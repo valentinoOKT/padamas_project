@@ -49,7 +49,14 @@ $nav_layanan                = $this->nav_model->nav_layanan();
             </li>
 
             <!-- GALERI -->
-            <li><a href="<?php echo base_url('galeri') ?>">GALERI</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GALERI <span class="caret"></span></a>
+                <ul class="dropdown-menu sub-menu">
+                    
+                    <li class="sub-active"><a href="<?php echo base_url('galeri'); ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> In Stock</a></li>
+                    <li class="sub-active"><a href="<?php echo base_url('sold'); ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sold</a></li>                   
+                </ul>
+            </li>
             
             <!-- KONTAK  -->
             <li><a href="<?php echo base_url('kontak') ?>">KONTAK</a></li>
