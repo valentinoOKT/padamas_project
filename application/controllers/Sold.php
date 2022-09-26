@@ -30,11 +30,11 @@ class Sold extends CI_Controller {
 		$sold 	= $this->sold_model->sold($config['per_page'], $page);
 		// End paginasi
 
-		$data = array(	'title'		=> 'Galeri ',
-						'deskripsi'	=> 'Galeri - '.$site->namaweb,
-						'keywords'	=> 'Galeri - '.$site->namaweb,
+		$data = array(	'title'		=> 'Sold ',
+						'deskripsi'	=> 'Sold - '.$site->namaweb,
+						'keywords'	=> 'Sold - '.$site->namaweb,
 						'pagin' 	=> $this->pagination->create_links(),
-						'sold'	=> $sold,
+						'sold'		=> $sold,
 						'kategori'	=> $kategori,
 						'isi'		=> 'sold/list');
 		$this->load->view('layout/wrapper', $data, FALSE);
@@ -93,7 +93,7 @@ class Sold extends CI_Controller {
 		$data = array(	'title'				=> 'Kategori galeri: '.$kategori_galeri->nama_kategori_galeri,
 						'deskripsi'			=> 'Kategori galeri: '.$kategori_galeri->nama_kategori_galeri,
 						'keywords'			=> 'Kategori galeri: '.$kategori_galeri->nama_kategori_galeri,
-						'sold'			=> $sold,
+						'sold'				=> $sold,
 						'kategori'			=> $kategori_galeri,
 						'pagin' 			=> $this->pagination->create_links(),
 						'site'				=> $site,
@@ -104,8 +104,8 @@ class Sold extends CI_Controller {
 	// Read galeri
 	public function read($id_galeri) {
 		$site 		= $this->konfigurasi_model->listing();
-		$sold 	= $this->sold_model->detail($id_galeri);
-		$listing 	= $this->sold_model->home();
+		$sold 		= $this->sold_model->detail($id_galeri);
+		$listing 	= $this->sold_model->sold_home();
 
 		if(count($sold) < 1) {
 			redirect(base_url('oops'),'refresh');
@@ -123,7 +123,7 @@ class Sold extends CI_Controller {
 		$data = array(	'title'		=> $sold->judul_galeri,
 						'deskripsi'	=> $sold->judul_galeri,
 						'keywords'	=> $sold->judul_galeri,
-						'sold'	=> $sold,
+						'sold'		=> $sold,
 						'listing'	=> $listing,
 						'site'		=> $site,
 						'isi'		=> 'sold/read');

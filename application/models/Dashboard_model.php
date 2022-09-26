@@ -36,20 +36,21 @@ class Dashboard_model extends CI_Model {
 		return $query->row();
 	}
 
-	// Total agenda
-	public function agenda()
-	{
-		$this->db->select('COUNT(*) AS total');
-		$this->db->from('agenda');
-		$query = $this->db->get();
-		return $query->row();
-	}
 
 	// Total galeri
 	public function galeri()
 	{
 		$this->db->select('COUNT(*) AS total');
 		$this->db->from('galeri');
+		$query = $this->db->get();
+		return $query->row();
+	}
+
+	// Total galeri sold
+	public function sold()
+	{
+		$this->db->select('COUNT(*) AS total');
+		$this->db->from('sold');
 		$query = $this->db->get();
 		return $query->row();
 	}
@@ -65,5 +66,5 @@ class Dashboard_model extends CI_Model {
 
 }
 
-/* End of file Dasboar_model.php */
-/* Location: ./application/models/Dasboar_model.php */
+/* End of file Dashboard_model.php */
+/* Location: ./application/models/Dashboard_model.php */

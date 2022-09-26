@@ -52,6 +52,20 @@
             </ul>
           </li> 
 
+          <!-- PRODUK -->
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-newspaper-o"></i>
+              <p>PRODUK <i class="right fa fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"><a href="<?php echo base_url('admin/produk') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Produk</p></a>
+              </li>
+              <li class="nav-item"><a href="<?php echo base_url('admin/produk/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Produk</p></a>
+              </li>             
+            </ul>
+          </li>
+
           <!-- GALERI -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -68,6 +82,23 @@
               
             </ul>
           </li> 
+
+          <!-- SOLD -->
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-image"></i>
+              <p>SOLD<i class="right fa fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"><a href="<?php echo base_url('admin/sold') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Galeri</p></a>
+              </li>
+              <li class="nav-item"><a href="<?php echo base_url('admin/sold/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Galeri</p></a>
+              </li>
+              <li class="nav-item"><a href="<?php echo base_url('admin/kategori_galeri') ?>" class="nav-link"><i class="fa fa-tags nav-icon"></i><p>Kategori Galeri</p></a>
+              </li>
+              
+            </ul>
+          </li>
           
           <?php if($this->session->userdata('akses_level')=="Admin") { ?>
           <!-- MENU USER -->

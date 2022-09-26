@@ -1,9 +1,13 @@
 <?php 
 $site                       = $this->konfigurasi_model->listing(); 
 $site_nav                   = $this->konfigurasi_model->listing();
-$nav_topik                 = $this->nav_model->nav_topik();
+$nav_topik                  = $this->nav_model->nav_topik();
 $nav_berita                 = $this->nav_model->nav_berita();
 $nav_layanan                = $this->nav_model->nav_layanan();
+$nav_att                    = $this->nav_model->nav_att();
+$nav_acc                    = $this->nav_model->nav_acc();
+$nav_related                = $this->nav_model->nav_related();
+$nav_spare                  = $this->nav_model->nav_spare();
 ?>
 <!-- Start Menu -->
 <div class="bg-main-menu menu-scroll">
@@ -25,8 +29,46 @@ $nav_layanan                = $this->nav_model->nav_layanan();
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <!-- HOME -->
-            <li><a href="<?php echo base_url() ?>" class="active">BERANDA</a></li>
+            
+            <!-- ATTACHMENT -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ATTACHMENT<span class="caret"></span></a>
+                <ul class="dropdown-menu sub-menu">
+                    <?php foreach($nav_att as $nav_att) { ?>
+                    <li class="sub-active"><a href="<?php echo base_url('produk/attachment/'.$nav_att->slug_produk) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_att->judul_produk ?></a></li>
+                    <?php } ?> 
+                </ul>
+            </li>
+
+            <!-- ACCECORIES -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ACCECORIES<span class="caret"></span></a>
+                <ul class="dropdown-menu sub-menu">
+                    <?php foreach($nav_acc as $nav_acc) { ?>
+                    <li class="sub-active"><a href="<?php echo base_url('produk/accecories/'.$nav_acc->slug_produk) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_acc->judul_produk ?></a></li>
+                    <?php } ?> 
+                </ul>
+            </li>
+
+            <!-- SPARE PARTS -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PARTS<span class="caret"></span></a>
+                <ul class="dropdown-menu sub-menu">
+                    <?php foreach($nav_spare as $nav_spare) { ?>
+                    <li class="sub-active"><a href="<?php echo base_url('produk/spare/'.$nav_spare->slug_produk) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_spare->judul_produk ?></a></li>
+                    <?php } ?> 
+                </ul>
+            </li>
+
+            <!-- RELATED PRODUCTS -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">RELATED<span class="caret"></span></a>
+                <ul class="dropdown-menu sub-menu">
+                    <?php foreach($nav_related as $nav_related) { ?>
+                    <li class="sub-active"><a href="<?php echo base_url('produk/accecories/'.$nav_related->slug_produk) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_related->judul_produk ?></a></li>
+                    <?php } ?> 
+                </ul>
+            </li>
 
             <!-- RENTAL -->
             <li class="dropdown">
@@ -47,6 +89,8 @@ $nav_layanan                = $this->nav_model->nav_layanan();
                     <?php } ?> 
                 </ul>
             </li>
+
+
 
             <!-- GALERI -->
             <li class="dropdown">

@@ -39,7 +39,7 @@ class Sold_model extends CI_Model {
 	}
 
 	// Listing data slider
-	public function home() {
+	public function sold_home() {
 		$this->db->select('sold.*, kategori_galeri.nama_kategori_galeri, kategori_galeri.slug_kategori_galeri, , users.nama');
 		$this->db->from('sold');
 		// Join dg 2 tabel
@@ -92,7 +92,7 @@ class Sold_model extends CI_Model {
 		$this->db->join('kategori_galeri','kategori_galeri.id_kategori_galeri = sold.id_kategori_galeri','LEFT');
 		$this->db->join('users','users.id_user = sold.id_user','LEFT');
 		// End join
-		$this->db->where('jenis_galeri','Sold');
+		$this->db->where('jenis_galeri','Galeri');
 		$this->db->order_by('id_galeri','DESC');
 		$this->db->limit($limit,$start);
 		$query = $this->db->get();
@@ -107,7 +107,7 @@ class Sold_model extends CI_Model {
 		$this->db->join('kategori_galeri','kategori_galeri.id_kategori_galeri = sold.id_kategori_galeri','LEFT');
 		$this->db->join('users','users.id_user = sold.id_user','LEFT');
 		// End join
-		$this->db->where('jenis_galeri','Sold');
+		$this->db->where('jenis_galeri','Galeri');
 		$this->db->order_by('id_galeri','DESC');
 		$query = $this->db->get();
 		return $query->result();
@@ -122,7 +122,7 @@ class Sold_model extends CI_Model {
 		$this->db->join('kategori_galeri','kategori_galeri.id_kategori_galeri = sold.id_kategori_galeri','LEFT');
 		$this->db->join('users','users.id_user = sold.id_user','LEFT');
 		// End join
-		$this->db->where('jenis_galeri','Sold');
+		$this->db->where('jenis_galeri','Galeri');
 		$this->db->group_by('sold.id_kategori_galeri');
 		$this->db->order_by('id_galeri','DESC');
 		$query = $this->db->get();
@@ -138,7 +138,7 @@ class Sold_model extends CI_Model {
 		$this->db->join('users','users.id_user = sold.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'sold.id_kategori_galeri'	=> $id_kategori_galeri,
-								'sold.jenis_galeri'	=> 'Sold'));
+								'sold.jenis_galeri'	=> 'Galeri'));
 		$this->db->order_by('id_galeri','DESC');
 		$this->db->limit($limit,$start);
 		$query = $this->db->get();

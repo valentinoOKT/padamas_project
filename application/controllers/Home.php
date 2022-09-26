@@ -9,6 +9,7 @@ class Home extends CI_Controller {
 		$this->load->model('konfigurasi_model');
 		$this->load->model('berita_model');
 		$this->load->model('galeri_model');
+		$this->load->model('sold_model');
 	}
 
 	public function index()
@@ -18,9 +19,12 @@ class Home extends CI_Controller {
 		$popup 			= $this->galeri_model->popup_aktif();
 		$headline		= $this->berita_model->listing_headline();
 		$galeri 		= $this->galeri_model->galeri_home();
+		$sold			= $this->sold_model->sold_home();
 		$kategori_galeri= $this->galeri_model->kategori();
 		$layanan 		= $this->nav_model->nav_layanan();
 		$profil 		= $this->nav_model->nav_profil();
+		$attachment		= $this->nav_model->nav_att();
+		$accecories		= $this->nav_model->nav_acc();
 
 		// Berita dan paginasi
 		$this->load->library('pagination');
@@ -68,7 +72,10 @@ class Home extends CI_Controller {
 						'berita'			=> $berita,
 						'popup'				=> $popup,
 						'galeri'			=> $galeri,
+						'sold'				=> $sold,
 						'kategori_galeri'	=> $kategori_galeri,
+						'attachment'		=> $attachment,
+						'accecories'		=> $accecories,
 						'layanan'			=> $layanan,
 						'profil'			=> $profil,
 						'isi'				=> 'home/list'

@@ -79,34 +79,6 @@ $site = $this->konfigurasi_model->listing();
 <div class="box-heading">
 <h5>Backgroud Pattern</h5>
 </div>
-<div class="box-content">
-<ul class="box-pattern-img">
-<li>
-    <a class="pt-1" href="#"><img src="../../../../www.codexcoder.com/images/auror/pt-image/01.png"" alt=""></a>
-</li>
-<li>
-    <a class="pt-2" href="#"><img src="../../../../www.codexcoder.com/images/auror/pt-image/02.png"" alt=""></a>
-</li>
-<li>
-    <a class="pt-3" href="#"><img src="../../../../www.codexcoder.com/images/auror/pt-image/03.png"" alt=""></a>
-</li>
-<li>
-    <a class="pt-4" href="#"><img src="../../../../www.codexcoder.com/images/auror/pt-image/04.png"" alt=""></a>
-</li>
-<li>
-    <a class="pt-5" href="#"><img src="../../../../www.codexcoder.com/images/auror/pt-image/05.png"" alt=""></a>
-</li>
-<li>
-    <a class="pt-6" href="#"><img src="../../../../www.codexcoder.com/images/auror/pt-image/06.png"" alt=""></a>
-</li>
-<li>
-    <a class="pt-7" href="#"><img src="../../../../www.codexcoder.com/images/auror/pt-image/07.png"" alt=""></a>
-</li>
-<li>
-    <a class="pt-8" href="#"><img src="../../../../www.codexcoder.com/images/auror/pt-image/08.png"" alt=""></a>
-</li>
-</ul>
-</div>
 </div>
 </div>
 </div>

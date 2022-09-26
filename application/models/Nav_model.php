@@ -76,12 +76,56 @@ class Nav_model extends CI_Model {
 		return $query->result();
 	}
 
-	// Navigasi profil
+	// Navigasi Service
 	public function nav_topik() {
 		$this->db->select('*');
 		$this->db->from('berita');
 		$this->db->where(array(	'jenis_berita'	=> 'Service',
 								'status_berita'	=> 'Publish'));
+		$this->db->order_by('urutan','ASC');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	// Navigasi Attachment
+	public function nav_att() {
+		$this->db->select('*');
+		$this->db->from('produk');
+		$this->db->where(array(	'jenis_produk'	=> 'Attachment',
+								'status_produk'	=> 'Publish'));
+		$this->db->order_by('urutan','ASC');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	// Navigasi Related
+	public function nav_related() {
+		$this->db->select('*');
+		$this->db->from('produk');
+		$this->db->where(array(	'jenis_produk'	=> 'Related',
+								'status_produk'	=> 'Publish'));
+		$this->db->order_by('urutan','ASC');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	// Navigasi Accecories
+	public function nav_acc() {
+		$this->db->select('*');
+		$this->db->from('produk');
+		$this->db->where(array(	'jenis_produk'	=> 'Accecories',
+								'status_produk'	=> 'Publish'));
+		$this->db->order_by('urutan','ASC');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	// Navigasi Spare Part
+	public function nav_spare() {
+		$this->db->select('*');
+		$this->db->from('produk');
+		$this->db->where(array(	'jenis_produk'	=> 'Spare Part',
+								'status_produk'	=> 'Publish'));
 		$this->db->order_by('urutan','ASC');
 		$query = $this->db->get();
 		return $query->result();
