@@ -312,7 +312,7 @@ class Produk_model extends CI_Model {
 		$this->db->join('users','users.id_user = produk.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'produk.status_produk'	=> 'Publish',
-								'produk.jenis_produk'	=> 'Spare Parts'));
+								'produk.jenis_produk'	=> 'Spare Part'));
 		$this->db->order_by('id_produk','DESC');
 		$this->db->limit(20);
 		$query = $this->db->get();
