@@ -47,7 +47,7 @@ echo form_open_multipart(base_url('admin/sold/tambah'));
 <div class="col-md-4">
 
 <div class="form-group">
-<label>Jenis/Posisi Galeri</label>
+<label>Jenis Galeri</label>
 <select name="jenis_galeri" class="form-control">
 	<option value="Galeri">Galeri Biasa</option>
 	<option value="Homepage">Homepage - Gambar Slider</option>

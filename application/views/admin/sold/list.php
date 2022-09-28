@@ -9,7 +9,7 @@ echo form_open(base_url('admin/sold/proses'));
 ?>
 <p class="btn-group">
   <a href="<?php echo base_url('admin/sold/tambah') ?>" class="btn btn-success btn-lg">
-  <i class="fa fa-plus"></i> Tambah Galeri Sold</a>
+  <i class="fa fa-plus"></i> Tambah Sold</a>
 
   <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
       <i class="fa fa-trash-o"></i> Hapus

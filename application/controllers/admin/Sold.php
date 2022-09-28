@@ -71,7 +71,7 @@ class Sold extends CI_Controller {
       		if(! $this->upload->do_upload('gambar')) {
 		// End validasi
 
-		$data = array(	'title'				=> 'Tambah Galeri Sold',
+		$data = array(	'title'				=> 'Tambah Sold',
 						'kategori_galeri'	=> $kategori_galeri,
 						'error'    			=> $this->upload->display_errors(),
 						'isi'				=> 'admin/sold/tambah');
@@ -110,7 +110,7 @@ class Sold extends CI_Controller {
 	        redirect(base_url('admin/sold'),'refresh');
 		}}
 		// End masuk database
-		$data = array(	'title'				=> 'Tambah Galeri Sold',
+		$data = array(	'title'				=> 'Tambah Sold',
 						'kategori_galeri'	=> $kategori_galeri,
 						'isi'				=> 'admin/sold/tambah');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
@@ -141,7 +141,7 @@ class Sold extends CI_Controller {
       		if(! $this->upload->do_upload('gambar')) {
 		// End validasi
 
-		$data = array(	'title'				=> 'Edit Galeri Sold',
+		$data = array(	'title'				=> 'Edit Sold',
 						'kategori_galeri'	=> $kategori_galeri,
 						'sold'			    => $sold,
 						'error'    			=> $this->upload->display_errors(),
@@ -204,7 +204,7 @@ class Sold extends CI_Controller {
 	        redirect(base_url('admin/sold'),'refresh');
 		}}
 		// End masuk database
-		$data = array(	'title'				=> 'Edit Galeri',
+		$data = array(	'title'				=> 'Edit Sold',
 						'kategori_galeri'	=> $kategori_galeri,
 						'sold'			       => $sold,
 						'isi'				=> 'admin/sold/edit');

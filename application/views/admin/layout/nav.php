@@ -66,18 +66,16 @@
             </ul>
           </li>
 
-          <!-- GALERI -->
+          <!-- STOCK -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-image"></i>
-              <p>GALERI<i class="right fa fa-angle-left"></i></p>
+              <p>STOCK<i class="right fa fa-angle-left"></i></p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="<?php echo base_url('admin/galeri') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Galeri</p></a>
+              <li class="nav-item"><a href="<?php echo base_url('admin/galeri') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Stock</p></a>
               </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/galeri/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Galeri</p></a>
-              </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/kategori_galeri') ?>" class="nav-link"><i class="fa fa-tags nav-icon"></i><p>Kategori Galeri</p></a>
+              <li class="nav-item"><a href="<?php echo base_url('admin/galeri/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Stock</p></a>
               </li>
               
             </ul>
@@ -90,11 +88,9 @@
               <p>SOLD<i class="right fa fa-angle-left"></i></p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="<?php echo base_url('admin/sold') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Galeri</p></a>
+              <li class="nav-item"><a href="<?php echo base_url('admin/sold') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Sold</p></a>
               </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/sold/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Galeri</p></a>
-              </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/kategori_galeri') ?>" class="nav-link"><i class="fa fa-tags nav-icon"></i><p>Kategori Galeri</p></a>
+              <li class="nav-item"><a href="<?php echo base_url('admin/sold/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Sold</p></a>
               </li>
               
             </ul>

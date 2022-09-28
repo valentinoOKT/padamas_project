@@ -19,7 +19,7 @@ class Galeri extends CI_Controller {
 	// Halaman galeri
 	public function index()	{
 		$galeri = $this->galeri_model->listing();
-		$data = array(	'title'			=> 'Galeri',
+		$data = array(	'title'			=> 'Stock',
 						'galeri'		=> $galeri,
 						'isi'			=> 'admin/galeri/list');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
@@ -71,7 +71,7 @@ class Galeri extends CI_Controller {
       		if(! $this->upload->do_upload('gambar')) {
 		// End validasi
 
-		$data = array(	'title'				=> 'Tambah Galeri',
+		$data = array(	'title'				=> 'Tambah Stock',
 						'kategori_galeri'	=> $kategori_galeri,
 						'error'    			=> $this->upload->display_errors(),
 						'isi'				=> 'admin/galeri/tambah');
@@ -110,7 +110,7 @@ class Galeri extends CI_Controller {
 	        redirect(base_url('admin/galeri'),'refresh');
 		}}
 		// End masuk database
-		$data = array(	'title'				=> 'Tambah Galeri',
+		$data = array(	'title'				=> 'Tambah Stock',
 						'kategori_galeri'	=> $kategori_galeri,
 						'isi'				=> 'admin/galeri/tambah');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
@@ -141,7 +141,7 @@ class Galeri extends CI_Controller {
       		if(! $this->upload->do_upload('gambar')) {
 		// End validasi
 
-		$data = array(	'title'				=> 'Edit Galeri',
+		$data = array(	'title'				=> 'Edit Stock',
 						'kategori_galeri'	=> $kategori_galeri,
 						'galeri'			=> $galeri,
 						'error'    			=> $this->upload->display_errors(),
@@ -204,7 +204,7 @@ class Galeri extends CI_Controller {
 	        redirect(base_url('admin/galeri'),'refresh');
 		}}
 		// End masuk database
-		$data = array(	'title'				=> 'Edit Galeri',
+		$data = array(	'title'				=> 'Edit Stock',
 						'kategori_galeri'	=> $kategori_galeri,
 						'galeri'			=> $galeri,
 						'isi'				=> 'admin/galeri/edit');
