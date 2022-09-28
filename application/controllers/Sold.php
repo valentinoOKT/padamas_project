@@ -54,7 +54,7 @@ class Sold extends CI_Controller {
 		
 		
 		
-		// Berita dan paginasi
+		// Layanan dan paginasi
 		$this->load->library('pagination');
 		$config['base_url'] 		= base_url().'sold/kategori/'.$slug_kategori_galeri.'/index/';
 		$config['total_rows'] 		= count($this->sold_model->all_kategori($id_kategori_galeri));

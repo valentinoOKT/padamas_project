@@ -20,15 +20,11 @@ class Simple_login
 		// Kalau ada, maka masuk ke halaman dashboard
 		if($user_login) {
 			$id_user 		= $user_login->id_user;
-			$id_bagian 		= $user_login->id_bagian;
-			$nama_bagian 	= $user_login->nama_bagian;
 			$username 		= $username;
 			$nama 			= $user_login->nama;
 			$akses_level 	= $user_login->akses_level;
 			// Create session utk login
 			$this->CI->session->set_userdata('id_user',$id_user);
-			$this->CI->session->set_userdata('id_bagian',$id_bagian);
-			$this->CI->session->set_userdata('nama_bagian',$nama_bagian);
 			$this->CI->session->set_userdata('username',$username);
 			$this->CI->session->set_userdata('nama',$nama);
 			$this->CI->session->set_userdata('akses_level',$akses_level);
@@ -55,8 +51,6 @@ class Simple_login
 	{
 		// Meng-unset semua session
 		$this->CI->session->unset_userdata('id_user');
-		$this->CI->session->unset_userdata('id_bagian');
-		$this->CI->session->unset_userdata('nama_bagian');
 		$this->CI->session->unset_userdata('username');
 		$this->CI->session->unset_userdata('nama');
 		$this->CI->session->unset_userdata('akses_level');

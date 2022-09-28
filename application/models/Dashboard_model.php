@@ -9,23 +9,15 @@ class Dashboard_model extends CI_Model {
 		$this->load->database();
 	}
 
-	// Total berita
-	public function berita()
+	// Total layanan
+	public function layanan()
 	{
 		$this->db->select('COUNT(*) AS total');
-		$this->db->from('berita');
+		$this->db->from('layanan');
 		$query = $this->db->get();
 		return $query->row();
 	}
 
-	// Total staff
-	public function staff()
-	{
-		$this->db->select('COUNT(*) AS total');
-		$this->db->from('staff');
-		$query = $this->db->get();
-		return $query->row();
-	}
 
 	// Total client
 	public function client()

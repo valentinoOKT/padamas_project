@@ -31,7 +31,7 @@ class Kategori extends CI_Controller {
 		if($valid->run()===FALSE) {
 		// End validasi
 
-		$data = array(	'title'		=> 'Kategori Berita/Profil',
+		$data = array(	'title'		=> 'Kategori Layanan/Profil',
 						'kategori'	=> $this->kategori_model->listing(),
 						'isi'		=> 'admin/kategori/list');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
@@ -67,7 +67,7 @@ class Kategori extends CI_Controller {
 		if($valid->run()===FALSE) {
 		// End validasi
 
-		$data = array(	'title'		=> 'Edit Kategori Berita/Profil',
+		$data = array(	'title'		=> 'Edit Kategori Layanan/Profil',
 						'kategori'	=> $this->kategori_model->detail($id_kategori),
 						'isi'		=> 'admin/kategori/edit');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);

@@ -13,12 +13,9 @@ class User_model extends CI_Model {
 	// Listing
 	public function listing()
 	{
-		$this->db->select('users.*,
-							bagian.nama_bagian');
+		$this->db->select('users.*,');
 		$this->db->from('users');
-		// join
-		$this->db->join('bagian', 'bagian.id_bagian = users.id_bagian', 'left');
-		// End join
+		
 		$this->db->order_by('users.id_user', 'desc');
 		$query = $this->db->get();
 		return $query->result();
@@ -36,13 +33,9 @@ class User_model extends CI_Model {
 	// Login
 	public function login($username,$password)
 	{
-		$this->db->select('users.*,
-							bagian.nama_bagian');
+		$this->db->select('users.*,');
 		$this->db->from('users');
-		// join
-		$this->db->join('bagian', 'bagian.id_bagian = users.id_bagian', 'left');
-		// End join
-		// where
+		
 		$this->db->where(array(	'username'	=> $username,
 								'password'	=> sha1($password)
 							));
@@ -54,13 +47,9 @@ class User_model extends CI_Model {
 	// Detail
 	public function detail($id_user)
 	{
-		$this->db->select('users.*,
-							bagian.nama_bagian');
+		$this->db->select('users.*,');
 		$this->db->from('users');
-		// join
-		$this->db->join('bagian', 'bagian.id_bagian = users.id_bagian', 'left');
-		// End join
-		// where
+		
 		$this->db->where('users.id_user', $id_user);
 		$this->db->order_by('users.id_user', 'desc');
 		$query = $this->db->get();

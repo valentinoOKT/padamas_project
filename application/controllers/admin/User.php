@@ -13,7 +13,7 @@ class User extends CI_Controller {
 		// Ambil check login dari simple_login
 		$this->simple_login->check_login($pengalihan);
 		$this->load->model('user_model');
-		$this->load->model('bagian_model');
+		
 		// Tambahkan proteksi halaman
 		$url_pengalihan = str_replace('index.php/', '', current_url());
 		$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
@@ -38,8 +38,8 @@ class User extends CI_Controller {
 	// Tambah
 	public function tambah()
 	{
-		// Load data bagian
-		$bagian 		= $this->bagian_model->listing();
+
+		
 		// Validasi
 		$validasi 	= $this->form_validation;
 
@@ -57,7 +57,6 @@ class User extends CI_Controller {
 		// End validasi
 
 		$data = array(	'title'		=> 'Tambah User Baru',
-						'bagian'		=> $bagian,
 						'isi'		=> 'admin/user/tambah'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
@@ -65,7 +64,7 @@ class User extends CI_Controller {
 		}else{
 			$inp = $this->input;
 
-			$data = array(	'id_bagian'		=> $inp->post('id_bagian'),
+			$data = array(	
 							'nama'		=> $inp->post('nama'),
 							'email'			=> $inp->post('email'),
 							'username'		=> $inp->post('username'),
@@ -84,8 +83,7 @@ class User extends CI_Controller {
 	// Edit
 	public function edit($id_user)
 	{
-		// Load data bagian
-		$bagian 		= $this->bagian_model->listing();
+
 		// Ambil data user yg akan diedit
 		$user 		= $this->user_model->detail($id_user);
 
@@ -106,7 +104,7 @@ class User extends CI_Controller {
 
 		$data = array(	'title'		=> 'Edit User: '.$user->nama,
 						'user'		=> $user,
-						'bagian'		=> $bagian,
+
 						'isi'		=> 'admin/user/edit'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
@@ -115,7 +113,7 @@ class User extends CI_Controller {
 			$inp = $this->input;
 
 			$data = array(	'id_user'		=> $id_user,
-							'id_bagian'		=> $inp->post('id_bagian'),
+
 							'nama'		=> $inp->post('nama'),
 							'email'			=> $inp->post('email'),
 							'username'		=> $inp->post('username'),

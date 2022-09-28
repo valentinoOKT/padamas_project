@@ -124,7 +124,7 @@ class Produk extends CI_Controller {
 			array(	'required'	=> 'Judul harus diisi'));
 
 		$valid->set_rules('isi','Isi','required',
-			array(	'required'	=> 'Isi berita harus diisi'));
+			array(	'required'	=> 'Isi layanan harus diisi'));
 
 		if($valid->run()) {
 			if(!empty($_FILES['gambar']['name'])) {
@@ -135,7 +135,7 @@ class Produk extends CI_Controller {
       		if(! $this->upload->do_upload('gambar')) {
 		// End validasi
 
-		$data = array(	'title'			=> 'Tambah Berita/Profil',
+		$data = array(	'title'			=> 'Tambah Layanan/Profil',
 						'kategori'		=> $kategori,
 						'error'    		=> $this->upload->display_errors(),
 						'isi'			=> 'admin/produk/tambah');
@@ -200,7 +200,7 @@ class Produk extends CI_Controller {
 	        redirect(base_url('admin/produk/jenis_produk/'.$i->post('jenis_produk')),'refresh');
 		}}
 		// End masuk database
-		$data = array(	'title'			=> 'Tambah Berita/Profil',
+		$data = array(	'title'			=> 'Tambah Layanan/Profil',
 						'kategori'		=> $kategori,
 						'isi'			=> 'admin/produk/tambah');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		

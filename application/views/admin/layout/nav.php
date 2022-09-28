@@ -45,9 +45,9 @@
               <p>LAYANAN <i class="right fa fa-angle-left"></i></p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="<?php echo base_url('admin/berita') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Layanan</p></a>
+              <li class="nav-item"><a href="<?php echo base_url('admin/layanan') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Layanan</p></a>
               </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/berita/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Layanan</p></a>
+              <li class="nav-item"><a href="<?php echo base_url('admin/layanan/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Layanan</p></a>
               </li>             
             </ul>
           </li> 

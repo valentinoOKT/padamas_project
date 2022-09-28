@@ -7,7 +7,7 @@
       <div class="info-box-content">
         <span class="info-box-text">Layanan</span>
         <span class="info-box-number">
-          <?php echo $this->Dashboard_model->berita()->total; ?>
+          <?php echo $this->Dashboard_model->layanan()->total; ?>
           <small>Post</small>
         </span>
       </div>

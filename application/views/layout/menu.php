@@ -2,7 +2,7 @@
 $site                       = $this->konfigurasi_model->listing(); 
 $site_nav                   = $this->konfigurasi_model->listing();
 $nav_topik                  = $this->nav_model->nav_topik();
-$nav_berita                 = $this->nav_model->nav_berita();
+$nav_layanan                 = $this->nav_model->nav_layanan();
 $nav_layanan                = $this->nav_model->nav_layanan();
 $nav_att                    = $this->nav_model->nav_att();
 $nav_acc                    = $this->nav_model->nav_acc();
@@ -75,7 +75,7 @@ $nav_spare                  = $this->nav_model->nav_spare();
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">RENTAL<span class="caret"></span></a>
                 <ul class="dropdown-menu sub-menu">
                     <?php foreach($nav_layanan as $nav_layanan) { ?>
-                    <li class="sub-active"><a href="<?php echo base_url('berita/layanan/'.$nav_layanan->slug_berita) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_layanan->judul_berita ?></a></li>
+                    <li class="sub-active"><a href="<?php echo base_url('layanan/layanan/'.$nav_layanan->slug_layanan) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_layanan->judul_layanan ?></a></li>
                     <?php } ?> 
                 </ul>
             </li>
@@ -85,7 +85,7 @@ $nav_spare                  = $this->nav_model->nav_spare();
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVICE<span class="caret"></span></a>
                 <ul class="dropdown-menu sub-menu">
                     <?php foreach($nav_topik as $nav_topik) { ?>
-                    <li class="sub-active"><a href="<?php echo base_url('berita/profil/'.$nav_topik->slug_berita) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_topik->judul_berita ?></a></li>
+                    <li class="sub-active"><a href="<?php echo base_url('layanan/profil/'.$nav_topik->slug_layanan) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_topik->judul_layanan ?></a></li>
                     <?php } ?> 
                 </ul>
             </li>

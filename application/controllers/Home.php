@@ -7,7 +7,7 @@ class Home extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('konfigurasi_model');
-		$this->load->model('berita_model');
+		$this->load->model('layanan_model');
 		$this->load->model('galeri_model');
 		$this->load->model('sold_model');
 		$this->load->model('produk_model');
@@ -18,7 +18,7 @@ class Home extends CI_Controller {
 		$site 			= $this->konfigurasi_model->listing();
 		$slider 		= $this->galeri_model->slider();
 		$popup 			= $this->galeri_model->popup_aktif();
-		$headline		= $this->berita_model->listing_headline();
+		$headline		= $this->layanan_model->listing_headline();
 		$galeri 		= $this->galeri_model->galeri_home();
 		$sold			= $this->sold_model->sold_home();
 		$kategori_galeri= $this->galeri_model->kategori();
@@ -29,10 +29,10 @@ class Home extends CI_Controller {
 		$spare			= $this->nav_model->nav_spare();
 		$related		= $this->nav_model->nav_related();
 
-		// Berita dan paginasi
+		// Layanan dan paginasi
 		$this->load->library('pagination');
 		$config['base_url'] 		= base_url().'home/index/';
-		$config['total_rows'] 		= count($this->berita_model->total());
+		$config['total_rows'] 		= count($this->layanan_model->total());
 		$config['use_page_numbers'] = TRUE;
 		$config['num_links'] 		= 5;
 		$config['uri_segment'] 		= 3;
@@ -63,7 +63,7 @@ class Home extends CI_Controller {
 		$config['first_url'] 		= base_url().'home/';
 		$this->pagination->initialize($config); 
 		$page 		= ($this->uri->segment(3)) ? ($this->uri->segment(3) - 1) * $config['per_page'] : 0;
-		$berita 	= $this->berita_model->berita($config['per_page'], $page);
+		$layanan 	= $this->layanan_model->layanan($config['per_page'], $page);
 
 		$data = array(	'title'				=> $site->singkatan.' - '.$site->tagline,
 						'deskripsi'			=> $site->deskripsi,
@@ -72,7 +72,7 @@ class Home extends CI_Controller {
 						'slider'			=> $slider,
 						'headline'			=> $headline,
 						'pagin' 			=> $this->pagination->create_links(),
-						'berita'			=> $berita,
+						'layanan'			=> $layanan,
 						'popup'				=> $popup,
 						'galeri'			=> $galeri,
 						'sold'				=> $sold,

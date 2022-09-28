@@ -63,7 +63,7 @@ echo form_open_multipart(base_url('admin/produk/tambah'));
 	<option value="Attachment">Attachment</option>
 	<option value="Accecories">Accecories</option>
   <option value="Related">Related</option>
-  <option value="Spare Part">Spare Parts</option>
+  <option value="Spare">Spare Parts</option>
 </select>
 
 </div>

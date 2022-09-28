@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="about-greenforest-content">
-                            <h2><?php echo $profil->judul_berita ?></h2>
+                            <h2><?php echo $profil->judul_layanan ?></h2>
                             <p><?php echo $profil->isi ?></p>
                         </div>
                         <!-- .about-greenforest-content -->

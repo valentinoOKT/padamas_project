@@ -54,7 +54,7 @@ class Galeri extends CI_Controller {
 		
 		
 		
-		// Berita dan paginasi
+		// Layanan dan paginasi
 		$this->load->library('pagination');
 		$config['base_url'] 		= base_url().'galeri/kategori/'.$slug_kategori_galeri.'/index/';
 		$config['total_rows'] 		= count($this->galeri_model->all_kategori($id_kategori_galeri));
@@ -107,7 +107,7 @@ class Galeri extends CI_Controller {
 		$galeri 	= $this->galeri_model->detail($id_galeri);
 		$listing 	= $this->galeri_model->galeri_home();
 
-		if(count($galeri) < 1) {
+		if(count(array($galeri)) < 1) {
 			redirect(base_url('oops'),'refresh');
 		}
 		

@@ -40,51 +40,6 @@
       </div>
     </div>
   </div>
-  <div class="col-md-3 col-sm-4 col-xs-12">
-    <aside>
-      
-      
-      <div class="rightSidebar">
-        <div class="panel panel-default">
-          <div class="panel-heading bg-color-5 border-color-5">
-            <h3 class="panel-title">produk lainnya</h3>
-          </div>
-          <div class="panel-body">
-            <ul class="media-list blogListing">
-            
-            <?php foreach($listing as $listing) { ?>
-
-              <li class="media">
-                <div class="media-left">
-                  <a href="<?php echo base_url('produk/read/'.$listing->slug_produk) ?>"><img src="<?php echo base_url('assets/upload/image/thumbs/'.$listing->gambar) ?>" alt="<?php echo $listing->judul_produk ?>" width="70"></a>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading"><a href="<?php echo base_url('produk/read/'.$listing->slug_produk) ?>"><?php echo $listing->judul_produk ?></a></h4>
-                  <p><?php echo date('d M Y',strtotime($listing->tanggal)) ?></p>
-                </div>
-              </li>
-
-            <?php } ?>
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="panel panel-default courseSidebar">
-        <div class="panel-heading bg-color-2 border-color-2">
-          <h3 class="panel-title">Categories</h3>
-        </div>
-        <div class="panel-body">
-          <ul class="list-unstyled categoryItem">
-          <?php foreach($kategori as $kategori) { ?>
-            <li><a href="<?php echo base_url('produk/kategori/'.$kategori->slug_kategori) ?>"><?php echo $kategori->nama_kategori ?></a></li>
-          <?php } ?>
-          </ul>
-        </div>
-      </div>
-    </aside>
-  </div>
 </div>
 </div>
 </section>

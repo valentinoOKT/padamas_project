@@ -11,18 +11,14 @@ class Dashboard extends CI_Controller {
 		$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
 		// Ambil check login dari simple_login
 		$this->simple_login->check_login($pengalihan);
-		$this->load->model('staff_model');
-		$this->load->model('staff_model');
 		$this->load->model('Dashboard_model');
 	}
 
 	// Halaman Dashboard
 	public function index()
 	{
-		$staff 					= $this->staff_model->listing();
 
 		$data = array(	'title'					=> 'Halaman Dashboard',
-						'staff'					=> $staff,
 						'isi'					=> 'admin/Dashboard/list'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);

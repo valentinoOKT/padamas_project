@@ -18,48 +18,13 @@ class Nav_model extends CI_Model {
 		return $query->result();
 	}
 
-	// Sub menu
-	public function nav_sub_menu($id_menu) {
-		$this->db->select('*');
-		$this->db->from('sub_menu');
-		$this->db->where('id_menu',$id_menu);
-		$this->db->order_by('urutan','ASC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-	
-	// Listing
-	public function nav_anggota()
-	{
-		$this->db->select('anggota.*,
-							COUNT(staff.id_staff) AS total_staff,
-							provinsi.nama_provinsi');
-		$this->db->from('anggota');
-		$this->db->join('provinsi', 'provinsi.id_provinsi = anggota.id_provinsi', 'left');
-		$this->db->join('staff', 'staff.id_anggota = anggota.id_anggota', 'left');
-        $this->db->group_by('anggota.id_anggota');
-		$this->db->order_by('urutan', 'ASC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	public function nav_mitra()
-	{
-		$this->db->select('*');
-		$this->db->from('mitra');
-		$this->db->order_by('urutan', 'ASC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	
 
 	// Navigasi profil
 	public function nav_profil() {
 		$this->db->select('*');
-		$this->db->from('berita');
-		$this->db->where(array(	'jenis_berita'	=> 'Profil',
-								'status_berita'	=> 'Publish'));
+		$this->db->from('layanan');
+		$this->db->where(array(	'jenis_layanan'	=> 'Profil',
+								'status_layanan'	=> 'Publish'));
 		$this->db->order_by('urutan','ASC');
 		$query = $this->db->get();
 		return $query->result();
@@ -68,9 +33,9 @@ class Nav_model extends CI_Model {
 	// Navigasi profil
 	public function nav_layanan() {
 		$this->db->select('*');
-		$this->db->from('berita');
-		$this->db->where(array(	'jenis_berita'	=> 'Rental',
-								'status_berita'	=> 'Publish'));
+		$this->db->from('layanan');
+		$this->db->where(array(	'jenis_layanan'	=> 'Rental',
+								'status_layanan'	=> 'Publish'));
 		$this->db->order_by('urutan','ASC');
 		$query = $this->db->get();
 		return $query->result();
@@ -79,9 +44,9 @@ class Nav_model extends CI_Model {
 	// Navigasi Service
 	public function nav_topik() {
 		$this->db->select('*');
-		$this->db->from('berita');
-		$this->db->where(array(	'jenis_berita'	=> 'Service',
-								'status_berita'	=> 'Publish'));
+		$this->db->from('layanan');
+		$this->db->where(array(	'jenis_layanan'	=> 'Service',
+								'status_layanan'	=> 'Publish'));
 		$this->db->order_by('urutan','ASC');
 		$query = $this->db->get();
 		return $query->result();
@@ -124,7 +89,7 @@ class Nav_model extends CI_Model {
 	public function nav_spare() {
 		$this->db->select('*');
 		$this->db->from('produk');
-		$this->db->where(array(	'jenis_produk'	=> 'Spare Part',
+		$this->db->where(array(	'jenis_produk'	=> 'Spare',
 								'status_produk'	=> 'Publish'));
 		$this->db->order_by('urutan','ASC');
 		$query = $this->db->get();
@@ -188,18 +153,7 @@ class Nav_model extends CI_Model {
 		return $query->result();
 	}
 
-	// Navigasi berita
-	public function nav_berita() {
-		$this->db->select('berita.*,kategori.nama_kategori,kategori.slug_kategori');
-		$this->db->from('berita');
-		$this->db->join('kategori','kategori.id_kategori = berita.id_kategori');
-		$this->db->where(array(	'jenis_berita'	=> 'Berita',
-								'status_berita'	=> 'Publish'));
-		$this->db->group_by('berita.id_kategori');
-		$this->db->order_by('kategori.urutan','ASC');
-		$query = $this->db->get();
-		return $query->result();
-	}
+	
 
 }
 
