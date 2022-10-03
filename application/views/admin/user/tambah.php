@@ -27,12 +27,8 @@ echo form_open(base_url('admin/user/tambah'));
 	
 	<div class="col-md-3">
 		<div class="form-group">
-			<label>Level Hak Akses <span class="text-danger">*</span></label>
-			<select name="akses_level" class="form-control">
-				<option value="User">User</option>
-				<option value="Admin">Admin</option>
-				<option value="Direktur">Direktur</option>
-			</select>
+			<label>Level Hak Akses <span class="text-danger"></span></label>
+			<input type="text" name="akses_level" class="form-control" value="Admin" placeholder="level hak akses" readonly>
 		</div>
 	</div>
 

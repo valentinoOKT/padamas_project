@@ -68,6 +68,8 @@ $nav_profil     = $this->nav_model->nav_profil();
                 <li><a href="<?php echo $site->facebook; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="<?php echo $site->instagram; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 <li><a href="<?php echo $site->youtube; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="<?php echo $site->whatsapp; ?>"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                <li><a href="<?php echo $site->whatsapp; ?>"><i class="fas fa-blog" aria-hidden="true"></i></a></li>
             </ul>
         </div>
         <!-- .social-box -->

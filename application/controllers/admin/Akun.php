@@ -129,8 +129,7 @@ class Akun extends CI_Controller {
 			$i = $this->input;
 			$this->session->set_userdata('nama',$i->post('nama'));
 			$data = array(	'id_user'			=> $id_user,
-							'password'			=> sha1($i->post('password')),
-							'password_hint'		=> $i->post('password')
+							'password'			=> sha1($i->post('password'))
 						);
 			$this->user_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Data '.$user->nama.' telah diupdate');

@@ -20,7 +20,7 @@ class Sold extends CI_Controller {
 	public function index()	{
 		$sold = $this->sold_model->listing();
 		$data = array(	'title'			=> 'Sold',
-						'sold'		=> $sold,
+						'sold'			=> $sold,
 						'isi'			=> 'admin/sold/list');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
 	}

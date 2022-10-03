@@ -41,6 +41,7 @@ class Konfigurasi extends CI_Controller {
 							'telepon'			=> $i->post('telepon'),
 							'hp'				=> $i->post('hp'),
 							'fax'				=> $i->post('fax'),
+							'whatsapp'			=> $i->post('whatsapp'),
 							'keywords'			=> $i->post('keywords'),
 							'facebook'			=> $i->post('facebook'),
 							'youtube'			=> $i->post('youtube'),

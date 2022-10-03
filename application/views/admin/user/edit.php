@@ -28,11 +28,7 @@ echo form_open(base_url('admin/user/edit/'.$user->id_user));
 	<div class="col-md-3">
 		<div class="form-group">
 			<label>Level Hak Akses <span class="text-danger">*</span></label>
-			<select name="akses_level" class="form-control">
-				<option value="User">User</option>
-				<option value="Admin" <?php if($user->akses_level=="Admin") { echo "selected"; } ?>>Admin</option>
-				<option value="Direktur" <?php if($user->akses_level=="Direktur") { echo "selected"; } ?>>Direktur</option>
-			</select>
+			<input type="email" name="akses_level" class="form-control" value="<?php echo $user->akses_level ?>" placeholder="Level Hal Akses" readonly>
 		</div>
 	</div>
 

@@ -52,24 +52,29 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
     </div>
     
     <div class="form-group">
-    <label>Official email</label>
+    <label>Official email <i class="fa fa-envelope"></i></label>
     <input type="email" name="email" placeholder="youremail@address.com" value="<?php echo $site->email ?>" class="form-control" required>
     </div>
     
      
     
      <div class="form-group">
-    <label>Phone number</label>
+    <label>Phone number <i class="fa fa-mobile"></i></label>
     <input type="text" name="telepon" placeholder="021-000000" value="<?php echo $site->telepon ?>" class="form-control">
     </div>
     
       <div class="form-group">
-    <label>Fax</label>
+    <label>Fax <i class="fa fa-fax"></i></label>
     <input type="text" name="fax" placeholder="021-000000" value="<?php echo $site->fax ?>" class="form-control">
     </div>
     
     
     <h3>Social network</h3><hr>
+
+    <div class="form-group">
+    <label>Whatsapp <i class="fa fa-whatsapp"></i></label>
+    <input type="url" name="whatsapp" placeholder="https://api.whatsapp.com/send?phone=nomorkamu" value="<?php echo $site->whatsapp ?>" class="form-control">
+    </div>
     
     <div class="form-group">
     <label>Facebook <i class="fa fa-facebook"></i></label>
@@ -98,7 +103,7 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
     
     <h3>Google Map</h3><hr>
     <div class="form-group">
-    <label>Google Map</label>
+    <label>Google Map <i class="fa fa-map"></i></label>
     <textarea name="google_map" rows="5" class="form-control" placeholder="Kode dari Google Map"><?php echo $site->google_map ?></textarea>
     </div>
     
