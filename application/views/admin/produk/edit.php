@@ -61,7 +61,7 @@ echo form_open_multipart(base_url('admin/produk/edit/'.$produk->id_produk));
 	<option value="Attachment">Attachment</option>
   <option value="Accecories" <?php if($produk->jenis_produk=="Accecories") { echo "selected"; }?>>Accecories</option>
   <option value="Related" <?php if($produk->jenis_produk=="Related") { echo "selected"; } ?>>Related</option>
-  <option value="Spare" <?php if($produk->jenis_produk=="Spare Part") { echo "selected"; } ?>>Spare Parts</option>
+  <option value="Spare" <?php if($produk->jenis_produk=="Spare") { echo "selected"; } ?>>Spare Parts</option>
 </select>
 
 </div>
