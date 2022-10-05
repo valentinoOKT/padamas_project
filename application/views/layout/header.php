@@ -77,7 +77,7 @@ $site = $this->konfigurasi_model->listing();
 </div>
 <div class="box-element">
 <div class="box-heading">
-<h5>Backgroud Pattern</h5>
+<h5>Background Pattern</h5>
 </div>
 </div>
 </div>

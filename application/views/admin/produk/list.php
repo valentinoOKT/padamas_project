@@ -15,7 +15,7 @@ echo form_open(base_url('admin/produk/proses'));
   </button>
 
   <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
-      <i class="fa fa-trash-o"></i> Hapus
+      <i class="fa fa-trash"></i> Hapus
     </button> 
 <?php 
 $url_navigasi = $this->uri->segment(2); 
@@ -88,7 +88,7 @@ if($this->uri->segment(3) != "") {
         <a href="<?php echo base_url('admin/produk/edit/'.$produk->id_produk) ?>" 
         class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>
 
-        <a href="<?php echo base_url('admin/produk/delete/'.$produk->id_produk) ?>" class="btn btn-danger btn-xs" onclick="confirmation(event)"><i class="fa fa-trash-o"></i></a>
+        <a href="<?php echo base_url('admin/produk/delete/'.$produk->id_produk) ?>" class="btn btn-danger btn-xs" onclick="confirmation(event)"><i class="fa fa-trash"></i></a>
       </div>
     </td>
 </tr>

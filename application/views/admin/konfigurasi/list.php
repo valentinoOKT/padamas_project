@@ -29,7 +29,7 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
 <div class="col-md-6">
 	<h3>Basic information:</h3><hr>
     <div class="form-group">
-    <label>Company name</label>
+    <label>Company name <i class="fa fa-building"></i></label>
     <input type="text" name="namaweb" placeholder="Nama organisasi/perusahaan" value="<?php echo $site->namaweb ?>" required class="form-control">
     </div>
 
@@ -47,7 +47,7 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
 
     
     <div class="form-group">
-    <label>Website address</label>
+    <label>Website address <i class="fa fa-globe"></i></label>
     <input type="url" name="website" placeholder="<?php echo base_url() ?>" value="<?php echo $site->website ?>" class="form-control">
     </div>
     
@@ -72,22 +72,22 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
     <h3>Social network</h3><hr>
 
     <div class="form-group">
-    <label>Whatsapp <i class="fa fa-whatsapp"></i></label>
+    <label>Whatsapp <i class="fab fa-whatsapp"></i></label>
     <input type="url" name="whatsapp" placeholder="https://api.whatsapp.com/send?phone=nomorkamu" value="<?php echo $site->whatsapp ?>" class="form-control">
     </div>
     
     <div class="form-group">
-    <label>Facebook <i class="fa fa-facebook"></i></label>
+    <label>Facebook <i class="fab fa-facebook"></i></label>
     <input type="url" name="facebook" placeholder="http://facebook.com/namakamu" value="<?php echo $site->facebook ?>" class="form-control">
     </div>
     
      <div class="form-group">
-    <label>Instagram <i class="fa fa-instagram"></i></label>
+    <label>Instagram <i class="fab fa-instagram"></i></label>
    <input type="url" name="instagram" placeholder="http://instagram.com/namakamu" value="<?php echo $site->instagram ?>" class="form-control">
     </div>
 
     <div class="form-group">
-    <label>Youtube <i class="fa fa-youtube"></i></label>
+    <label>Youtube <i class="fab fa-youtube"></i></label>
     <input type="url" name="youtube" placeholder="http://youtube.com/namakamu" value="<?php echo $site->youtube ?>" class="form-control">
     </div>
     

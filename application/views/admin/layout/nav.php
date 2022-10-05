@@ -41,7 +41,7 @@
           <!-- LAYANAN -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-newspaper-o"></i>
+              <i class="nav-icon fa fa-newspaper"></i>
               <p>LAYANAN <i class="right fa fa-angle-left"></i></p>
             </a>
             <ul class="nav nav-treeview">
@@ -55,7 +55,8 @@
           <!-- PRODUK -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-newspaper-o"></i>
+              
+              <i class="nav-icon fas fa-box-open"></i>
               <p>PRODUK <i class="right fa fa-angle-left"></i></p>
             </a>
             <ul class="nav nav-treeview">

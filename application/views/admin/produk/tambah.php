@@ -86,14 +86,7 @@ echo form_open_multipart(base_url('admin/produk/tambah'));
 </div>
 
 <div class="form-group">
-<label>Isi produk
-<sup>
-		<a data-toggle="modal" class="btn btn-info btn-xs" href="<?php echo base_url('admin/produk/files') ?>" data-target="#file"><i class="fa fa-download"></i> Attach File</a>
-
-		<a data-toggle="modal" class="btn btn-info btn-xs" href="<?php echo base_url('admin/produk/gambar') ?>" data-target="#gambar"><i class="fa fa-download"></i> Attach Gambar</a>
-
-	</sup>
-</label>
+<label>Isi produk</label>
 <textarea name="isi" class="form-control" id="isi" placeholder="Isi produk"><?php echo set_value('isi') ?></textarea>
 </div>
 

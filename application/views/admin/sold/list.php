@@ -12,7 +12,7 @@ echo form_open(base_url('admin/sold/proses'));
   <i class="fa fa-plus"></i> Tambah Sold</a>
 
   <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
-      <i class="fa fa-trash-o"></i> Hapus
+      <i class="fa fa-trash"></i> Hapus
     </button> 
 
 </p>
@@ -73,7 +73,7 @@ echo form_open(base_url('admin/sold/proses'));
       class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>
 
        <a href="<?php echo base_url('admin/sold/delete/'.$sold->id_galeri) ?>" 
-      class="btn btn-danger btn-xs " onclick="confirmation(event)"><i class="fa fa-trash-o"></i></a>
+      class="btn btn-danger btn-xs " onclick="confirmation(event)"><i class="fa fa-trash"></i></a>
     </div>
     </td>
 </tr>
