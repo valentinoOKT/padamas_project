@@ -5,10 +5,10 @@
 });
 </script>
 <?php
-echo form_open(base_url('admin/galeri/proses'));
+echo form_open(base_url('admin/stock/proses'));
 ?>
 <p class="btn-group">
-  <a href="<?php echo base_url('admin/galeri/tambah') ?>" class="btn btn-success btn-lg">
+  <a href="<?php echo base_url('admin/stock/tambah') ?>" class="btn btn-success btn-lg">
   <i class="fa fa-plus"></i> Tambah Stock</a>
 
   <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
@@ -39,40 +39,40 @@ echo form_open(base_url('admin/galeri/proses'));
 </thead>
 <tbody>
 
-<?php $i=1; foreach($galeri as $galeri) { ?>
+<?php $i=1; foreach($stock as $stock) { ?>
 
 <tr class="odd gradeX">
     <td>
       <div class="mailbox-star text-center"><div class="text-center">
-        <input type="checkbox" class="icheckbox_flat-blue " name="id_galeri[]" value="<?php echo $galeri->id_galeri ?>">
+        <input type="checkbox" class="icheckbox_flat-blue " name="id_galeri[]" value="<?php echo $stock->id_galeri ?>">
         <span class="checkmark"></span>
       </div>
     </td>
     <td>
-      <img src="<?php echo base_url('assets/upload/image/thumbs/'.$galeri->gambar) ?>" width="60">
+      <img src="<?php echo base_url('assets/upload/image/thumbs/'.$stock->gambar) ?>" width="60">
     </td>
-    <td><?php echo $galeri->judul_galeri ?>
+    <td><?php echo $stock->judul_galeri ?>
       
       <br><small>
-        Urutan: <?php echo $galeri->urutan ?>
+        Urutan: <?php echo $stock->urutan ?>
       <br>
-      Status Tampil Teks: <?php echo $galeri->status_text ?><br>
-      <textarea name="aa"><?php echo base_url('assets/upload/image/'.$galeri->gambar) ?></textarea>
+      Status Tampil Teks: <?php echo $stock->status_text ?><br>
+      <textarea name="aa"><?php echo base_url('assets/upload/image/'.$stock->gambar) ?></textarea>
       </small>
 
     </td>
-    <td><?php echo $galeri->nama_kategori_galeri ?> - <?php echo $galeri->jenis_galeri ?></td>
-    <td><?php echo $galeri->nama ?></td>
-    <td><?php echo $galeri->tanggal ?></td>
+    <td><?php echo $stock->nama_kategori_galeri ?> - <?php echo $stock->jenis_galeri ?></td>
+    <td><?php echo $stock->nama ?></td>
+    <td><?php echo $stock->tanggal ?></td>
     <td>
       <div class="btn-group">
-      <a href="<?php echo base_url('galeri/read/'.$galeri->id_galeri) ?>" 
+      <a href="<?php echo base_url('stock/read/'.$stock->id_galeri) ?>" 
       class="btn btn-success btn-xs" target="_blank"><i class="fa fa-eye"></i></a>
 
-      <a href="<?php echo base_url('admin/galeri/edit/'.$galeri->id_galeri) ?>" 
+      <a href="<?php echo base_url('admin/stock/edit/'.$stock->id_galeri) ?>" 
       class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>
 
-       <a href="<?php echo base_url('admin/galeri/delete/'.$galeri->id_galeri) ?>" 
+       <a href="<?php echo base_url('admin/stock/delete/'.$stock->id_galeri) ?>" 
       class="btn btn-danger btn-xs " onclick="confirmation(event)"><i class="fa fa-trash-o"></i></a>
     </div>
     </td>

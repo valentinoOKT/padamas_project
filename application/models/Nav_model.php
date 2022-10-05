@@ -97,14 +97,14 @@ class Nav_model extends CI_Model {
 	}
 
 	// Listing data slider
-	public function nav_galeri() {
-		$this->db->select('galeri.*, kategori_galeri.nama_kategori_galeri, kategori_galeri.slug_kategori_galeri');
-		$this->db->from('galeri');
+	public function nav_stock() {
+		$this->db->select('stock.*, kategori_galeri.nama_kategori_galeri, kategori_galeri.slug_kategori_galeri');
+		$this->db->from('stock');
 		// Join dg 2 tabel
-		$this->db->join('kategori_galeri','kategori_galeri.id_kategori_galeri = galeri.id_kategori_galeri','LEFT');
+		$this->db->join('kategori_galeri','kategori_galeri.id_kategori_galeri = stock.id_kategori_galeri','LEFT');
 		// End join
 		$this->db->where('jenis_galeri','Galeri');
-		$this->db->group_by('galeri.id_kategori_galeri');
+		$this->db->group_by('stock.id_kategori_galeri');
 		$this->db->order_by('id_galeri','DESC');
 		$this->db->limit(8);
 		$query = $this->db->get();

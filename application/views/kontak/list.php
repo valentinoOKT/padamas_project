@@ -80,7 +80,7 @@ if($this->session->flashdata('sukses')) {
 <!-- End Contact us Section -->
 
 
-<!-- STart Maps Section -->
+<!-- Start Maps Section -->
 <style type="text/css" media="screen">
     iframe {
         width: 100%;

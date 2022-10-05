@@ -11,7 +11,7 @@ if(isset($error)) {
 }
 
 // Form open
-echo form_open_multipart(base_url('admin/galeri/tambah'));
+echo form_open_multipart(base_url('admin/stock/tambah'));
 ?>
 <div class="row">
 <div class="col-md-6">

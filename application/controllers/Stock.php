@@ -1,42 +1,42 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Galeri extends CI_Controller {
+class Stock extends CI_Controller {
 
 	// Load database
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('galeri_model');
+		$this->load->model('stock_model');
 		$this->load->model('kategori_galeri_model');
 	}
 
 	// Main page galeri
 	public function index()	{
 		$site 		= $this->konfigurasi_model->listing();
-		$kategori 	= $this->galeri_model->kategori();
+		$kategori 	= $this->stock_model->kategori();
 
 		// Galeri dan paginasi
 		$this->load->library('pagination');
-		$config['base_url'] 		= base_url().'galeri/index/';
-		$config['total_rows'] 		= count($this->galeri_model->total_galeri());
+		$config['base_url'] 		= base_url().'stock/index/';
+		$config['total_rows'] 		= count($this->stock_model->total_stock());
 		$config['use_page_numbers'] = TRUE;
 		$config['num_links'] 		= 5;
 		$config['uri_segment'] 		= 3;
 		$config['per_page'] 		= 12;
-		$config['first_url'] 		= base_url().'galeri/';
+		$config['first_url'] 		= base_url().'stock/';
 		$this->pagination->initialize($config); 
 		$page 		= ($this->uri->segment(3)) ? ($this->uri->segment(3) - 1) * $config['per_page'] : 0;
-		$galeri 	= $this->galeri_model->galeri($config['per_page'], $page);
+		$stock 	= $this->stock_model->stock($config['per_page'], $page);
 		// End paginasi
 
-		$data = array(	'title'		=> 'Galeri ',
-						'deskripsi'	=> 'Galeri - '.$site->namaweb,
-						'keywords'	=> 'Galeri - '.$site->namaweb,
+		$data = array(	'title'		=> 'Stock ',
+						'deskripsi'	=> 'Stock - '.$site->namaweb,
+						'keywords'	=> 'Stock - '.$site->namaweb,
 						'pagin' 	=> $this->pagination->create_links(),
-						'galeri'	=> $galeri,
+						'stock'	=> $stock,
 						'kategori'	=> $kategori,
-						'isi'		=> 'galeri/list');
+						'isi'		=> 'stock/list');
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
 
@@ -56,8 +56,8 @@ class Galeri extends CI_Controller {
 		
 		// Layanan dan paginasi
 		$this->load->library('pagination');
-		$config['base_url'] 		= base_url().'galeri/kategori/'.$slug_kategori_galeri.'/index/';
-		$config['total_rows'] 		= count($this->galeri_model->all_kategori($id_kategori_galeri));
+		$config['base_url'] 		= base_url().'stock/kategori/'.$slug_kategori_galeri.'/index/';
+		$config['total_rows'] 		= count($this->stock_model->all_kategori($id_kategori_galeri));
 		$config['use_page_numbers'] = TRUE;
 		$config['num_links'] 		= 5;
 		$config['uri_segment'] 		= 5;
@@ -85,51 +85,51 @@ class Galeri extends CI_Controller {
         $config['num_tag_open'] 	= '<li class="page">';
         $config['num_tag_close'] 	= '</li>';
 		$config['per_page'] 		= 12;
-		$config['first_url'] 		= base_url().'galeri/kategori/'.$slug_kategori_galeri.'/';
+		$config['first_url'] 		= base_url().'stock/kategori/'.$slug_kategori_galeri.'/';
 		$this->pagination->initialize($config); 
 		$page 		= ($this->uri->segment(5)) ? ($this->uri->segment(5) - 1) * $config['per_page'] : 0;
-		$galeri 	= $this->galeri_model->kategori_galeri($id_kategori_galeri,$config['per_page'], $page);
+		$stock 	= $this->stock_model->kategori_galeri($id_kategori_galeri,$config['per_page'], $page);
 
 		$data = array(	'title'				=> 'Kategori galeri: '.$kategori_galeri->nama_kategori_galeri,
 						'deskripsi'			=> 'Kategori galeri: '.$kategori_galeri->nama_kategori_galeri,
 						'keywords'			=> 'Kategori galeri: '.$kategori_galeri->nama_kategori_galeri,
-						'galeri'			=> $galeri,
+						'stock'			=> $stock,
 						'kategori'			=> $kategori_galeri,
 						'pagin' 			=> $this->pagination->create_links(),
 						'site'				=> $site,
-						'isi'				=> 'galeri/list');
+						'isi'				=> 'stock/list');
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
 
 	// Read galeri
 	public function read($id_galeri) {
 		$site 		= $this->konfigurasi_model->listing();
-		$galeri 	= $this->galeri_model->detail($id_galeri);
-		$listing 	= $this->galeri_model->galeri_home();
+		$stock 	= $this->stock_model->detail($id_galeri);
+		$listing 	= $this->stock_model->stock_home();
 
-		if(count(array($galeri)) < 1) {
+		if(count(array($stock)) < 1) {
 			redirect(base_url('oops'),'refresh');
 		}
 		
 		// Update hit
-		if($galeri) {
-			$newhits = $galeri->hits + 1;
-			$hit = array(	'id_galeri'	=> $galeri->id_galeri,
+		if($stock) {
+			$newhits = $stock->hits + 1;
+			$hit = array(	'id_galeri'	=> $stock->id_galeri,
 							'hits'		=> $newhits);
-			$this->galeri_model->update_hit($hit);
+			$this->stock_model->update_hit($hit);
 		}
 		//  End update hit
 
-		$data = array(	'title'		=> $galeri->judul_galeri,
-						'deskripsi'	=> $galeri->judul_galeri,
-						'keywords'	=> $galeri->judul_galeri,
-						'galeri'	=> $galeri,
+		$data = array(	'title'		=> $stock->judul_galeri,
+						'deskripsi'	=> $stock->judul_galeri,
+						'keywords'	=> $stock->judul_galeri,
+						'stock'	=> $stock,
 						'listing'	=> $listing,
 						'site'		=> $site,
-						'isi'		=> 'galeri/read');
+						'isi'		=> 'stock/read');
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
 }
 
-/* End of file Galeri.php */
-/* Location: ./application/controllers/Galeri.php */
+/* End of file Stock.php */
+/* Location: ./application/controllers/Stock.php */

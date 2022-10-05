@@ -22,23 +22,23 @@
 </thead>
 <tbody>
 
-<?php $i=1; foreach($galeri as $galeri) { ?>
+<?php $i=1; foreach($stock as $stock) { ?>
 
 <tr class="odd gradeX">
     <td><?php echo $i ?></td>
     <td>
-      <img src="<?php echo base_url('assets/upload/image/thumbs/'.$galeri->gambar) ?>" width="60">
+      <img src="<?php echo base_url('assets/upload/image/thumbs/'.$stock->gambar) ?>" width="60">
     </td>
-    <td><?php echo $galeri->judul_galeri ?></td>
-    <td><?php echo $galeri->popup_status ?></td>
-    <td><?php echo $galeri->website ?></td>
-    <td><?php echo $galeri->nama ?></td>
-    <td><?php echo $galeri->tanggal ?></td>
+    <td><?php echo $stock->judul_galeri ?></td>
+    <td><?php echo $stock->popup_status ?></td>
+    <td><?php echo $stock->website ?></td>
+    <td><?php echo $stock->nama ?></td>
+    <td><?php echo $stock->tanggal ?></td>
     <td>
 
       <?php include('activate_popup.php'); ?>
 
-      <a href="<?php echo base_url('admin/popup/edit/'.$galeri->id_galeri) ?>" 
+      <a href="<?php echo base_url('admin/popup/edit/'.$stock->id_galeri) ?>" 
       class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>
 
       <?php include('delete_popup.php'); ?>

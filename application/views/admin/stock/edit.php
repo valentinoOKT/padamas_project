@@ -11,14 +11,14 @@ if(isset($error)) {
 }
 
 // Form open
-echo form_open_multipart(base_url('admin/galeri/edit/'.$galeri->id_galeri));
+echo form_open_multipart(base_url('admin/stock/edit/'.$stock->id_galeri));
 ?>
 <div class="row">
 <div class="col-md-6">
 
 <div class="form-group form-group-lg">
 <label>Judul galeri</label>
-<input type="text" name="judul_galeri" class="form-control" placeholder="Judul galeri" value="<?php echo $galeri->judul_galeri ?>">
+<input type="text" name="judul_galeri" class="form-control" placeholder="Judul galeri" value="<?php echo $stock->judul_galeri ?>">
 </div>
 
 </div>
@@ -27,7 +27,7 @@ echo form_open_multipart(base_url('admin/galeri/edit/'.$galeri->id_galeri));
 
 <div class="form-group form-group-lg">
 <label>Urutan</label>
-<input type="number" name="urutan" class="form-control" placeholder="No urut tampil"  value="<?php echo $galeri->urutan ?>">
+<input type="number" name="urutan" class="form-control" placeholder="No urut tampil"  value="<?php echo $stock->urutan ?>">
 </div>
 </div>
 
@@ -37,7 +37,7 @@ echo form_open_multipart(base_url('admin/galeri/edit/'.$galeri->id_galeri));
 <label>Tampilkan teks pada slider?</label>
 <select name="status_text" class="form-control">
 	<option value="Ya">Ya, tampilkan</option>
-	<option value="Tidak" <?php if($galeri->status_text=="Tidak") { echo "selected"; } ?>>Tidak, jangan tampilkan teks</option>
+	<option value="Tidak" <?php if($stock->status_text=="Tidak") { echo "selected"; } ?>>Tidak, jangan tampilkan teks</option>
 </select>
 </div>
 
@@ -48,12 +48,12 @@ echo form_open_multipart(base_url('admin/galeri/edit/'.$galeri->id_galeri));
 <div class="form-group">
 <label>Jenis/Posisi Galeri</label>
 <select name="jenis_galeri" class="form-control">
-	<option value="Galeri">Galeri Biasa</option>
+	<option value="Stock">Stock Biasa</option>
 	<option value="Homepage" 
-	<?php if($galeri->jenis_galeri=="Homepage") { echo "selected"; } ?>
+	<?php if($stock->jenis_galeri=="Homepage") { echo "selected"; } ?>
 	>Homepage - Gambar Slider</option>
-  	<option value="Pop up" <?php if($galeri->jenis_galeri=="Pop up") { echo "selected"; } ?>>Pop up Homepage</option>
-  	<option value="Testimonial" <?php if($galeri->jenis_galeri=="Testimonial") { echo "selected"; } ?>>Background Testimonial</option>
+  	<option value="Pop up" <?php if($stock->jenis_galeri=="Pop up") { echo "selected"; } ?>>Pop up Homepage</option>
+  	<option value="Testimonial" <?php if($stock->jenis_galeri=="Testimonial") { echo "selected"; } ?>>Background Testimonial</option>
 </select>
 
 </div>
@@ -67,7 +67,7 @@ echo form_open_multipart(base_url('admin/galeri/edit/'.$galeri->id_galeri));
 
 	<?php foreach($kategori_galeri as $kategori_galeri) { ?>
 	<option value="<?php echo $kategori_galeri->id_kategori_galeri ?>" 
-	<?php if($galeri->id_kategori_galeri==$kategori_galeri->id_kategori_galeri) { echo "selected"; } ?>
+	<?php if($stock->id_kategori_galeri==$kategori_galeri->id_kategori_galeri) { echo "selected"; } ?>
 	><?php echo $kategori_galeri->nama_kategori_galeri ?></option>
 	<?php } ?>
 
@@ -87,7 +87,7 @@ echo form_open_multipart(base_url('admin/galeri/edit/'.$galeri->id_galeri));
 
 <div class="form-group">
 <label>Isi galeri</label>
-<textarea name="isi" id="isi" class="form-control konten" placeholder="Isi galeri"><?php echo $galeri->isi ?></textarea>
+<textarea name="isi" id="isi" class="form-control konten" placeholder="Isi galeri"><?php echo $stock->isi ?></textarea>
 </div>
 
 

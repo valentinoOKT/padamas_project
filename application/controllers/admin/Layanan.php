@@ -10,7 +10,7 @@ class Layanan extends CI_Controller {
 		$this->load->model('layanan_model');
 		$this->load->model('kategori_model');
 		$this->load->model('download_model');
-		$this->load->model('galeri_model');
+		$this->load->model('stock_model');
 		// Tambahkan proteksi halaman
 		$url_pengalihan = str_replace('index.php/', '', current_url());
 		$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
@@ -61,8 +61,8 @@ class Layanan extends CI_Controller {
    			for($i=0; $i < sizeof($id_layanannya);$i++) {
    				$layanan 	= $this->layanan_model->detail($id_layanannya[$i]);
    				if($layanan->gambar !='') {
-					unlink('./assets/upload/layanan/'.$layanan->gambar);
-					unlink('./assets/upload/layanan/thumbs/'.$layanan->gambar);
+					unlink('./assets/upload/image/'.$layanan->gambar);
+					unlink('./assets/upload/image/thumbs/'.$layanan->gambar);
 				}
 				$data = array(	'id_layanan'	=> $id_layanannya[$i]);
    				$this->layanan_model->delete($data);

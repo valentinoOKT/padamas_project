@@ -27,7 +27,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-          <!-- Dashboard -->
+          <!-- DASHBOARD -->
           <li class="nav-item">
             <a href="<?php echo base_url('admin/Dashboard') ?>" class="nav-link">
               <i class="nav-icon fa fa-dashboard"></i>
@@ -73,9 +73,9 @@
               <p>STOCK<i class="right fa fa-angle-left"></i></p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="<?php echo base_url('admin/galeri') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Stock</p></a>
+              <li class="nav-item"><a href="<?php echo base_url('admin/stock') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Stock</p></a>
               </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/galeri/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Stock</p></a>
+              <li class="nav-item"><a href="<?php echo base_url('admin/stock/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Stock</p></a>
               </li>
               
             </ul>
@@ -102,7 +102,7 @@
             <a href="<?php echo base_url('admin/user') ?>" class="nav-link">
               <i class="nav-icon fa fa-lock"></i>
               <p>
-                PENGGUNA SISTEM
+                USER SYSTEM
               </p>
             </a>
           </li>
@@ -124,7 +124,7 @@
             </ul>
           </li>
         <?php } ?>
-          <!-- Logout -->
+          <!-- LOGOUT -->
           <li class="nav-item">
             <a href="<?php echo base_url('login/logout') ?>" class="nav-link">
               <i class="nav-icon fa fa-sign-out"></i>

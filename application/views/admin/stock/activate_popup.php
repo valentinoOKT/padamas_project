@@ -1,4 +1,4 @@
-<?php if($galeri->popup_status == "Publish") { ?>
+<?php if($stock->popup_status == "Publish") { ?>
 <button class="btn btn-info btn-xs" data-toggle="modal" data-target="#activate<?php echo $i ?>">
     <i class="fa fa-check"></i> Non Aktifkan
 </button>
@@ -22,11 +22,11 @@
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <?php if($galeri->popup_status == "Publish") { ?>
-		<a href="<?php echo base_url('admin/popup/non_aktifkan/'.$galeri->id_galeri) ?>" class="btn btn-success">
+    <?php if($stock->popup_status == "Publish") { ?>
+		<a href="<?php echo base_url('admin/popup/non_aktifkan/'.$stock->id_galeri) ?>" class="btn btn-success">
     <i class="fa fa-check"></i> Ya, Non Aktifkan</a>
     <?php }else{ ?>
-    	<a href="<?php echo base_url('admin/popup/aktifkan/'.$galeri->id_galeri) ?>" class="btn btn-success">
+    	<a href="<?php echo base_url('admin/popup/aktifkan/'.$stock->id_galeri) ?>" class="btn btn-success">
     	<i class="fa fa-check"></i> Ya, Aktifkan dan Non Aktifkan yang lain</a>
     <?php } ?>
 

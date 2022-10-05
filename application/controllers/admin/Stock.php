@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Galeri extends CI_Controller {
+class Stock extends CI_Controller {
 
 	// Load database
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('galeri_model');
+		$this->load->model('stock_model');
 		$this->load->model('kategori_galeri_model');
 		// Tambahkan proteksi halaman
 		$url_pengalihan = str_replace('index.php/', '', current_url());
@@ -18,10 +18,10 @@ class Galeri extends CI_Controller {
 
 	// Halaman galeri
 	public function index()	{
-		$galeri = $this->galeri_model->listing();
+		$stock = $this->stock_model->listing();
 		$data = array(	'title'			=> 'Stock',
-						'galeri'		=> $galeri,
-						'isi'			=> 'admin/galeri/list');
+						'stock'		=> $stock,
+						'isi'			=> 'admin/stock/list');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
 	}
 
@@ -35,17 +35,17 @@ class Galeri extends CI_Controller {
 			$id_galerinya		= $inp->post('id_galeri');
 
    			for($i=0; $i < sizeof($id_galerinya);$i++) {
-   				$galeri 	= $this->galeri_model->detail($id_galerinya[$i]);
-   				if($galeri->gambar !='') {
-					unlink('./assets/upload/galeri/'.$galeri->gambar);
-					unlink('./assets/upload/galeri/thumbs/'.$galeri->gambar);
+   				$stock 	= $this->stock_model->detail($id_galerinya[$i]);
+   				if($stock->gambar !='') {
+					unlink('./assets/upload/image/'.$stock->gambar);
+					unlink('./assets/upload/image/thumbs/'.$stock->gambar);
 				}
 				$data = array(	'id_galeri'	=> $id_galerinya[$i]);
-   				$this->galeri_model->delete($data);
+   				$this->stock_model->delete($data);
    			}
 
    			$this->session->set_flashdata('sukses', 'Data telah dihapus');
-   			redirect(base_url('admin/galeri'),'refresh');
+   			redirect(base_url('admin/stock'),'refresh');
    		// PROSES SETTING DRAFT
    		}
 	}
@@ -74,7 +74,7 @@ class Galeri extends CI_Controller {
 		$data = array(	'title'				=> 'Tambah Stock',
 						'kategori_galeri'	=> $kategori_galeri,
 						'error'    			=> $this->upload->display_errors(),
-						'isi'				=> 'admin/galeri/tambah');
+						'isi'				=> 'admin/stock/tambah');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
 		// Masuk database
 		}else{
@@ -105,21 +105,21 @@ class Galeri extends CI_Controller {
 	        				'status_text'		=> $i->post('status_text'),
 	        				'urutan'		=> $i->post('urutan')
 	        				);
-	        $this->galeri_model->tambah($data);
+	        $this->stock_model->tambah($data);
 	        $this->session->set_flashdata('sukses', 'Data telah ditambah');
-	        redirect(base_url('admin/galeri'),'refresh');
+	        redirect(base_url('admin/stock'),'refresh');
 		}}
 		// End masuk database
 		$data = array(	'title'				=> 'Tambah Stock',
 						'kategori_galeri'	=> $kategori_galeri,
-						'isi'				=> 'admin/galeri/tambah');
+						'isi'				=> 'admin/stock/tambah');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
 	}
 
 	// Edit galeri
 	public function edit($id_galeri)	{
 		$kategori_galeri 	= $this->kategori_galeri_model->listing();
-		$galeri 	= $this->galeri_model->detail($id_galeri); 
+		$stock 	= $this->stock_model->detail($id_galeri); 
 
 		// Validasi
 		$valid = $this->form_validation;
@@ -143,9 +143,9 @@ class Galeri extends CI_Controller {
 
 		$data = array(	'title'				=> 'Edit Stock',
 						'kategori_galeri'	=> $kategori_galeri,
-						'galeri'			=> $galeri,
+						'stock'			=> $stock,
 						'error'    			=> $this->upload->display_errors(),
-						'isi'				=> 'admin/galeri/edit');
+						'isi'				=> 'admin/stock/edit');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
 		// Masuk database
 		}else{
@@ -166,9 +166,9 @@ class Galeri extends CI_Controller {
 	        $this->image_lib->resize();
 
 	        // Proses hapus gambar
-			if($galeri->gambar != "") {
-				unlink('./assets/upload/image/'.$galeri->gambar);
-				unlink('./assets/upload/image/thumbs/'.$galeri->gambar);
+			if($stock->gambar != "") {
+				unlink('./assets/upload/image/'.$stock->gambar);
+				unlink('./assets/upload/image/thumbs/'.$stock->gambar);
 			}
 			// End hapus gambar
 
@@ -184,9 +184,9 @@ class Galeri extends CI_Controller {
 	        				'status_text'		=> $i->post('status_text'),
 	        				'urutan'		=> $i->post('urutan')
 	        				);
-	        $this->galeri_model->edit($data);
+	        $this->stock_model->edit($data);
 	        $this->session->set_flashdata('sukses', 'Data telah diedit');
-	        redirect(base_url('admin/galeri'),'refresh');
+	        redirect(base_url('admin/stock'),'refresh');
 		}}else{
 			$i 		= $this->input;
 
@@ -199,15 +199,15 @@ class Galeri extends CI_Controller {
 	        				'status_text'		=> $i->post('status_text'),
 	        				'urutan'		=> $i->post('urutan')
 	        				);
-	        $this->galeri_model->edit($data);
+	        $this->stock_model->edit($data);
 	        $this->session->set_flashdata('sukses', 'Data telah diedit');
-	        redirect(base_url('admin/galeri'),'refresh');
+	        redirect(base_url('admin/stock'),'refresh');
 		}}
 		// End masuk database
 		$data = array(	'title'				=> 'Edit Stock',
 						'kategori_galeri'	=> $kategori_galeri,
-						'galeri'			=> $galeri,
-						'isi'				=> 'admin/galeri/edit');
+						'stock'			=> $stock,
+						'isi'				=> 'admin/stock/edit');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
 	}
 
@@ -220,20 +220,20 @@ $pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
 // Ambil check login dari simple_login
 $this->simple_login->check_login($pengalihan);
 
-		$galeri = $this->galeri_model->detail($id_galeri);
+		$stock = $this->stock_model->detail($id_galeri);
 		// Proses hapus gambar
-		if($galeri->gambar=="") {
+		if($stock->gambar=="") {
 		}else{
-			unlink('./assets/upload/image/'.$galeri->gambar);
-			unlink('./assets/upload/image/thumbs/'.$galeri->gambar);
+			unlink('./assets/upload/image/'.$stock->gambar);
+			unlink('./assets/upload/image/thumbs/'.$stock->gambar);
 		}
 		// End hapus gambar
 		$data = array('id_galeri'	=> $id_galeri);
-		$this->galeri_model->delete($data);
+		$this->stock_model->delete($data);
 	    $this->session->set_flashdata('sukses', 'Data telah dihapus');
-	    redirect(base_url('admin/galeri'),'refresh');
+	    redirect(base_url('admin/stock'),'refresh');
 	}
 }
 
-/* End of file Galeri.php */
-/* Location: ./application/controllers/admin/Galeri.php */
+/* End of file Stock.php */
+/* Location: ./application/controllers/admin/Stock.php */

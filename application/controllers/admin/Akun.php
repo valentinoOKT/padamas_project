@@ -55,8 +55,8 @@ class Akun extends CI_Controller {
 			$upload_data        		= array('uploads' =>$this->upload->data());
 	        // Image Editor
 	        $config['image_library']  	= 'gd2';
-	        $config['source_image']   	= './assets/upload/user/'.$upload_data['uploads']['file_name']; 
-	        $config['new_image']     	= './assets/upload/user/thumbs/';
+	        $config['source_image']   	= './assets/upload/image/'.$upload_data['uploads']['file_name']; 
+	        $config['new_image']     	= './assets/upload/image/thumbs/';
 	        $config['create_thumb']   	= TRUE;
 	        $config['quality']       	= "100%";
 	        $config['maintain_ratio']   = TRUE;

@@ -16,7 +16,7 @@
 <div class="modal-footer">
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
     
-    <a href="<?php echo base_url('admin/galeri/delete/'.$galeri->id_galeri) ?>" class="btn btn-danger">
+    <a href="<?php echo base_url('admin/stock/delete/'.$stock->id_galeri) ?>" class="btn btn-danger">
     <i class="fa fa-trash-o"></i> Ya, Hapus data</a>
 
 </div>

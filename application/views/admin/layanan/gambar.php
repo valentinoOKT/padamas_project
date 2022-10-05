@@ -93,18 +93,18 @@ $site_info  = $this->konfigurasi_model->listing();
 </thead>
 <tbody>
 
-<?php $i=1; foreach($galeri as $galeri) { ?>
+<?php $i=1; foreach($stock as $stock) { ?>
 
 <tr class="odd gradeX">
     <td><?php echo $i ?></td>
     <td>
-      <img src="<?php echo base_url('assets/filemanager/userfiles/image/thumbs/'.$galeri->gambar) ?>" width="60">
+      <img src="<?php echo base_url('assets/filemanager/userfiles/image/thumbs/'.$stock->gambar) ?>" width="60">
     </td>
-    <td><?php echo $galeri->judul_galeri ?>
+    <td><?php echo $stock->judul_galeri ?>
       
       <br><small>
       Link Gambar:<br> 
-      <textarea name="aa" style="width: 100%;"><?php echo base_url('assets/filemanager/userfiles/image/'.$galeri->gambar) ?></textarea>
+      <textarea name="aa" style="width: 100%;"><?php echo base_url('assets/filemanager/userfiles/image/'.$stock->gambar) ?></textarea>
       </small>
 
     </td>

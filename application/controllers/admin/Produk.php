@@ -10,7 +10,7 @@ class Produk extends CI_Controller {
 		$this->load->model('produk_model');
 		$this->load->model('kategori_model');
 		$this->load->model('download_model');
-		$this->load->model('galeri_model');
+		$this->load->model('stock_model');
 		// Tambahkan proteksi halaman
 		$url_pengalihan = str_replace('index.php/', '', current_url());
 		$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
@@ -61,8 +61,8 @@ class Produk extends CI_Controller {
    			for($i=0; $i < sizeof($id_produknya);$i++) {
    				$produk 	= $this->produk_model->detail($id_produknya[$i]);
    				if($produk->gambar !='') {
-					unlink('./assets/upload/produk/'.$produk->gambar);
-					unlink('./assets/upload/produk/thumbs/'.$produk->gambar);
+					unlink('./assets/upload/image/'.$produk->gambar);
+					unlink('./assets/upload/image/thumbs/'.$produk->gambar);
 				}
 				$data = array(	'id_produk'	=> $id_produknya[$i]);
    				$this->produk_model->delete($data);

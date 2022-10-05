@@ -19,21 +19,21 @@ class Dashboard_model extends CI_Model {
 	}
 
 
-	// Total client
-	public function client()
+	// Total Produk
+	public function produk()
 	{
 		$this->db->select('COUNT(*) AS total');
-		$this->db->from('client');
+		$this->db->from('produk');
 		$query = $this->db->get();
 		return $query->row();
 	}
 
 
 	// Total galeri
-	public function galeri()
+	public function stock()
 	{
 		$this->db->select('COUNT(*) AS total');
-		$this->db->from('galeri');
+		$this->db->from('stock');
 		$query = $this->db->get();
 		return $query->row();
 	}
