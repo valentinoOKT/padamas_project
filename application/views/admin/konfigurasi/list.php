@@ -118,7 +118,7 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
 
     <hr>
     <div class="form-group btn-group">
-        <input type="submit" name="submit" value="Save Configuration" class="btn btn-success btn-lg">
+        <input type="submit" name="submit" value="Save Configuration" class="btn btn-success btn-lg">&nbsp&nbsp
         <input type="reset" name="reset" value="Reset" class="btn btn-primary btn-lg">
     </div>
     </div>

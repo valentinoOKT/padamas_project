@@ -8,6 +8,19 @@ class Stock_model extends CI_Model {
 		parent::__construct();
 		$this->load->database();
 	}
+	public function nav_stock() {
+		$this->db->select('stock.*, kategori_galeri.nama_kategori_galeri, kategori_galeri.slug_kategori_galeri');
+		$this->db->from('stock');
+		// Join dg 2 tabel
+		$this->db->join('kategori_galeri','kategori_galeri.id_kategori_galeri = stock.id_kategori_galeri','LEFT');
+		// End join
+		$this->db->where('jenis_galeri','Galeri');
+		$this->db->group_by('stock.id_kategori_galeri');
+		$this->db->order_by('id_galeri','DESC');
+		$this->db->limit(8);
+		$query = $this->db->get();
+		return $query->result();
+	}
 
 	// Listing data
 	public function listing() {
@@ -17,7 +30,7 @@ class Stock_model extends CI_Model {
 		$this->db->join('kategori_galeri','kategori_galeri.id_kategori_galeri = stock.id_kategori_galeri','LEFT');
 		$this->db->join('users','users.id_user = stock.id_user','LEFT');
 		// End join
-		$this->db->where('jenis_galeri <>','Pop up');
+		$this->db->where('jenis_galeri','Galeri');
 		$this->db->order_by('id_galeri','DESC');
 		$query = $this->db->get();
 		return $query->result();
@@ -138,7 +151,7 @@ class Stock_model extends CI_Model {
 		$this->db->join('users','users.id_user = stock.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'stock.id_kategori_galeri'	=> $id_kategori_galeri,
-								'stock.jenis_galeri'	=> 'Stock'));
+								'stock.jenis_galeri'	=> 'Galeri'));
 		$this->db->order_by('id_galeri','DESC');
 		$this->db->limit($limit,$start);
 		$query = $this->db->get();
@@ -154,7 +167,7 @@ class Stock_model extends CI_Model {
 		$this->db->join('users','users.id_user = stock.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'stock.id_kategori_galeri'	=> $id_kategori_galeri,
-								'stock.jenis_galeri'	=> 'Stock'));
+								'stock.jenis_galeri'	=> 'Galeri'));
 		$this->db->order_by('id_galeri','DESC');
 		$query = $this->db->get();
 		return $query->result();

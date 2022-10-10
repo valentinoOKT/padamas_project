@@ -26,6 +26,18 @@ if($this->session->flashdata('sukses')) {
                                     </div>
                                     <!-- .form-group -->
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="nameCompId" name="nama_company" placeholder="Company Name">
+                                    </div>
+                                    <!-- .form-group -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="phoneId" name="phone" placeholder="Phone Number">
+                                    </div>
+                                    <!-- .form-group -->
+                                </div>
                                 <!-- .col-md-6 -->
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -37,6 +49,40 @@ if($this->session->flashdata('sukses')) {
                             <!-- .row -->
                             <div class="form-group">
                                 <input type="text" class="form-control" id="subjectId" name="subject" placeholder="Subject">
+                            </div>
+                            <div class="form-group">
+                            <select name="location" class="form-control">
+                                <option value="Choose Location">Choose Location</option>
+                                <option value="DKI Jakarta">DKI Jakrata</option>
+                                <option value="Banten">Banten</option>
+                                <option value="Jawa Barat">Jawa Barat</option>
+                                <option value="Jawa Timur">Jawa Timur</option>
+                                <option value="Jawa Tengah">Jawa Tengah</option>
+                                <option value="DI Yogyakarta">DI Yogyakarta</option>
+                                <option value="Bangka Belitung">Bangka Belitung</option>
+                                <option value="Banda Aceh">Banda Aceh</option>
+                                <option value="Gorontalo">Gorontalo</option>
+                                <option value="Bangkulu">Bengkulu</option>
+                                <option value="Jambi">Jambi</option>
+                                <option value="Riau">Riau</option>
+                                <option value="Bali">Bali</option>
+                                <option value="Maluku Utara">Maluku Utara</option>
+                                <option value="Sumatera Utara">Sumatera Utara</option>
+                                <option value="Sumatera Barat">Sumatera Barat</option>
+                                <option value="Sumatera Selatan">Sumatera Selatan</option>
+                                <option value="Sulawesi Utara">Sulawesi Utara</option>
+                                <option value="Sulawesi Barat">Sulawesi Barat</option>
+                                <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                                <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                                <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                                <option value="Kalimantan Utara">Kalimantan Utara</option>
+                                <option value="Kalimantan Barat">Kalimantan Barat</option>
+                                <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+                                <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+                                <option value="kalimantan Timur">Kalimantan Timur</option>
+                                <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                                <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                            </select>
                             </div>
                             <textarea class="form-control text-area" name="pesan" rows="3" placeholder="Message"></textarea>
                             <button type="submit" class="btn btn-default">Send Email</button>

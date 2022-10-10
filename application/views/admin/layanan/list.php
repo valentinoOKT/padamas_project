@@ -4,24 +4,24 @@ echo form_open(base_url('admin/layanan/proses'));
 ?>
 <p class="btn-group">
   <a href="<?php echo base_url('admin/layanan/tambah') ?>" class="btn btn-success btn-lg">
-  <i class="fa fa-plus"></i> Tambah Layanan/Profil</a>
+  <i class="fa fa-plus"></i> Tambah Layanan/Profil</a>&nbsp&nbsp
 
-  <button class="btn btn-warning" type="submit" name="draft" onClick="check();" >
+  <button class="btn btn-warning btn-lg" type="submit" name="draft" onClick="check();" >
       <i class="fa fa-times"></i> Jangan Publikasikan
-  </button>
+  </button>&nbsp&nbsp
 
-   <button class="btn btn-primary" type="submit" name="publish" onClick="check();" >
+   <button class="btn btn-primary btn-lg" type="submit" name="publish" onClick="check();" >
       <i class="fa fa-check"></i> Publikasikan
-  </button>
+  </button>&nbsp&nbsp
 
-  <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
+  <button class="btn btn-danger btn-lg" type="submit" name="hapus" onClick="check();" >
       <i class="fa fa-trash"></i> Hapus
-    </button> 
+    </button> &nbsp&nbsp
 <?php 
 $url_navigasi = $this->uri->segment(2); 
 if($this->uri->segment(3) != "") { 
  ?>
-<a href="<?php echo base_url('admin/'.$url_navigasi) ?>"  class="btn btn-primary">
+<a href="<?php echo base_url('admin/'.$url_navigasi) ?>"  class="btn btn-primary btn-lg">
  <i class="fa fa-backward"></i> Kembali</a>
  <?php } ?>
 </p>
@@ -82,13 +82,10 @@ if($this->uri->segment(3) != "") {
     </a></td>
     <td>
       <div class="btn-group">
-        <a href="<?php echo base_url('layanan/read/'.$layanan->slug_layanan) ?>" 
-        class="btn btn-success btn-xs" target="_blank"><i class="fa fa-eye"></i></a>
-
         <a href="<?php echo base_url('admin/layanan/edit/'.$layanan->id_layanan) ?>" 
-        class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>
+        class="btn btn-warning btn-xs"><i class="fa fa-edit"></i>Edit</a>&nbsp&nbsp
 
-        <a href="<?php echo base_url('admin/layanan/delete/'.$layanan->id_layanan) ?>" class="btn btn-danger btn-xs" onclick="confirmation(event)"><i class="fa fa-trash"></i></a>
+        <a href="<?php echo base_url('admin/layanan/delete/'.$layanan->id_layanan) ?>" class="btn btn-danger btn-xs" onclick="confirmation(event)"><i class="fa fa-trash"></i>Hapus</a>
       </div>
     </td>
 </tr>

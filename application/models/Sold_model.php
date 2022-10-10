@@ -17,7 +17,7 @@ class Sold_model extends CI_Model {
 		$this->db->join('kategori_galeri','kategori_galeri.id_kategori_galeri = sold.id_kategori_galeri','LEFT');
 		$this->db->join('users','users.id_user = sold.id_user','LEFT');
 		// End join
-		$this->db->where('jenis_galeri <>','Pop up');
+		$this->db->where('jenis_galeri','Galeri');
 		$this->db->order_by('id_galeri','DESC');
 		$query = $this->db->get();
 		return $query->result();

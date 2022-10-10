@@ -9,11 +9,11 @@ echo form_open(base_url('admin/sold/proses'));
 ?>
 <p class="btn-group">
   <a href="<?php echo base_url('admin/sold/tambah') ?>" class="btn btn-success btn-lg">
-  <i class="fa fa-plus"></i> Tambah Sold</a>
+  <i class="fa fa-plus"></i> Tambah Sold</a>&nbsp&nbsp
 
-  <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
+  <button class="btn btn-danger btn-lg" type="submit" name="hapus" onClick="check();" >
       <i class="fa fa-trash"></i> Hapus
-    </button> 
+    </button>&nbsp&nbsp 
 
 </p>
 
@@ -66,15 +66,12 @@ echo form_open(base_url('admin/sold/proses'));
     <td><?php echo $sold->tanggal ?></td>
     <td>
       <div class="btn-group">
-      <a href="<?php echo base_url('sold/read/'.$sold->id_galeri) ?>" 
-      class="btn btn-success btn-xs" target="_blank"><i class="fa fa-eye"></i></a>
+        <a href="<?php echo base_url('admin/sold/edit/'.$sold->id_galeri) ?>" 
+        class="btn btn-warning btn-xs"><i class="fa fa-edit"></i>Edit</a>&nbsp&nbsp
 
-      <a href="<?php echo base_url('admin/sold/edit/'.$sold->id_galeri) ?>" 
-      class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>
-
-       <a href="<?php echo base_url('admin/sold/delete/'.$sold->id_galeri) ?>" 
-      class="btn btn-danger btn-xs " onclick="confirmation(event)"><i class="fa fa-trash"></i></a>
-    </div>
+        <a href="<?php echo base_url('admin/sold/delete/'.$sold->id_galeri) ?>" 
+        class="btn btn-danger btn-xs " onclick="confirmation(event)"><i class="fa fa-trash"></i>Hapus</a>
+      </div>
     </td>
 </tr>
 

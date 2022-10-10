@@ -48,9 +48,9 @@
 			<label class="col-sm-3 control-label text-right"></label>
 			<div class="col-sm-9">
 				<div class="form-group btn-group text-right">
-					<button type="submit" name="submit" class="btn btn-success btn-lg"><i class="fa fa-save"></i> Simpan Data</button>
-					<button type="reset" name="reset" class="btn btn-info btn-lg"><i class="fa fa-cut"></i> Reset</button>
-					<a href="<?php echo base_url('admin/Dashboard') ?>" class="btn btn-secondary btn-lg" data-dismiss="modal"><i class="fa fa-times"></i> Kembali</a>
+					<button type="submit" name="submit" class="btn btn-success btn-lg"><i class="fa fa-save"></i> Simpan Data</button>&nbsp&nbsp
+					<button type="reset" name="reset" class="btn btn-info btn-lg"><i class="fa fa-cut"></i> Reset</button>&nbsp&nbsp
+					<a href="<?php echo base_url('admin/Dashboard') ?>" class="btn btn-primary btn-lg" data-dismiss="modal"><i class="fa fa-backward"></i> Kembali</a>
 				</div>
 			</div>
 		</div>
@@ -81,12 +81,12 @@
 
 		<div class="form-group row">
 			<label class="col-sm-4 control-label text-right"></label>
-			<div class="col-sm-8">
+			
 				<div class="form-group btn-group text-right">
-					<button type="submit" name="submit" class="btn btn-success btn-lg"><i class="fa fa-save"></i> Ganti Password</button>
+					<button type="submit" name="submit" class="btn btn-success btn-lg"><i class="fa fa-save"></i> Ganti Password</button>&nbsp&nbsp
 					<button type="reset" name="reset" class="btn btn-info btn-lg"><i class="fa fa-cut"></i> Reset</button>
 				</div>
-			</div>
+
 		</div>
 
 		<?php echo form_close(); ?>

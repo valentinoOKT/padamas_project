@@ -49,10 +49,10 @@ echo form_open(base_url('admin/user/edit/'.$user->id_user));
 			<div class="btn-group">
 				<button class="btn btn-success btn-lg" name="submit" type="submit">
 					<i class="fa fa-save"></i> Simpan
-				</button>
+				</button>&nbsp&nbsp
 				<button class="btn btn-info btn-lg" name="reset" type="reset">
 					<i class="fa fa-times"></i> Reset
-				</button>
+				</button>&nbsp&nbsp
 				<a href="<?php echo base_url('admin/user') ?>" class="btn btn-warning btn-lg">
 					<i class="fa fa-backward"></i> Kembali
 				</a>

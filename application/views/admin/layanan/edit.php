@@ -17,7 +17,7 @@ echo form_open_multipart(base_url('admin/layanan/edit/'.$layanan->id_layanan));
 <div class="col-md-8">
 
 <div class="form-group form-group-lg">
-<label>Judul layanan/profil/layanan</label>
+<label>Judul layanan/profil</label>
 <input type="text" name="judul_layanan" class="form-control" placeholder="Judul layanan/profil/layanan" required="required" value="<?php echo $layanan->judul_layanan ?>">
 </div>
 
@@ -44,7 +44,7 @@ echo form_open_multipart(base_url('admin/layanan/edit/'.$layanan->id_layanan));
 <div class="col-md-6">
 
 <div class="form-group form-group-lg">
-<label>Status Layanan</label>
+<label>Status Layanan/Profil</label>
 <select name="status_layanan" class="form-control">
 	<option value="Publish">Publikasikan</option>
 	<option value="Draft" <?php if($layanan->status_layanan=="Draft") { echo "selected"; } ?>>Simpan sebagai draft</option>
@@ -56,7 +56,7 @@ echo form_open_multipart(base_url('admin/layanan/edit/'.$layanan->id_layanan));
 <div class="col-md-3">
 
 <div class="form-group">
-<label>Jenis Layanan</label>
+<label>Jenis Layanan/Profil</label>
 <select name="jenis_layanan" class="form-control">
 	<option value="Rental">Rental</option>
   <option value="Service" <?php if($layanan->jenis_layanan=="Service") { echo "selected"; }?>>Service</option>

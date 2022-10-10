@@ -31,9 +31,9 @@ class Kategori_galeri extends CI_Controller {
 		if($valid->run()===FALSE) {
 		// End validasi
 
-		$data = array(	'title'		=> 'Kategori galeri',
+		$data = array(	'title'				=> 'Kategori galeri',
 						'kategori_galeri'	=> $this->kategori_galeri_model->listing(),
-						'isi'		=> 'admin/kategori_galeri/list');
+						'isi'				=> 'admin/kategori_galeri/list');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
 		// Proses masuk ke database
 		}else{

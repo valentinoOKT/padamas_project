@@ -6,7 +6,7 @@ echo form_open(base_url('admin/user/proses'));
 <p>
   <div class="btn-group">
     <a href="<?php echo base_url('admin/user/tambah') ?>" class="btn btn-success btn-lg">
-    <i class="fa fa-plus"></i> Tambah Baru</a>
+    <i class="fa fa-plus"></i> Tambah Baru</a>&nbsp&nbsp
 
     <button class="btn btn-danger btn-lg" name="hapus" type="submit">
       <i class="fa fa-trash"></i> Hapus
@@ -48,8 +48,8 @@ echo form_open(base_url('admin/user/proses'));
     <td><?php echo $user->email ?></td>
     <td>
       <div class="btn-group">
-        <a href="<?php echo base_url('admin/user/edit/'.$user->id_user) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Edit</a>
-        <a href="<?php echo base_url('admin/user/delete/'.$user->id_user) ?>" class="btn btn-danger btn-sm" onclick="confirmation(event)"><i class="fa fa-trash-o"></i> Hapus</a>
+        <a href="<?php echo base_url('admin/user/edit/'.$user->id_user) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Edit</a>&nbsp&nbsp
+        <a href="<?php echo base_url('admin/user/delete/'.$user->id_user) ?>" class="btn btn-danger btn-sm" onclick="confirmation(event)"><i class="fa fa-trash"></i> Hapus</a>
       </div>
     </td>
   </tr>

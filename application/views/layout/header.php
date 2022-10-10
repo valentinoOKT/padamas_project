@@ -100,18 +100,3 @@ $site = $this->konfigurasi_model->listing();
 <!-- End Pre-Loader -->
 
 <header class="header-style-2">
-<div class="bg-header-top">
-<div class="container">
-<div class="row">
-<div class="header-top">
-    <ul class="h-contact">
-        <li><i class="fa fa-building-o"></i> <?php echo $site->namaweb ?></li>
-    </ul>
-</div>
-<!-- .header-top -->
-</div>
-<!-- .header-top -->
-</div>
-<!-- .container -->
-</div>
-<!-- .bg-header-top -->

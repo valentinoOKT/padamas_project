@@ -9,11 +9,11 @@ echo form_open(base_url('admin/stock/proses'));
 ?>
 <p class="btn-group">
   <a href="<?php echo base_url('admin/stock/tambah') ?>" class="btn btn-success btn-lg">
-  <i class="fa fa-plus"></i> Tambah Stock</a>
+  <i class="fa fa-plus"></i> Tambah Stock</a>&nbsp&nbsp
 
-  <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
+  <button class="btn btn-danger btn-lg" type="submit" name="hapus" onClick="check();" >
       <i class="fa fa-trash"></i> Hapus
-    </button> 
+    </button>&nbsp&nbsp 
 
 </p>
 
@@ -39,7 +39,8 @@ echo form_open(base_url('admin/stock/proses'));
 </thead>
 <tbody>
 
-<?php $i=1; foreach($stock as $stock) { ?>
+<?php $i=1; foreach($stock as $stock ) { ?>
+  
 
 <tr class="odd gradeX">
     <td>
@@ -66,15 +67,12 @@ echo form_open(base_url('admin/stock/proses'));
     <td><?php echo $stock->tanggal ?></td>
     <td>
       <div class="btn-group">
-      <a href="<?php echo base_url('stock/read/'.$stock->id_galeri) ?>" 
-      class="btn btn-success btn-xs" target="_blank"><i class="fa fa-eye"></i></a>
+        <a href="<?php echo base_url('admin/stock/edit/'.$stock->id_galeri) ?>" 
+        class="btn btn-warning btn-xs"><i class="fa fa-edit"></i>Edit</a>&nbsp&nbsp
 
-      <a href="<?php echo base_url('admin/stock/edit/'.$stock->id_galeri) ?>" 
-      class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>
-
-       <a href="<?php echo base_url('admin/stock/delete/'.$stock->id_galeri) ?>" 
-      class="btn btn-danger btn-xs " onclick="confirmation(event)"><i class="fa fa-trash"></i></a>
-    </div>
+        <a href="<?php echo base_url('admin/stock/delete/'.$stock->id_galeri) ?>" 
+        class="btn btn-danger btn-xs " onclick="confirmation(event)"><i class="fa fa-trash"></i>Hapus</a>
+      </div>
     </td>
 </tr>
 

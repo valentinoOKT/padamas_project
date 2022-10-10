@@ -39,62 +39,35 @@
 
           
           <!-- LAYANAN -->
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+          <li class="nav-item">
+            <a href="<?php echo base_url('admin/layanan') ?>" class="nav-link">
               <i class="nav-icon fa fa-newspaper"></i>
-              <p>LAYANAN <i class="right fa fa-angle-left"></i></p>
+              <p>LAYANAN/PROFIL</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="<?php echo base_url('admin/layanan') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Layanan</p></a>
-              </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/layanan/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Layanan</p></a>
-              </li>             
-            </ul>
           </li> 
 
           <!-- PRODUK -->
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              
+          <li class="nav-item">
+            <a href="<?php echo base_url('admin/produk') ?>" class="nav-link">      
               <i class="nav-icon fas fa-box-open"></i>
-              <p>PRODUK <i class="right fa fa-angle-left"></i></p>
+              <p>PRODUK</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="<?php echo base_url('admin/produk') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Produk</p></a>
-              </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/produk/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Produk</p></a>
-              </li>             
-            </ul>
           </li>
 
           <!-- STOCK -->
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+          <li class="nav-item">
+            <a href="<?php echo base_url('admin/stock') ?>" class="nav-link">
               <i class="nav-icon fa fa-image"></i>
-              <p>STOCK<i class="right fa fa-angle-left"></i></p>
+              <p>STOCK</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="<?php echo base_url('admin/stock') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Stock</p></a>
-              </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/stock/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Stock</p></a>
-              </li>
-              
-            </ul>
           </li> 
 
           <!-- SOLD -->
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+          <li class="nav-item">
+            <a href="<?php echo base_url('admin/sold') ?>" class="nav-link">
               <i class="nav-icon fa fa-image"></i>
-              <p>SOLD<i class="right fa fa-angle-left"></i></p>
+              <p>SOLD</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="<?php echo base_url('admin/sold') ?>" class="nav-link"><i class="fa fa-table nav-icon"></i><p>Data Sold</p></a>
-              </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/sold/tambah') ?>" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Sold</p></a>
-              </li>
-              
-            </ul>
           </li>
           
           <?php if($this->session->userdata('akses_level')=="Admin") { ?>

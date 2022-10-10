@@ -19,7 +19,7 @@ class Home extends CI_Controller {
 		$slider 		= $this->stock_model->slider();
 		$popup 			= $this->stock_model->popup_aktif();
 		$headline		= $this->layanan_model->listing_headline();
-		$stock 		= $this->stock_model->stock_home();
+		$stock 			= $this->stock_model->stock_home();
 		$sold			= $this->sold_model->sold_home();
 		$kategori_galeri= $this->stock_model->kategori();
 		$layanan 		= $this->nav_model->nav_layanan();
@@ -74,7 +74,7 @@ class Home extends CI_Controller {
 						'pagin' 			=> $this->pagination->create_links(),
 						'layanan'			=> $layanan,
 						'popup'				=> $popup,
-						'stock'			=> $stock,
+						'stock'				=> $stock,
 						'sold'				=> $sold,
 						'kategori_galeri'	=> $kategori_galeri,
 						'attachment'		=> $attachment,

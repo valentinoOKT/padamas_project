@@ -8,7 +8,7 @@
 <div class="our-services-option">
 <div class="section-header text-left">
     <h2><?php echo $title ?></h2>
-    <p class="alert alert-success">Oops... Mohon maaf, halaman tidak ditemukan.<br><br> <a href="<?php echo base_url() ?>" class="btn btn-warning"><i class="fa fa-home"></i> Kembali ke Beranda</a></p>
+    <p class="alert alert-success">Halaman tidak ditemukan.<br><br> <a href="<?php echo base_url() ?>" class="btn btn-warning"><i class="fa fa-home"></i> Kembali ke Beranda</a></p>
 </div>
 <!-- .section-header -->
 <div class="row">

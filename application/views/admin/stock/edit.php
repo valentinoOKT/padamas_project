@@ -48,7 +48,7 @@ echo form_open_multipart(base_url('admin/stock/edit/'.$stock->id_galeri));
 <div class="form-group">
 <label>Jenis/Posisi Galeri</label>
 <select name="jenis_galeri" class="form-control">
-	<option value="Stock">Stock Biasa</option>
+	<option value="Galeri">Galeri Biasa</option>
 	<option value="Homepage" 
 	<?php if($stock->jenis_galeri=="Homepage") { echo "selected"; } ?>
 	>Homepage - Gambar Slider</option>
