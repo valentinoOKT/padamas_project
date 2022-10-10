@@ -93,10 +93,10 @@ class Kategori extends CI_Controller {
 	public function delete($id_kategori) {
 		// Proteksi proses delete harus login
 		// Tambahkan proteksi halaman
-$url_pengalihan = str_replace('index.php/', '', current_url());
-$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
-// Ambil check login dari simple_login
-$this->simple_login->check_login($pengalihan);
+		$url_pengalihan = str_replace('index.php/', '', current_url());
+		$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
+		// Ambil check login dari simple_login
+		$this->simple_login->check_login($pengalihan);
 
 
 		$data = array('id_kategori'	=> $id_kategori);

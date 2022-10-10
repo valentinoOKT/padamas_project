@@ -90,10 +90,10 @@ class Kategori_galeri extends CI_Controller {
 	// Delete user
 	public function delete($id_kategori_galeri) {
 		// Tambahkan proteksi halaman
-$url_pengalihan = str_replace('index.php/', '', current_url());
-$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
-// Ambil check login dari simple_login
-$this->simple_login->check_login($pengalihan);
+		$url_pengalihan = str_replace('index.php/', '', current_url());
+		$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
+		// Ambil check login dari simple_login
+		$this->simple_login->check_login($pengalihan);
 
 		$data = array('id_kategori_galeri'	=> $id_kategori_galeri);
 		$this->kategori_galeri_model->delete($data);
