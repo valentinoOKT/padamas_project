@@ -39,7 +39,7 @@
             <li class="clearfix" style="list-style:none;">
                 <figure><img src="<?php if($listing->gambar=="") { echo base_url('assets/upload/image/thumbs/'.$site->icon); }else{ echo base_url('assets/upload/image/thumbs/'.$listing->gambar); } ?>" alt="<?php echo $listing->judul_layanan ?>" class="img img-rounded img-thumbnail"></figure>
                 <div class="entry-content">
-                    <h5><a href="<?php echo base_url('layanan/profil/'.$listing->slug_layanan) ?>"><?php echo $listing->judul_layanan ?></a></h5>
+                    <h5><a href="<?php echo base_url('layanan/'.$listing->slug_layanan) ?>"><?php echo $listing->judul_layanan ?></a></h5>
                     <p><?php echo date('d/m/Y',strtotime($listing->tanggal_publish)) ?> - <i class="fa fa-eye"></i> <a href="#"><?php echo $listing->hits ?></a></p>
                 </div><!-- End .entry-content -->
             </li>

@@ -25,6 +25,14 @@ class Website
 		return $logo;
 	}
 
+	//Alamat
+	public function gambar()
+	{
+		$site 	= $this->CI->konfigurasi_model->listing();
+		$gambar 	= base_url('assets/upload/image/'.$site->gambar);
+		return $gambar;
+	}
+
 	// Alamat
 	public function icon()
 	{

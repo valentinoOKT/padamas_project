@@ -19,8 +19,8 @@ echo form_open_multipart(base_url('admin/layanan/tambah'));
 <div class="col-md-8">
 
 <div class="form-group form-group-lg">
-<label>Judul layanan/profil</label>
-<input type="text" name="judul_layanan" class="form-control" placeholder="Judul layanan/profil/layanan" required="required" value="<?php echo set_value('judul_layanan') ?>">
+<label>Judul layanan</label>
+<input type="text" name="judul_layanan" class="form-control" placeholder="Judul layanan" required="required" value="<?php echo set_value('judul_layanan') ?>">
 </div>
 
 </div>
@@ -46,7 +46,7 @@ echo form_open_multipart(base_url('admin/layanan/tambah'));
 <div class="col-md-6">
 
 <div class="form-group form-group-lg">
-<label>Status Layanan/Profil</label>
+<label>Status Layanan</label>
 <select name="status_layanan" class="form-control">
 	<option value="Publish">Publikasikan</option>
 	<option value="Draft">Simpan sebagai draft</option>}
@@ -58,7 +58,7 @@ echo form_open_multipart(base_url('admin/layanan/tambah'));
 <div class="col-md-3">
 
 <div class="form-group">
-<label>Jenis Layanan/Profil</label>
+<label>Jenis Layanan</label>
 <select name="jenis_layanan" class="form-control">
 	<option value="Rental">Rental</option>
 	<option value="Service">Service</option>

@@ -12,7 +12,7 @@ class Kontak extends CI_Controller {
 	// Main page kontak
 	public function index()	{
 		$site 			= $this->konfigurasi_model->listing();
-
+		
 		// Validasi
 		$valid = $this->form_validation;
 		$valid->set_rules('nama','Nama','required',
@@ -49,7 +49,19 @@ class Kontak extends CI_Controller {
 			$nama		= $i->post('nama');
 			
 			$this->load->library('email');
+		
+			$config['protocol']     = $site->protocol;
+			$config['smtp_host']    = $site->smtp_host;
+			$config['smtp_port']    = $site->smtp_port;
+			$config['smtp_timeout'] = $site->smtp_timeout;
+			$config['smtp_user']    = $site->smtp_user;
+			$config['smtp_pass']    = $site->smtp_pass;
+			$config['charset']      = 'utf-8';
+			$config['newline']      = "\r\n";
+			$config['mailtype']     = 'html'; // or html
+			$config['validation']   = TRUE;
 
+			$this->email->initialize($config);
 			$this->email->from($email, $nama);
 			$this->email->to($site->email);
 			$this->email->cc($email);

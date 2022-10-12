@@ -30,13 +30,6 @@
 		</div>
 
 		<div class="form-group row">
-			<label class="col-sm-3 control-label text-right">Level Hak Akses <span class="text-danger">*</span></label>
-			<div class="col-sm-9">
-				<input type="text" name="akses_level" class="form-control" placeholder="Akses level" value="<?php echo $user->akses_level ?>" readonly disabled>
-			</div>
-		</div>
-
-		<div class="form-group row">
 			<label class="col-sm-3 control-label text-right">Upload Foto Profil</label>
 			<div class="col-sm-9">
 

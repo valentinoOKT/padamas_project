@@ -4,7 +4,7 @@ echo form_open(base_url('admin/layanan/proses'));
 ?>
 <p class="btn-group">
   <a href="<?php echo base_url('admin/layanan/tambah') ?>" class="btn btn-success btn-lg">
-  <i class="fa fa-plus"></i> Tambah Layanan/Profil</a>&nbsp&nbsp
+  <i class="fa fa-plus"></i> Tambah Layanan</a>&nbsp&nbsp
 
   <button class="btn btn-warning btn-lg" type="submit" name="draft" onClick="check();" >
       <i class="fa fa-times"></i> Jangan Publikasikan

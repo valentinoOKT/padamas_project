@@ -85,7 +85,7 @@ $nav_spare                  = $this->nav_model->nav_spare();
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVICE<span class="caret"></span></a>
                 <ul class="dropdown-menu sub-menu">
                     <?php foreach($nav_topik as $nav_topik) { ?>
-                    <li class="sub-active"><a href="<?php echo base_url('layanan/profil/'.$nav_topik->slug_layanan) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_topik->judul_layanan ?></a></li>
+                    <li class="sub-active"><a href="<?php echo base_url('layanan/'.$nav_topik->slug_layanan) ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?php echo $nav_topik->judul_layanan ?></a></li>
                     <?php } ?> 
                 </ul>
             </li>

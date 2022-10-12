@@ -24,7 +24,7 @@ class Layanan extends CI_Controller {
 		$layanan = $this->layanan_model->listing();
 		$site 	= $this->konfigurasi_model->listing();
 
-		$data = array(	'title'			=> 'Layanan/Profil ('.count($layanan).')',
+		$data = array(	'title'			=> 'Layanan ('.count($layanan).')',
 						'layanan'		=> $layanan,
 						'site'			=> $site,
 						'isi'			=> 'admin/layanan/list');
@@ -136,7 +136,7 @@ class Layanan extends CI_Controller {
       		if(! $this->upload->do_upload('gambar')) {
 		// End validasi
 
-		$data = array(	'title'			=> 'Tambah Layanan/Profil',
+		$data = array(	'title'			=> 'Tambah Layanan',
 						'kategori'		=> $kategori,
 						'error'    		=> $this->upload->display_errors(),
 						'isi'			=> 'admin/layanan/tambah');
@@ -201,7 +201,7 @@ class Layanan extends CI_Controller {
 	        redirect(base_url('admin/layanan/jenis_layanan/'.$i->post('jenis_layanan')),'refresh');
 		}}
 		// End masuk database
-		$data = array(	'title'			=> 'Tambah Layanan/Profil',
+		$data = array(	'title'			=> 'Tambah Layanan',
 						'kategori'		=> $kategori,
 						'isi'			=> 'admin/layanan/tambah');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
@@ -234,7 +234,7 @@ class Layanan extends CI_Controller {
       		if(! $this->upload->do_upload('gambar')) {
 		// End validasi
 
-		$data = array(	'title'			=> 'Edit Layanan/Profil',
+		$data = array(	'title'			=> 'Edit Layanan',
 						'kategori'		=> $kategori,
 						'layanan'		=> $layanan,
 						'error'    		=> $this->upload->display_errors(),
@@ -309,7 +309,7 @@ class Layanan extends CI_Controller {
 	        redirect(base_url('admin/layanan/jenis_layanan/'.$i->post('jenis_layanan')),'refresh');
 		}}
 		// End masuk database
-		$data = array(	'title'			=> 'Edit Layanan/Profil',
+		$data = array(	'title'			=> 'Edit Layanan',
 						'kategori'		=> $kategori,
 						'layanan'		=> $layanan,
 						'isi'			=> 'admin/layanan/edit');

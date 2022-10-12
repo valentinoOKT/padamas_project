@@ -19,6 +19,11 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
     <label>Summary of the company</label>
     <textarea name="tentang" class="form-control" placeholder="Summary of the company" id="isi"><?php echo $site->tentang ?></textarea>
     </div>
+    
+    <div class="form-group">
+    <label>Description</label>
+    <textarea name="deskripsi" rows="3" class="form-control textarea" placeholder="Company Description"><?php echo $site->deskripsi ?></textarea>
+    </div>
 
     <div class="form-group">
     <label>Address</label>
@@ -117,10 +122,10 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
     <?php echo $site->google_map ?>
 
     <hr>
-    <div class="form-group btn-group">
-        <input type="submit" name="submit" value="Save Configuration" class="btn btn-success btn-lg">&nbsp&nbsp
-        <input type="reset" name="reset" value="Reset" class="btn btn-primary btn-lg">
-    </div>
+    <div class="form-group btn-group text-right">
+		<button type="submit" name="submit" class="btn btn-success btn-lg"><i class="fa fa-save"></i> Save Configuration</button>&nbsp&nbsp
+		<button type="reset" name="reset" class="btn btn-primary btn-lg"><i class="fa fa-cut"></i> Reset</button>
+	</div>
     </div>
 </div>
 

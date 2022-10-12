@@ -102,6 +102,8 @@ if($this->session->flashdata('sukses')) {
                                 <i class="flaticon-vibrating-phone"></i>
                                 <div class="contact-content">
                                     <p><?php echo $site->telepon; ?></p>
+                                    </br>
+                                    <p><?php echo $site->fax; ?></p>
                                 </div>
                             </li>
                         </ul>

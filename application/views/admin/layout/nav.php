@@ -42,7 +42,7 @@
           <li class="nav-item">
             <a href="<?php echo base_url('admin/layanan') ?>" class="nav-link">
               <i class="nav-icon fa fa-newspaper"></i>
-              <p>LAYANAN/PROFIL</p>
+              <p>LAYANAN</p>
             </a>
           </li> 
 
@@ -91,9 +91,13 @@
               
               <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi') ?>" class="nav-link"><i class="fa fa-wrench nav-icon"></i><p>Konfigurasi Umum</p></a>
               </li>
+              <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/email_setting') ?>" class="nav-link"><i class="fa fa-sitemap nav-icon"></i><p>Email Setting</p></a>
+              </li>
               <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/logo') ?>" class="nav-link"><i class="fa fa-home nav-icon"></i><p>Ganti Logo</p></a>
               </li>
               <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/icon') ?>" class="nav-link"><i class="fa fa-upload nav-icon"></i><p>Ganti Icon</p></a>
+              </li>
+              <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/gambar') ?>" class="nav-link"><i class="fa fa-image nav-icon"></i><p>Ganti Foto Profil</p></a>
               </li>
             </ul>
           </li>

@@ -22,10 +22,7 @@ class Nav_model extends CI_Model {
 	// Navigasi profil
 	public function nav_profil() {
 		$this->db->select('*');
-		$this->db->from('layanan');
-		$this->db->where(array(	'jenis_layanan'	=> 'Profil',
-								'status_layanan'	=> 'Publish'));
-		$this->db->order_by('urutan','ASC');
+		$this->db->from('konfigurasi');
 		$query = $this->db->get();
 		return $query->result();
 	}

@@ -135,7 +135,7 @@ class Produk extends CI_Controller {
       		if(! $this->upload->do_upload('gambar')) {
 		// End validasi
 
-		$data = array(	'title'			=> 'Tambah Layanan/Profil',
+		$data = array(	'title'			=> 'Tambah Layanan',
 						'kategori'		=> $kategori,
 						'error'    		=> $this->upload->display_errors(),
 						'isi'			=> 'admin/produk/tambah');

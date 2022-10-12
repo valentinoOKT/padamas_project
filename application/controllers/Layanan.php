@@ -258,7 +258,7 @@ class Layanan extends CI_Controller {
 						'layanan'	=> $layanan,
 						'site'		=> $site,
 						'listing'	=> $profil,
-						'isi'		=> 'layanan/profil');
+						'isi'		=> 'layanan');
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
 
