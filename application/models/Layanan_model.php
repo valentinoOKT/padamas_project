@@ -36,36 +36,6 @@ class Layanan_model extends CI_Model {
 		return $query->result();
 	}
 
-	// Listing data
-	public function bulanan($bulan) {
-		$this->db->select('layanan.*, users.nama, kategori.nama_kategori, kategori.slug_kategori');
-		$this->db->from('layanan');
-		// Join dg 2 tabel
-		$this->db->join('kategori','kategori.id_kategori = layanan.id_kategori','LEFT');
-		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
-		// End join
-		$this->db->where('DATE_FORMAT(layanan.tanggal,"%Y-%m")',$bulan);
-		$this->db->order_by('hits','DESC');
-		$this->db->limit(20);
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Listing data
-	public function tahunan($tahun) {
-		$this->db->select('layanan.*, users.nama, kategori.nama_kategori, kategori.slug_kategori');
-		$this->db->from('layanan');
-		// Join dg 2 tabel
-		$this->db->join('kategori','kategori.id_kategori = layanan.id_kategori','LEFT');
-		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
-		// End join
-		$this->db->where('DATE_FORMAT(layanan.tanggal,"%Y")',$tahun);
-		$this->db->order_by('hits','DESC');
-		$this->db->limit(20);
-		$query = $this->db->get();
-		return $query->result();
-	}
-
 	// Kunjungan layanan teramai
 	public function populer()
 	{
@@ -153,9 +123,9 @@ class Layanan_model extends CI_Model {
 		$this->db->join('kategori','kategori.id_kategori = layanan.id_kategori','LEFT');
 		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
 		// End join
-		$this->db->where(array(	'layanan.id_kategori'	=> $id_kategori,
+		$this->db->where(array(	'layanan.id_kategori'		=> $id_kategori,
 								'layanan.status_layanan'	=> 'Publish',
-								'layanan.jenis_layanan'	=> 'Layanan'));
+								'layanan.jenis_layanan'		=> 'Layanan'));
 		$this->db->order_by('id_layanan','DESC');
 		$this->db->limit($limit,$start);
 		$query = $this->db->get();
@@ -170,9 +140,9 @@ class Layanan_model extends CI_Model {
 		$this->db->join('kategori','kategori.id_kategori = layanan.id_kategori','LEFT');
 		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
 		// End join
-		$this->db->where(array(	'layanan.id_kategori'	=> $id_kategori,
+		$this->db->where(array(	'layanan.id_kategori'		=> $id_kategori,
 								'layanan.status_layanan'	=> 'Publish',
-								'layanan.jenis_layanan'	=> 'Layanan'));
+								'layanan.jenis_layanan'		=> 'Layanan'));
 		$this->db->order_by('id_layanan','DESC');
 		$query = $this->db->get();
 		return $query->result();
@@ -181,18 +151,14 @@ class Layanan_model extends CI_Model {
 
 	// Listing layanan
 	public function layanan($limit,$start) {
-		$this->db->select('layanan.*, 
-					users.nama, 
-					kategori.nama_kategori, kategori.slug_kategori,
-					kategori.slug_kategori
-					');
+		$this->db->select('layanan.*, users.nama, kategori.nama_kategori, kategori.slug_kategori, kategori.slug_kategori');
 		$this->db->from('layanan');
 		// Join dg 2 tabel
 		$this->db->join('kategori','kategori.id_kategori = layanan.id_kategori','LEFT');
 		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'layanan.status_layanan'	=> 'Publish',
-								'layanan.jenis_layanan'	=> 'Layanan'));
+								'layanan.jenis_layanan'		=> 'Layanan'));
 		$this->db->order_by('layanan.tanggal_publish','DESC');
 		$this->db->limit($limit,$start);
 		$query = $this->db->get();
@@ -208,7 +174,7 @@ class Layanan_model extends CI_Model {
 		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'layanan.status_layanan'	=> 'Publish',
-								'layanan.jenis_layanan'	=> 'Layanan'));
+								'layanan.jenis_layanan'		=> 'Layanan'));
 		$this->db->order_by('id_layanan','DESC');
 		$query = $this->db->get();
 		return $query->result();
@@ -227,7 +193,7 @@ class Layanan_model extends CI_Model {
 		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'layanan.status_layanan'	=> 'Publish',
-								'layanan.jenis_layanan'	=> 'Layanan'));
+								'layanan.jenis_layanan'		=> 'Layanan'));
 		$this->db->like('layanan.judul_layanan',$keywords);
 		$this->db->or_like('layanan.isi',$keywords);
 		$this->db->group_by('id_layanan');
@@ -246,7 +212,7 @@ class Layanan_model extends CI_Model {
 		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'layanan.status_layanan'	=> 'Publish',
-								'layanan.jenis_layanan'	=> 'Layanan'));
+								'layanan.jenis_layanan'		=> 'Layanan'));
 		$this->db->like('layanan.judul_layanan',$keywords);
 		$this->db->or_like('layanan.isi',$keywords);
 		$this->db->group_by('id_layanan');
@@ -264,28 +230,13 @@ class Layanan_model extends CI_Model {
 		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'layanan.status_layanan'	=> 'Publish',
-								'layanan.jenis_layanan'	=> 'Layanan'));
+								'layanan.jenis_layanan'		=> 'Layanan'));
 		$this->db->order_by('id_layanan','DESC');
 		$this->db->limit(10);
 		$query = $this->db->get();
 		return $query->result();
 	}
 
-	// Listing profil
-	public function listing_profil() {
-		$this->db->select('layanan.*, users.nama');
-		$this->db->from('layanan');
-		// Join dg 2 tabel
-		
-		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
-		// End join
-		$this->db->where(array(	'layanan.status_layanan'	=> 'Publish',
-								'layanan.jenis_layanan'	=> 'Profil'));
-		$this->db->order_by('id_layanan','DESC');
-		$this->db->limit(20);
-		$query = $this->db->get();
-		return $query->result();
-	}
 
 	// Listing layanan
 	public function listing_layanan() {
@@ -296,41 +247,32 @@ class Layanan_model extends CI_Model {
 		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'layanan.status_layanan'	=> 'Publish',
-								'layanan.jenis_layanan'	=> 'Layanan'));
+								'layanan.jenis_layanan'		=> 'Rental'));
 		$this->db->order_by('id_layanan','DESC');
 		$this->db->limit(20);
 		$query = $this->db->get();
 		return $query->result();
 	}
 
-	// Listing headline
-	public function listing_headline() {
-		$this->db->select('layanan.*, 
-					users.nama, 
-					kategori.nama_kategori, kategori.slug_kategori,
-					kategori.slug_kategori
-					');
+	// Listing layanan
+	public function listing_service() {
+		$this->db->select('layanan.*, users.nama');
 		$this->db->from('layanan');
 		// Join dg 2 tabel
-		$this->db->join('kategori','kategori.id_kategori = layanan.id_kategori','LEFT');
+		
 		$this->db->join('users','users.id_user = layanan.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'layanan.status_layanan'	=> 'Publish',
-								'layanan.jenis_layanan'	=> 'Headline'));
+								'layanan.jenis_layanan'		=> 'Service'));
 		$this->db->order_by('id_layanan','DESC');
-		$this->db->limit(9);
+		$this->db->limit(20);
 		$query = $this->db->get();
 		return $query->result();
 	}
 
-
 	// Read data
 	public function read($slug_layanan) {
-		$this->db->select('layanan.*, 
-					users.nama, 
-					kategori.nama_kategori, kategori.slug_kategori,
-					kategori.slug_kategori
-					');
+		$this->db->select('layanan.*, users.nama, kategori.nama_kategori, kategori.slug_kategori, kategori.slug_kategori');
 		$this->db->from('layanan');
 		// Join dg 2 tabel
 		$this->db->join('kategori','kategori.id_kategori = layanan.id_kategori','LEFT');

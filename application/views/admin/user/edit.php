@@ -20,8 +20,8 @@ echo form_open(base_url('admin/user/edit/'.$user->id_user));
 	</div>
 	<div class="col-md-3">
 		<div class="form-group">
-			<label>Password <span class="text-danger">*</span></label>
-			<input type="password" name="password" class="form-control form-control-lg" value="" placeholder="Password" required>
+			<label>Password</label>
+			<input type="password" name="password" class="form-control form-control-lg" value="" placeholder="Password">
 		</div>
 	</div>
 	

@@ -36,35 +36,9 @@ class Produk_model extends CI_Model {
 		return $query->result();
 	}
 
-	// Listing data
-	public function bulanan($bulan) {
-		$this->db->select('produk.*, users.nama, kategori.nama_kategori, kategori.slug_kategori');
-		$this->db->from('produk');
-		// Join dg 2 tabel
-		$this->db->join('kategori','kategori.id_kategori = produk.id_kategori','LEFT');
-		$this->db->join('users','users.id_user = produk.id_user','LEFT');
-		// End join
-		$this->db->where('DATE_FORMAT(produk.tanggal,"%Y-%m")',$bulan);
-		$this->db->order_by('hits','DESC');
-		$this->db->limit(20);
-		$query = $this->db->get();
-		return $query->result();
-	}
+	
 
-	// Listing data
-	public function tahunan($tahun) {
-		$this->db->select('produk.*, users.nama, kategori.nama_kategori, kategori.slug_kategori');
-		$this->db->from('produk');
-		// Join dg 2 tabel
-		$this->db->join('kategori','kategori.id_kategori = produk.id_kategori','LEFT');
-		$this->db->join('users','users.id_user = produk.id_user','LEFT');
-		// End join
-		$this->db->where('DATE_FORMAT(produk.tanggal,"%Y")',$tahun);
-		$this->db->order_by('hits','DESC');
-		$this->db->limit(20);
-		$query = $this->db->get();
-		return $query->result();
-	}
+	
 
 	// Kunjungan produk teramai
 	public function populer()
@@ -216,11 +190,7 @@ class Produk_model extends CI_Model {
 
 	// Listing produk
 	public function search($keywords,$limit,$start) {
-		$this->db->select('produk.*, 
-					users.nama, 
-					kategori.nama_kategori, kategori.slug_kategori,
-					kategori.slug_kategori
-					');
+		$this->db->select('produk.*, users.nama, kategori.nama_kategori, kategori.slug_kategori, kategori.slug_kategori');
 		$this->db->from('produk');
 		// Join dg 2 tabel
 		$this->db->join('kategori','kategori.id_kategori = produk.id_kategori','LEFT');
@@ -241,8 +211,6 @@ class Produk_model extends CI_Model {
 	public function total_search($keywords) {
 		$this->db->select('produk.*, users.nama');
 		$this->db->from('produk');
-		// Join dg 2 tabel
-		
 		$this->db->join('users','users.id_user = produk.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'produk.status_produk'	=> 'Publish',
@@ -259,8 +227,6 @@ class Produk_model extends CI_Model {
 	public function listing_read() {
 		$this->db->select('produk.*, users.nama');
 		$this->db->from('produk');
-		// Join dg 2 tabel
-		
 		$this->db->join('users','users.id_user = produk.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'produk.status_produk'	=> 'Publish',
@@ -275,8 +241,6 @@ class Produk_model extends CI_Model {
 	public function listing_att() {
 		$this->db->select('produk.*, users.nama');
 		$this->db->from('produk');
-		// Join dg 2 tabel
-		
 		$this->db->join('users','users.id_user = produk.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'produk.status_produk'	=> 'Publish',
@@ -291,8 +255,6 @@ class Produk_model extends CI_Model {
 	public function listing_acc() {
 		$this->db->select('produk.*, users.nama');
 		$this->db->from('produk');
-		// Join dg 2 tabel
-		
 		$this->db->join('users','users.id_user = produk.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'produk.status_produk'	=> 'Publish',
@@ -307,8 +269,6 @@ class Produk_model extends CI_Model {
 	public function listing_spare() {
 		$this->db->select('produk.*, users.nama');
 		$this->db->from('produk');
-		// Join dg 2 tabel
-		
 		$this->db->join('users','users.id_user = produk.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'produk.status_produk'	=> 'Publish',
@@ -323,8 +283,6 @@ class Produk_model extends CI_Model {
 	public function listing_related() {
 		$this->db->select('produk.*, users.nama');
 		$this->db->from('produk');
-		// Join dg 2 tabel
-		
 		$this->db->join('users','users.id_user = produk.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'produk.status_produk'	=> 'Publish',
@@ -338,11 +296,7 @@ class Produk_model extends CI_Model {
 
 	// Read data
 	public function read($slug_produk) {
-		$this->db->select('produk.*, 
-					users.nama, 
-					kategori.nama_kategori, kategori.slug_kategori,
-					kategori.slug_kategori
-					');
+		$this->db->select('produk.*, users.nama, kategori.nama_kategori, kategori.slug_kategori, kategori.slug_kategori');
 		$this->db->from('produk');
 		// Join dg 2 tabel
 		$this->db->join('kategori','kategori.id_kategori = produk.id_kategori','LEFT');

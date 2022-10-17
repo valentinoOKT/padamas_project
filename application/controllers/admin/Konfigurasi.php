@@ -124,8 +124,8 @@ class Konfigurasi extends CI_Controller {
 				// End hapus gambar lama
 				// Masuk ke database
 				$i = $this->input;
-				$data = array(	'id_konfigurasi'=> $i->post('id_konfigurasi'),
-								'logo'			=> $upload_data['uploads']['file_name'],
+				$data = array(	'id_konfigurasi'	=> $i->post('id_konfigurasi'),
+								'logo'				=> $upload_data['uploads']['file_name'],
 								'id_user'			=> $this->session->userdata('id'));
 				$this->konfigurasi_model->edit($data);
 				$this->session->set_flashdata('sukses','Logo changed');
@@ -138,7 +138,7 @@ class Konfigurasi extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
-	// New Photo Profile
+	// New Photo Company Profile
 	public function gambar() {
 		$site = $this->konfigurasi_model->listing();
 		
@@ -153,7 +153,7 @@ class Konfigurasi extends CI_Controller {
 			$this->load->library('upload', $config);
 			if(! $this->upload->do_upload('gambar')) {
 				
-		$data = array(	'title'	=> 'New Photo Profile',
+		$data = array(	'title'	=> 'New Photo Company Profile',
 						'site'	=> $site,
 						'error'	=> $this->upload->display_errors(),
 						'isi'	=> 'admin/konfigurasi/gambar');
@@ -177,7 +177,7 @@ class Konfigurasi extends CI_Controller {
 				// End hapus gambar lama
 				// Masuk ke database
 				$i = $this->input;
-				$data = array(	'id_konfigurasi'=> $i->post('id_konfigurasi'),
+				$data = array(	'id_konfigurasi'	=> $i->post('id_konfigurasi'),
 								'gambar'			=> $upload_data['uploads']['file_name'],
 								'id_user'			=> $this->session->userdata('id'));
 				$this->konfigurasi_model->edit($data);
@@ -185,7 +185,7 @@ class Konfigurasi extends CI_Controller {
 				redirect(base_url('admin/konfigurasi/gambar'));
 		}}
 		// Default page
-		$data = array(	'title'	=> 'New Photo Profile',
+		$data = array(	'title'	=> 'New Photo Company Profile',
 						'site'	=> $site,
 						'isi'	=> 'admin/konfigurasi/gambar');
 		$this->load->view('admin/layout/wrapper',$data);
@@ -231,8 +231,8 @@ class Konfigurasi extends CI_Controller {
 				$this->image_lib->resize();
 				// Masuk ke database
 				$i = $this->input;
-				$data = array(	'id_konfigurasi'=> $i->post('id_konfigurasi'),
-								'icon'			=> $upload_data['uploads']['file_name'],
+				$data = array(	'id_konfigurasi'	=> $i->post('id_konfigurasi'),
+								'icon'				=> $upload_data['uploads']['file_name'],
 								'id_user'			=> $this->session->userdata('id'));
 				$this->konfigurasi_model->edit($data);
 				$this->session->set_flashdata('sukses','Icon changed');

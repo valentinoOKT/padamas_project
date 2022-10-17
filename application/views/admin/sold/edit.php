@@ -44,19 +44,10 @@ echo form_open_multipart(base_url('admin/sold/edit/'.$sold->id_galeri));
 </div>
 
 <div class="col-md-4">
-
-<div class="form-group">
-<label>Jenis/Posisi Galeri</label>
-<select name="jenis_galeri" class="form-control">
-	<option value="Galeri">Galeri Biasa</option>
-	<option value="Homepage" 
-	<?php if($sold->jenis_galeri=="Homepage") { echo "selected"; } ?>
-	>Homepage - Gambar Slider</option>
-  	<option value="Pop up" <?php if($sold->jenis_galeri=="Pop up") { echo "selected"; } ?>>Pop up Homepage</option>
-  	<option value="Testimonial" <?php if($sold->jenis_galeri=="Testimonial") { echo "selected"; } ?>>Background Testimonial</option>
-</select>
-
-</div>
+		<div class="form-group">
+			<label>Jenis Galeri</label>
+			<input type="text" name=jenis_galeri" class="form-control" value="<?php echo $sold->jenis_galeri ?>" readonly>
+		</div>
 </div>
 
 <div class="col-md-4">
@@ -64,13 +55,11 @@ echo form_open_multipart(base_url('admin/sold/edit/'.$sold->id_galeri));
 <div class="form-group">
 <label>Kategori Galeri</label>
 <select name="id_kategori_galeri" class="form-control">
-
 	<?php foreach($kategori_galeri as $kategori_galeri) { ?>
 	<option value="<?php echo $kategori_galeri->id_kategori_galeri ?>" 
 	<?php if($sold->id_kategori_galeri==$kategori_galeri->id_kategori_galeri) { echo "selected"; } ?>
 	><?php echo $kategori_galeri->nama_kategori_galeri ?></option>
 	<?php } ?>
-
 </select>
 
 </div>

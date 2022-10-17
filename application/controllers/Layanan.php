@@ -232,16 +232,16 @@ class Layanan extends CI_Controller {
 	}
 
 	// Profil layanan detail
-	public function profil($slug_layanan)	{
+	public function service($slug_layanan)	{
 		$site 		= $this->konfigurasi_model->listing();
 		$layanan 	= $this->layanan_model->read($slug_layanan);
-		$profil 	= $this->nav_model->nav_profil();
+		$service 	= $this->nav_model->nav_topik();
 
 		if(count(array($layanan)) < 1) {
 			redirect(base_url('oops'),'refresh');
 		}
 
-		$listing 	= $this->layanan_model->listing_profil();
+		$listing 	= $this->layanan_model->listing_service();
 
 		// Update hit
 		if($layanan) {
@@ -257,16 +257,16 @@ class Layanan extends CI_Controller {
 						'keywords'	=> $layanan->judul_layanan,
 						'layanan'	=> $layanan,
 						'site'		=> $site,
-						'listing'	=> $profil,
-						'isi'		=> 'layanan');
+						'listing'	=> $service,
+						'isi'		=> 'layanan/service');
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
 
 	// Profil layanan detail
-	public function layanan($slug_layanan)	{
+	public function rental($slug_layanan)	{
 		$site 		= $this->konfigurasi_model->listing();
 		$layanan 	= $this->layanan_model->read($slug_layanan);
-		$profil 	= $this->nav_model->nav_layanan();
+		$rental 	= $this->nav_model->nav_layanan();
 
 		if(count(array($layanan)) < 1) {
 			redirect(base_url('oops'),'refresh');
@@ -288,8 +288,8 @@ class Layanan extends CI_Controller {
 						'keywords'	=> $layanan->judul_layanan,
 						'layanan'	=> $layanan,
 						'site'		=> $site,
-						'listing'	=> $profil,
-						'isi'		=> 'layanan/layanan');
+						'listing'	=> $rental,
+						'isi'		=> 'layanan/rental');
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
 

@@ -27,7 +27,7 @@ echo form_open(base_url('admin/user/tambah'));
 	
 	<div class="col-md-3">
 		<div class="form-group">
-			<label>Level Hak Akses <span class="text-danger"></span></label>
+			<label>Level Hak Akses</label>
 			<input type="text" name="akses_level" class="form-control" value="Admin" placeholder="level hak akses" readonly>
 		</div>
 	</div>

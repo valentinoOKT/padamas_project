@@ -12,9 +12,8 @@ echo form_open(base_url('admin/sold/proses'));
   <i class="fa fa-plus"></i> Tambah Sold</a>&nbsp&nbsp
 
   <button class="btn btn-danger btn-lg" type="submit" name="hapus" onClick="check();" >
-      <i class="fa fa-trash"></i> Hapus
-    </button>&nbsp&nbsp 
-
+    <i class="fa fa-trash"></i> Hapus
+  </button>&nbsp&nbsp 
 </p>
 
 

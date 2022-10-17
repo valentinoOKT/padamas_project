@@ -45,17 +45,10 @@ echo form_open_multipart(base_url('admin/stock/tambah'));
 
 
 <div class="col-md-4">
-
-<div class="form-group">
-<label>Jenis/Posisi Galeri</label>
-<select name="jenis_galeri" class="form-control">
-	<option value="Galeri">Galeri Biasa</option>
-	<option value="Homepage">Homepage - Gambar Slider</option>
-  	<option value="Pop up">Pop up Homepage</option>
-  	<option value="Testimonial">Background Testimonial</option>
-</select>
-
-</div>
+		<div class="form-group">
+			<label>Jenis galeri</label>
+			<input type="text" name="jenis_galeri" class="form-control" value="Galeri" readonly>
+		</div>
 </div>
 
 <div class="col-md-4">

@@ -65,7 +65,7 @@ class User extends CI_Controller {
 			$inp = $this->input;
 
 			$data = array(	
-							'nama'		=> $inp->post('nama'),
+							'nama'			=> $inp->post('nama'),
 							'email'			=> $inp->post('email'),
 							'username'		=> $inp->post('username'),
 							'password'		=> sha1($inp->post('password')),
@@ -96,9 +96,6 @@ class User extends CI_Controller {
 		$validasi->set_rules('username','Username','required',
 			array(	'required'		=> '%s harus diisi'));
 
-		$validasi->set_rules('password','Password','required',
-			array(	'required'		=> '%s harus diisi'));
-
 		if($validasi->run()===FALSE) {
 		// End validasi
 
@@ -113,8 +110,7 @@ class User extends CI_Controller {
 			$inp = $this->input;
 
 			$data = array(	'id_user'		=> $id_user,
-
-							'nama'		=> $inp->post('nama'),
+							'nama'			=> $inp->post('nama'),
 							'email'			=> $inp->post('email'),
 							'username'		=> $inp->post('username'),
 							'password'		=> sha1($inp->post('password')),
@@ -159,7 +155,7 @@ class User extends CI_Controller {
 	// Delete
 	public function delete($id_user)
 	{
-		$data = array(	'id_user'		=> $id_user);
+		$data = array(	'id_user'	=> $id_user);
 		$this->user_model->delete($data);
 		$this->session->set_flashdata('sukses', 'Data telah dihapus');
 		redirect(base_url('admin/user'),'refresh');

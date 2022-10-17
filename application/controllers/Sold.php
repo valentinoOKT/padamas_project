@@ -87,7 +87,7 @@ class Sold extends CI_Controller {
 		$config['per_page'] 		= 12;
 		$config['first_url'] 		= base_url().'sold/kategori/'.$slug_kategori_galeri.'/';
 		$this->pagination->initialize($config); 
-		$page 		= ($this->uri->segment(5)) ? ($this->uri->segment(5) - 1) * $config['per_page'] : 0;
+		$page 	= ($this->uri->segment(5)) ? ($this->uri->segment(5) - 1) * $config['per_page'] : 0;
 		$sold 	= $this->sold_model->kategori_galeri($id_kategori_galeri,$config['per_page'], $page);
 
 		$data = array(	'title'				=> 'Kategori galeri: '.$kategori_galeri->nama_kategori_galeri,

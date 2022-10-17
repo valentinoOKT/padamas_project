@@ -77,9 +77,8 @@ if($this->uri->segment(3) != "") {
     <td><a href="<?php echo base_url('admin/layanan/status_layanan/'.$layanan->status_layanan) ?>"><?php echo $layanan->status_layanan ?><sup><i class="fa fa-link"></i></sup>
     </a></td>
     <td>
-    <a href="<?php echo base_url('admin/layanan/author/'.$layanan->id_user) ?>">
-    <?php echo $layanan->nama ?><sup><i class="fa fa-link"></i></sup>
-    </a></td>
+    <?php echo $layanan->nama ?><sup></sup>
+    </td>
     <td>
       <div class="btn-group">
         <a href="<?php echo base_url('admin/layanan/edit/'.$layanan->id_layanan) ?>" 

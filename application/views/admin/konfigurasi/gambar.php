@@ -53,14 +53,14 @@ echo validation_errors('<div class="alert alert-success">','</div>');
 	
     <div class="col-md-6">
     <div class="form-group">
-    	<label>Upload a new photo profile</label>
+    	<label>Upload a new photo company profile</label>
         <input type="file" name="gambar" class="form-control" id="file">
         <div id="imagePreview"></div>
     </div>
     </div>
     
     <div class="col-md-6">
-    	<label>Your current photo profile</label><br>
+    	<label>Your current photo company profile</label><br>
         <img src="<?php echo base_url('assets/upload/image/'.$site->gambar) ?>" style="max-width:200px; height:auto;">
     </div>
     

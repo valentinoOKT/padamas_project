@@ -19,9 +19,9 @@ class Stock extends CI_Controller {
 	// Halaman galeri
 	public function index()	{
 		$stock = $this->stock_model->listing();
-		$data = array(	'title'			=> 'Stock',
+		$data = array(	'title'		=> 'Stock',
 						'stock'		=> $stock,
-						'isi'			=> 'admin/stock/list');
+						'isi'		=> 'admin/stock/list');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
 	}
 
@@ -96,14 +96,14 @@ class Stock extends CI_Controller {
 
 	        $i 		= $this->input;
 
-	        $data = array(	'id_kategori_galeri'=> $i->post('id_kategori_galeri'),
-	        				'id_user'			=> $this->session->userdata('id_user'),
-	        				'judul_galeri'		=> $i->post('judul_galeri'),
-	        				'isi'				=> $i->post('isi'),
-	        				'jenis_galeri'		=> $i->post('jenis_galeri'),
-	        				'gambar'			=> $upload_data['uploads']['file_name'],
-	        				'status_text'		=> $i->post('status_text'),
-	        				'urutan'		=> $i->post('urutan')
+	        $data = array(	'id_kategori_galeri'	=> $i->post('id_kategori_galeri'),
+	        				'id_user'				=> $this->session->userdata('id_user'),
+	        				'judul_galeri'			=> $i->post('judul_galeri'),
+	        				'isi'					=> $i->post('isi'),
+	        				'jenis_galeri'			=> $i->post('jenis_galeri'),
+	        				'gambar'				=> $upload_data['uploads']['file_name'],
+	        				'status_text'			=> $i->post('status_text'),
+	        				'urutan'				=> $i->post('urutan')
 	        				);
 	        $this->stock_model->tambah($data);
 	        $this->session->set_flashdata('sukses', 'Data telah ditambah');
@@ -143,7 +143,7 @@ class Stock extends CI_Controller {
 
 		$data = array(	'title'				=> 'Edit Stock',
 						'kategori_galeri'	=> $kategori_galeri,
-						'stock'			=> $stock,
+						'stock'				=> $stock,
 						'error'    			=> $this->upload->display_errors(),
 						'isi'				=> 'admin/stock/edit');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
@@ -174,15 +174,15 @@ class Stock extends CI_Controller {
 
 	        $i 		= $this->input;
 
-	        $data = array(	'id_galeri'			=> $id_galeri,
-	        				'id_kategori_galeri'=> $i->post('id_kategori_galeri'),
-	        				'id_user'			=> $this->session->userdata('id_user'),
-	        				'judul_galeri'		=> $i->post('judul_galeri'),
-	        				'isi'				=> $i->post('isi'),
-	        				'jenis_galeri'		=> $i->post('jenis_galeri'),
-	        				'gambar'			=> $upload_data['uploads']['file_name'],
-	        				'status_text'		=> $i->post('status_text'),
-	        				'urutan'		=> $i->post('urutan')
+	        $data = array(	'id_galeri'				=> $id_galeri,
+	        				'id_kategori_galeri'	=> $i->post('id_kategori_galeri'),
+	        				'id_user'				=> $this->session->userdata('id_user'),
+	        				'judul_galeri'			=> $i->post('judul_galeri'),
+	        				'isi'					=> $i->post('isi'),
+	        				'jenis_galeri'			=> $i->post('jenis_galeri'),
+	        				'gambar'				=> $upload_data['uploads']['file_name'],
+	        				'status_text'			=> $i->post('status_text'),
+	        				'urutan'				=> $i->post('urutan')
 	        				);
 	        $this->stock_model->edit($data);
 	        $this->session->set_flashdata('sukses', 'Data telah diedit');
@@ -190,14 +190,14 @@ class Stock extends CI_Controller {
 		}}else{
 			$i 		= $this->input;
 
-	        $data = array(	'id_galeri'			=> $id_galeri,
-	        				'id_kategori_galeri'=> $i->post('id_kategori_galeri'),
-	        				'id_user'			=> $this->session->userdata('id_user'),
-	        				'judul_galeri'		=> $i->post('judul_galeri'),
-	        				'isi'				=> $i->post('isi'),
-	        				'jenis_galeri'		=> $i->post('jenis_galeri'),
-	        				'status_text'		=> $i->post('status_text'),
-	        				'urutan'		=> $i->post('urutan')
+	        $data = array(	'id_galeri'				=> $id_galeri,
+	        				'id_kategori_galeri'	=> $i->post('id_kategori_galeri'),
+	        				'id_user'				=> $this->session->userdata('id_user'),
+	        				'judul_galeri'			=> $i->post('judul_galeri'),
+	        				'isi'					=> $i->post('isi'),
+	        				'jenis_galeri'			=> $i->post('jenis_galeri'),
+	        				'status_text'			=> $i->post('status_text'),
+	        				'urutan'				=> $i->post('urutan')
 	        				);
 	        $this->stock_model->edit($data);
 	        $this->session->set_flashdata('sukses', 'Data telah diedit');
@@ -206,7 +206,7 @@ class Stock extends CI_Controller {
 		// End masuk database
 		$data = array(	'title'				=> 'Edit Stock',
 						'kategori_galeri'	=> $kategori_galeri,
-						'stock'			=> $stock,
+						'stock'				=> $stock,
 						'isi'				=> 'admin/stock/edit');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
 	}

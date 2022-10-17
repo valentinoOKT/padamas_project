@@ -115,8 +115,7 @@ class Sold_model extends CI_Model {
 
 	// Kategori
 	public function kategori() {
-		$this->db->select('sold.*, kategori_galeri.nama_kategori_galeri, users.nama, 
-						kategori_galeri.slug_kategori_galeri');
+		$this->db->select('sold.*, kategori_galeri.nama_kategori_galeri, users.nama, kategori_galeri.slug_kategori_galeri');
 		$this->db->from('sold');
 		// Join dg 2 tabel
 		$this->db->join('kategori_galeri','kategori_galeri.id_kategori_galeri = sold.id_kategori_galeri','LEFT');
@@ -138,7 +137,7 @@ class Sold_model extends CI_Model {
 		$this->db->join('users','users.id_user = sold.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'sold.id_kategori_galeri'	=> $id_kategori_galeri,
-								'sold.jenis_galeri'	=> 'Galeri'));
+								'sold.jenis_galeri'			=> 'Galeri'));
 		$this->db->order_by('id_galeri','DESC');
 		$this->db->limit($limit,$start);
 		$query = $this->db->get();
@@ -154,7 +153,7 @@ class Sold_model extends CI_Model {
 		$this->db->join('users','users.id_user = sold.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'sold.id_kategori_galeri'	=> $id_kategori_galeri,
-								'sold.jenis_galeri'	=> 'Sold'));
+								'sold.jenis_galeri'			=> 'Sold'));
 		$this->db->order_by('id_galeri','DESC');
 		$query = $this->db->get();
 		return $query->result();

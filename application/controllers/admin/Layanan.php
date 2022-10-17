@@ -9,7 +9,6 @@ class Layanan extends CI_Controller {
 		parent::__construct();
 		$this->load->model('layanan_model');
 		$this->load->model('kategori_model');
-		$this->load->model('download_model');
 		$this->load->model('stock_model');
 		// Tambahkan proteksi halaman
 		$url_pengalihan = str_replace('index.php/', '', current_url());
@@ -163,18 +162,16 @@ class Layanan extends CI_Controller {
 	        $slug 	= url_title($i->post('judul_layanan'),'dash',TRUE);
 
 	        $data = array(	
-	        				'id_user'		=> $this->session->userdata('id_user'),
-	        				'slug_layanan'	=> $slug,
-	        				'judul_layanan'	=> $i->post('judul_layanan'),
-	        				'isi'			=> $i->post('isi'),
-	        				'jenis_layanan'	=> $i->post('jenis_layanan'),
+	        				'id_user'			=> $this->session->userdata('id_user'),
+	        				'slug_layanan'		=> $slug,
+	        				'judul_layanan'		=> $i->post('judul_layanan'),
+	        				'isi'				=> $i->post('isi'),
+	        				'jenis_layanan'		=> $i->post('jenis_layanan'),
 	        				'status_layanan'	=> $i->post('status_layanan'),
-	        				'gambar'		=> $upload_data['uploads']['file_name'],
-	        				'keywords'		=> $i->post('keywords'),
-	        				'tanggal_publish'=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
-	        				// 'tanggal_mulai'		=> $i->post('tanggal_mulai'),
-	        				// 'tanggal_selesai'		=> $i->post('tanggal_selesai'),
-	        				'tanggal_post'	=> date('Y-m-d H:i:s'),
+	        				'gambar'			=> $upload_data['uploads']['file_name'],
+	        				'keywords'			=> $i->post('keywords'),
+	        				'tanggal_publish'	=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
+	        				'tanggal_post'		=> date('Y-m-d H:i:s'),
 	        				);
 	        $this->layanan_model->tambah($data);
 	        $this->session->set_flashdata('sukses', 'Data telah ditambah');
@@ -184,17 +181,15 @@ class Layanan extends CI_Controller {
 	        $slug 	= url_title($i->post('judul_layanan'),'dash',TRUE);
 
 	        $data = array(	
-	        				'id_user'		=> $this->session->userdata('id_user'),
-	        				'slug_layanan'	=> $slug,
-	        				'judul_layanan'	=> $i->post('judul_layanan'),
-	        				'isi'			=> $i->post('isi'),
-	        				'jenis_layanan'	=> $i->post('jenis_layanan'),
+	        				'id_user'			=> $this->session->userdata('id_user'),
+	        				'slug_layanan'		=> $slug,
+	        				'judul_layanan'		=> $i->post('judul_layanan'),
+	        				'isi'				=> $i->post('isi'),
+	        				'jenis_layanan'		=> $i->post('jenis_layanan'),
 	        				'status_layanan'	=> $i->post('status_layanan'),
-	        				'keywords'		=> $i->post('keywords'),
-	        				'tanggal_publish'=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
-	        				// 'tanggal_mulai'		=> $i->post('tanggal_mulai'),
-	        				// 'tanggal_selesai'		=> $i->post('tanggal_selesai'),
-	        				'tanggal_post'	=> date('Y-m-d H:i:s'),
+	        				'keywords'			=> $i->post('keywords'),
+	        				'tanggal_publish'	=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
+	        				'tanggal_post'		=> date('Y-m-d H:i:s'),
 	        				);
 	        $this->layanan_model->tambah($data);
 	        $this->session->set_flashdata('sukses', 'Data telah ditambah');
@@ -269,19 +264,17 @@ class Layanan extends CI_Controller {
 	        $slug 	= url_title($i->post('judul_layanan'),'dash',TRUE);
 
 	        $data = array(	'id_layanan'		=> $id_layanan,
-	        				'id_kategori'	=> $i->post('id_kategori'),
-	        				'id_user'		=> $this->session->userdata('id_user'),
-	        				'slug_layanan'	=> $slug,
-	        				'judul_layanan'	=> $i->post('judul_layanan'),
-	        				'isi'			=> $i->post('isi'),
-	        				'jenis_layanan'	=> $i->post('jenis_layanan'),
+	        				'id_kategori'		=> $i->post('id_kategori'),
+	        				'id_user'			=> $this->session->userdata('id_user'),
+	        				'slug_layanan'		=> $slug,
+	        				'judul_layanan'		=> $i->post('judul_layanan'),
+	        				'isi'				=> $i->post('isi'),
+	        				'jenis_layanan'		=> $i->post('jenis_layanan'),
 	        				'status_layanan'	=> $i->post('status_layanan'),
-	        				'gambar'		=> $upload_data['uploads']['file_name'],
-	        				'keywords'		=> $i->post('keywords'),
-	        				'tanggal_publish'=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
-	        				// 'tanggal_mulai'		=> $i->post('tanggal_mulai'),
-	        				// 'tanggal_selesai'		=> $i->post('tanggal_selesai'),
-	        				'urutan'	=> $i->post('urutan'),
+	        				'gambar'			=> $upload_data['uploads']['file_name'],
+	        				'keywords'			=> $i->post('keywords'),
+	        				'tanggal_publish'	=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
+	        				'urutan'			=> $i->post('urutan'),
 	        				);
 	        $this->layanan_model->edit($data);
 	        $this->session->set_flashdata('sukses', 'Data telah diedit');
@@ -291,18 +284,16 @@ class Layanan extends CI_Controller {
 	        $slug 	= url_title($i->post('judul_layanan'),'dash',TRUE);
 
 	        $data = array(	'id_layanan'		=> $id_layanan,
-	        				'id_kategori'	=> $i->post('id_kategori'),
-	        				'id_user'		=> $this->session->userdata('id_user'),
-	        				'slug_layanan'	=> $slug,
-	        				'judul_layanan'	=> $i->post('judul_layanan'),
-	        				'isi'			=> $i->post('isi'),
-	        				'jenis_layanan'	=> $i->post('jenis_layanan'),
+	        				'id_kategori'		=> $i->post('id_kategori'),
+	        				'id_user'			=> $this->session->userdata('id_user'),
+	        				'slug_layanan'		=> $slug,
+	        				'judul_layanan'		=> $i->post('judul_layanan'),
+	        				'isi'				=> $i->post('isi'),
+	        				'jenis_layanan'		=> $i->post('jenis_layanan'),
 	        				'status_layanan'	=> $i->post('status_layanan'),
-	        				'keywords'		=> $i->post('keywords'),
-	        				'tanggal_publish'=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
-	        				// 'tanggal_mulai'		=> $i->post('tanggal_mulai'),
-	        				// 'tanggal_selesai'		=> $i->post('tanggal_selesai'),
-	        				'urutan'	=> $i->post('urutan'),
+	        				'keywords'			=> $i->post('keywords'),
+	        				'tanggal_publish'	=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
+	        				'urutan'			=> $i->post('urutan'),
 	        				);
 	        $this->layanan_model->edit($data);
 	        $this->session->set_flashdata('sukses', 'Data telah diedit');

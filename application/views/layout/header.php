@@ -23,66 +23,6 @@ $site = $this->konfigurasi_model->listing();
   100% { transform: rotate(360deg); }
 }
 </style>
-<div class="box-style">
-<div class="color-btn">
-<a href="#"><i class="fa fa-cog fa-spin" aria-hidden="true"></i></a>
-</div>
-<div class="box-style-inner">
-<h3>Box Layout</h3>
-<div class="box-element">
-<div class="box-heading">
-<h5>HTML Layout</h5>
-</div>
-<div class="box-content">
-<ul class="box-customize">
-<li><a class="boxed-btn" href="#">Boxed</a></li>
-<li><a class="wide-btn" href="#">Wide</a></li>
-<li><a class="rtl-btn" href="#">Rtl</a></li>
-<li><a class="ltl-btn" href="#">Ltl</a></li>
-</ul>
-</div>
-</div>
-<div class="box-element">
-<div class="box-heading">
-<h5>Backgroud Images</h5>
-</div>
-<div class="box-content">
-<ul class="box-bg-img">
-<li>
-    <a class="bg-1" href="#"><img src="<?php echo base_url() ?>assets/tema/assets/images/box-style/01.jpg" alt=""></a>
-</li>
-<li>
-    <a class="bg-2" href="#"><img src="<?php echo base_url() ?>assets/tema/assets/images/box-style/02.jpg" alt=""></a>
-</li>
-<li>
-    <a class="bg-3" href="#"><img src="<?php echo base_url() ?>assets/tema/assets/images/box-style/03.jpg" alt=""></a>
-</li>
-<li>
-    <a class="bg-4" href="#"><img src="<?php echo base_url() ?>assets/tema/assets/images/box-style/04.jpg" alt=""></a>
-</li>
-<li>
-    <a class="bg-5" href="#"><img src="<?php echo base_url() ?>assets/tema/assets/images/box-style/05.jpg" alt=""></a>
-</li>
-<li>
-    <a class="bg-6" href="#"><img src="<?php echo base_url() ?>assets/tema/assets/images/box-style/06.jpg" alt=""></a>
-</li>
-<li>
-    <a class="bg-7" href="#"><img src="<?php echo base_url() ?>assets/tema/assets/images/box-style/07.jpg" alt=""></a>
-</li>
-<li>
-    <a class="bg-8" href="#"><img src="<?php echo base_url() ?>assets/tema/assets/images/box-style/08.jpg" alt=""></a>
-</li>
-</ul>
-</div>
-</div>
-<div class="box-element">
-<div class="box-heading">
-<h5>Background Pattern</h5>
-</div>
-</div>
-</div>
-</div>
-
 
 <!-- Start Pre-Loader-->
 

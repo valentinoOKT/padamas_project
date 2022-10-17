@@ -48,8 +48,7 @@ $site = $this->konfigurasi_model->listing();
   }
 </style>
 <?php 
-$site           = $this->konfigurasi_model->listing();
-$nav_profil     = $this->nav_model->nav_profil();
+$site  = $this->konfigurasi_model->listing();
 ?>
 <!-- Start Footer Section -->
 <footer>
@@ -72,7 +71,6 @@ $nav_profil     = $this->nav_model->nav_profil();
             </ul>
         </div>
         <!-- .social-box -->
-
     </div>
     <!-- .footer-bottom -->
 </div>

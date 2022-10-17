@@ -34,7 +34,7 @@ class Stock extends CI_Controller {
 						'deskripsi'	=> 'Stock - '.$site->namaweb,
 						'keywords'	=> 'Stock - '.$site->namaweb,
 						'pagin' 	=> $this->pagination->create_links(),
-						'stock'	=> $stock,
+						'stock'		=> $stock,
 						'kategori'	=> $kategori,
 						'isi'		=> 'stock/list');
 		$this->load->view('layout/wrapper', $data, FALSE);
@@ -93,7 +93,7 @@ class Stock extends CI_Controller {
 		$data = array(	'title'				=> 'Kategori galeri: '.$kategori_galeri->nama_kategori_galeri,
 						'deskripsi'			=> 'Kategori galeri: '.$kategori_galeri->nama_kategori_galeri,
 						'keywords'			=> 'Kategori galeri: '.$kategori_galeri->nama_kategori_galeri,
-						'stock'			=> $stock,
+						'stock'				=> $stock,
 						'kategori'			=> $kategori_galeri,
 						'pagin' 			=> $this->pagination->create_links(),
 						'site'				=> $site,
@@ -104,7 +104,7 @@ class Stock extends CI_Controller {
 	// Read galeri
 	public function read($id_galeri) {
 		$site 		= $this->konfigurasi_model->listing();
-		$stock 	= $this->stock_model->detail($id_galeri);
+		$stock 		= $this->stock_model->detail($id_galeri);
 		$listing 	= $this->stock_model->stock_home();
 
 		if(count(array($stock)) < 1) {
@@ -123,7 +123,7 @@ class Stock extends CI_Controller {
 		$data = array(	'title'		=> $stock->judul_galeri,
 						'deskripsi'	=> $stock->judul_galeri,
 						'keywords'	=> $stock->judul_galeri,
-						'stock'	=> $stock,
+						'stock'		=> $stock,
 						'listing'	=> $listing,
 						'site'		=> $site,
 						'isi'		=> 'stock/read');

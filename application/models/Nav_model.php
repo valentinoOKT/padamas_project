@@ -31,7 +31,7 @@ class Nav_model extends CI_Model {
 	public function nav_layanan() {
 		$this->db->select('*');
 		$this->db->from('layanan');
-		$this->db->where(array(	'jenis_layanan'	=> 'Rental',
+		$this->db->where(array(	'jenis_layanan'		=> 'Rental',
 								'status_layanan'	=> 'Publish'));
 		$this->db->order_by('urutan','ASC');
 		$query = $this->db->get();
@@ -42,7 +42,7 @@ class Nav_model extends CI_Model {
 	public function nav_topik() {
 		$this->db->select('*');
 		$this->db->from('layanan');
-		$this->db->where(array(	'jenis_layanan'	=> 'Service',
+		$this->db->where(array(	'jenis_layanan'		=> 'Service',
 								'status_layanan'	=> 'Publish'));
 		$this->db->order_by('urutan','ASC');
 		$query = $this->db->get();

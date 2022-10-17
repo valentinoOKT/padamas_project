@@ -44,19 +44,10 @@ echo form_open_multipart(base_url('admin/stock/edit/'.$stock->id_galeri));
 </div>
 
 <div class="col-md-4">
-
-<div class="form-group">
-<label>Jenis/Posisi Galeri</label>
-<select name="jenis_galeri" class="form-control">
-	<option value="Galeri">Galeri Biasa</option>
-	<option value="Homepage" 
-	<?php if($stock->jenis_galeri=="Homepage") { echo "selected"; } ?>
-	>Homepage - Gambar Slider</option>
-  	<option value="Pop up" <?php if($stock->jenis_galeri=="Pop up") { echo "selected"; } ?>>Pop up Homepage</option>
-  	<option value="Testimonial" <?php if($stock->jenis_galeri=="Testimonial") { echo "selected"; } ?>>Background Testimonial</option>
-</select>
-
-</div>
+		<div class="form-group">
+			<label>Jenis Galeri</label>
+			<input type="text" name=jenis_galeri" class="form-control" value="<?php echo $stock->jenis_galeri ?>" readonly>
+		</div>
 </div>
 
 <div class="col-md-4">

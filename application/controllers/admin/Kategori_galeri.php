@@ -42,7 +42,7 @@ class Kategori_galeri extends CI_Controller {
 
 			$data = array(	'nama_kategori_galeri'	=> $i->post('nama_kategori_galeri'),
 							'slug_kategori_galeri'	=> $slug,
-							'urutan'		=> $i->post('urutan'),
+							'urutan'				=> $i->post('urutan'),
 						);
 			$this->kategori_galeri_model->tambah($data);
 			$this->session->set_flashdata('sukses', 'Data telah ditambah');
@@ -66,9 +66,9 @@ class Kategori_galeri extends CI_Controller {
 		if($valid->run()===FALSE) {
 		// End validasi
 
-		$data = array(	'title'		=> 'Edit Kategori galeri',
+		$data = array(	'title'				=> 'Edit Kategori galeri',
 						'kategori_galeri'	=> $this->kategori_galeri_model->detail($id_kategori_galeri),
-						'isi'		=> 'admin/kategori_galeri/edit');
+						'isi'				=> 'admin/kategori_galeri/edit');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
 		// Proses masuk ke database
 		}else{
@@ -78,7 +78,7 @@ class Kategori_galeri extends CI_Controller {
 			$data = array(	'id_kategori_galeri'	=> $id_kategori_galeri,
 							'nama_kategori_galeri'	=> $i->post('nama_kategori_galeri'),
 							'slug_kategori_galeri'	=> $slug,
-							'urutan'		=> $i->post('urutan'),
+							'urutan'				=> $i->post('urutan'),
 						);
 			$this->kategori_galeri_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Data telah diedit');

@@ -143,16 +143,13 @@ class Produk extends CI_Controller {
 
 	// Category
 	public function kategori($slug_kategori)	{
-		$site 			= $this->konfigurasi_model->listing();
-		$kategori 		= $this->kategori_model->read($slug_kategori);
+		$site 		= $this->konfigurasi_model->listing();
+		$kategori 	= $this->kategori_model->read($slug_kategori);
 		$populer	= $this->produk_model->populer();
 		if(count(array($kategori)) < 1) {
 			redirect(base_url('oops'),'refresh');
 		}
-		
-		
 		$id_kategori	= $kategori->id_kategori;
-
 
 		// Produk dan paginasi
 		$this->load->library('pagination');
@@ -232,8 +229,8 @@ class Produk extends CI_Controller {
 
 	//  produk attachment
 	public function attachment($slug_produk)	{
-		$site 		= $this->konfigurasi_model->listing();
-		$produk 	= $this->produk_model->read($slug_produk);
+		$site 			= $this->konfigurasi_model->listing();
+		$produk 		= $this->produk_model->read($slug_produk);
 		$attachment 	= $this->nav_model->nav_att();
 
 		if(count(array($produk)) < 1) {

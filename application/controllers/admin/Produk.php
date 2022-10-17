@@ -9,7 +9,6 @@ class Produk extends CI_Controller {
 		parent::__construct();
 		$this->load->model('produk_model');
 		$this->load->model('kategori_model');
-		$this->load->model('download_model');
 		$this->load->model('stock_model');
 		// Tambahkan proteksi halaman
 		$url_pengalihan = str_replace('index.php/', '', current_url());
@@ -162,18 +161,16 @@ class Produk extends CI_Controller {
 	        $slug 	= url_title($i->post('judul_produk'),'dash',TRUE);
 
 	        $data = array(	
-	        				'id_user'		=> $this->session->userdata('id_user'),
-	        				'slug_produk'	=> $slug,
-	        				'judul_produk'	=> $i->post('judul_produk'),
-	        				'isi'			=> $i->post('isi'),
-	        				'jenis_produk'	=> $i->post('jenis_produk'),
-	        				'status_produk'	=> $i->post('status_produk'),
-	        				'gambar'		=> $upload_data['uploads']['file_name'],
-	        				'keywords'		=> $i->post('keywords'),
-	        				'tanggal_publish'=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
-	        				// 'tanggal_mulai'		=> $i->post('tanggal_mulai'),
-	        				// 'tanggal_selesai'		=> $i->post('tanggal_selesai'),
-	        				'tanggal_post'	=> date('Y-m-d H:i:s'),
+	        				'id_user'			=> $this->session->userdata('id_user'),
+	        				'slug_produk'		=> $slug,
+	        				'judul_produk'		=> $i->post('judul_produk'),
+	        				'isi'				=> $i->post('isi'),
+	        				'jenis_produk'		=> $i->post('jenis_produk'),
+	        				'status_produk'		=> $i->post('status_produk'),
+	        				'gambar'			=> $upload_data['uploads']['file_name'],
+	        				'keywords'			=> $i->post('keywords'),
+	        				'tanggal_publish'	=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
+	        				'tanggal_post'		=> date('Y-m-d H:i:s'),
 	        				);
 	        $this->produk_model->tambah($data);
 	        $this->session->set_flashdata('sukses', 'Data telah ditambah');
@@ -183,17 +180,15 @@ class Produk extends CI_Controller {
 	        $slug 	= url_title($i->post('judul_produk'),'dash',TRUE);
 
 	        $data = array(	
-	        				'id_user'		=> $this->session->userdata('id_user'),
-	        				'slug_produk'	=> $slug,
-	        				'judul_produk'	=> $i->post('judul_produk'),
-	        				'isi'			=> $i->post('isi'),
-	        				'jenis_produk'	=> $i->post('jenis_produk'),
-	        				'status_produk'	=> $i->post('status_produk'),
-	        				'keywords'		=> $i->post('keywords'),
-	        				'tanggal_publish'=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
-	        				// 'tanggal_mulai'		=> $i->post('tanggal_mulai'),
-	        				// 'tanggal_selesai'		=> $i->post('tanggal_selesai'),
-	        				'tanggal_post'	=> date('Y-m-d H:i:s'),
+	        				'id_user'			=> $this->session->userdata('id_user'),
+	        				'slug_produk'		=> $slug,
+	        				'judul_produk'		=> $i->post('judul_produk'),
+	        				'isi'				=> $i->post('isi'),
+	        				'jenis_produk'		=> $i->post('jenis_produk'),
+	        				'status_produk'		=> $i->post('status_produk'),
+	        				'keywords'			=> $i->post('keywords'),
+	        				'tanggal_publish'	=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
+	        				'tanggal_post'		=> date('Y-m-d H:i:s'),
 	        				);
 	        $this->produk_model->tambah($data);
 	        $this->session->set_flashdata('sukses', 'Data telah ditambah');
@@ -267,19 +262,17 @@ class Produk extends CI_Controller {
 	        $i 		= $this->input;
 	        $slug 	= url_title($i->post('judul_produk'),'dash',TRUE);
 
-	        $data = array(	'id_produk'		=> $id_produk,
-	        				'id_kategori'	=> $i->post('id_kategori'),
-	        				'id_user'		=> $this->session->userdata('id_user'),
-	        				'slug_produk'	=> $slug,
-	        				'judul_produk'	=> $i->post('judul_produk'),
-	        				'isi'			=> $i->post('isi'),
-	        				'jenis_produk'	=> $i->post('jenis_produk'),
-	        				'status_produk'	=> $i->post('status_produk'),
-	        				'gambar'		=> $upload_data['uploads']['file_name'],
-	        				'keywords'		=> $i->post('keywords'),
-	        				'tanggal_publish'=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
-	        				// 'tanggal_mulai'		=> $i->post('tanggal_mulai'),
-	        				// 'tanggal_selesai'		=> $i->post('tanggal_selesai'),
+	        $data = array(	'id_produk'			=> $id_produk,
+	        				'id_kategori'		=> $i->post('id_kategori'),
+	        				'id_user'			=> $this->session->userdata('id_user'),
+	        				'slug_produk'		=> $slug,
+	        				'judul_produk'		=> $i->post('judul_produk'),
+	        				'isi'				=> $i->post('isi'),
+	        				'jenis_produk'		=> $i->post('jenis_produk'),
+	        				'status_produk'		=> $i->post('status_produk'),
+	        				'gambar'			=> $upload_data['uploads']['file_name'],
+	        				'keywords'			=> $i->post('keywords'),
+	        				'tanggal_publish'	=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
 	        				);
 	        $this->produk_model->edit($data);
 	        $this->session->set_flashdata('sukses', 'Data telah diedit');
@@ -298,8 +291,6 @@ class Produk extends CI_Controller {
 	        				'status_produk'	=> $i->post('status_produk'),
 	        				'keywords'		=> $i->post('keywords'),
 	        				'tanggal_publish'=> date('Y-m-d',strtotime($i->post('tanggal_publish'))).' '.$i->post('jam_publish'),
-	        				// 'tanggal_mulai'		=> $i->post('tanggal_mulai'),
-	        				// 'tanggal_selesai'		=> $i->post('tanggal_selesai'),
 	        				);
 	        $this->produk_model->edit($data);
 	        $this->session->set_flashdata('sukses', 'Data telah diedit');

@@ -60,7 +60,6 @@ echo form_open_multipart(base_url('admin/layanan/edit/'.$layanan->id_layanan));
 <select name="jenis_layanan" class="form-control">
 	<option value="Rental">Rental</option>
   <option value="Service" <?php if($layanan->jenis_layanan=="Service") { echo "selected"; }?>>Service</option>
-  <option value="Profil" <?php if($layanan->jenis_layanan=="Profil") { echo "selected"; } ?>>Profil</option>
 </select>
 
 </div>

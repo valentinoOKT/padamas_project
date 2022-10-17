@@ -151,7 +151,7 @@ class Stock_model extends CI_Model {
 		$this->db->join('users','users.id_user = stock.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'stock.id_kategori_galeri'	=> $id_kategori_galeri,
-								'stock.jenis_galeri'	=> 'Galeri'));
+								'stock.jenis_galeri'		=> 'Galeri'));
 		$this->db->order_by('id_galeri','DESC');
 		$this->db->limit($limit,$start);
 		$query = $this->db->get();
@@ -167,7 +167,7 @@ class Stock_model extends CI_Model {
 		$this->db->join('users','users.id_user = stock.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'stock.id_kategori_galeri'	=> $id_kategori_galeri,
-								'stock.jenis_galeri'	=> 'Galeri'));
+								'stock.jenis_galeri'		=> 'Galeri'));
 		$this->db->order_by('id_galeri','DESC');
 		$query = $this->db->get();
 		return $query->result();
