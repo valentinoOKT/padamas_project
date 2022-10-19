@@ -56,11 +56,9 @@ echo form_open_multipart(base_url('admin/sold/tambah'));
 <div class="form-group">
 <label>Kategori Galeri</label>
 <select name="id_kategori_galeri" class="form-control">
-
 	<?php foreach($kategori_galeri as $kategori_galeri) { ?>
 	<option value="<?php echo $kategori_galeri->id_kategori_galeri ?>"><?php echo $kategori_galeri->nama_kategori_galeri ?></option>
 	<?php } ?>
-
 </select>
 
 </div>
