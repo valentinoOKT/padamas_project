@@ -13,9 +13,15 @@ echo form_open(base_url('admin/sold/proses'));
 
   <button class="btn btn-danger btn-lg" type="submit" name="hapus" onClick="check();" >
     <i class="fa fa-trash"></i> Hapus
-  </button>&nbsp&nbsp 
+  </button>&nbsp&nbsp
+  <?php 
+    $url_navigasi = $this->uri->segment(2); 
+    if($this->uri->segment(3) != "") { 
+    ?>
+    <a href="<?php echo base_url('admin/'.$url_navigasi) ?>"  class="btn btn-primary btn-lg">
+    <i class="fa fa-backward"></i> Kembali</a>
+  <?php } ?> 
 </p>
-
 
 <div class="table-responsive mailbox-messages">
 <table id="example1" class="display table table-bordered table-hover" cellspacing="0" width="100%">
@@ -50,18 +56,18 @@ echo form_open(base_url('admin/sold/proses'));
     <td>
       <img src="<?php echo base_url('assets/upload/image/thumbs/'.$sold->gambar) ?>" width="60">
     </td>
-    <td><?php echo $sold->judul_galeri ?>
-      
+    <td><?php echo $sold->judul_galeri ?>    
       <br><small>
         Urutan: <?php echo $sold->urutan ?>
       <br>
       Status Tampil Teks: <?php echo $sold->status_text ?><br>
       <textarea name="aa"><?php echo base_url('assets/upload/image/'.$sold->gambar) ?></textarea>
       </small>
-
     </td>
     <td><?php echo $sold->nama_kategori_galeri ?> - <?php echo $sold->jenis_galeri ?></td>
-    <td><?php echo $sold->nama ?></td>
+    <td><a href="<?php echo base_url('admin/sold/author/'.$sold->id_user) ?>">
+    <?php echo $sold->nama ?><sup><i class="fa fa-link"></i></sup>
+    </a></td>
     <td><?php echo $sold->tanggal ?></td>
     <td>
       <div class="btn-group">

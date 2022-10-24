@@ -15,6 +15,13 @@ echo form_open(base_url('admin/stock/proses'));
       <i class="fa fa-trash"></i> Hapus
     </button>&nbsp&nbsp 
 
+    <?php 
+    $url_navigasi = $this->uri->segment(2); 
+    if($this->uri->segment(3) != "") { 
+    ?>
+    <a href="<?php echo base_url('admin/'.$url_navigasi) ?>"  class="btn btn-primary btn-lg">
+    <i class="fa fa-backward"></i> Kembali</a>
+  <?php } ?>
 </p>
 
 
@@ -63,7 +70,9 @@ echo form_open(base_url('admin/stock/proses'));
 
     </td>
     <td><?php echo $stock->nama_kategori_galeri ?> - <?php echo $stock->jenis_galeri ?></td>
-    <td><?php echo $stock->nama ?></td>
+    <td><a href="<?php echo base_url('admin/stock/author/'.$stock->id_user) ?>">
+    <?php echo $stock->nama ?><sup><i class="fa fa-link"></i></sup>
+    </a></td>
     <td><?php echo $stock->tanggal ?></td>
     <td>
       <div class="btn-group">

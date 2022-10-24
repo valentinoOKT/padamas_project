@@ -173,6 +173,19 @@ class Stock_model extends CI_Model {
 		return $query->result();
 	}
 
+	public function author_admin($id_user) {
+		$this->db->select('stock.*,kategori_galeri.nama_kategori_galeri, users.nama');
+		$this->db->from('stock');
+		// Join dg 2 tabel
+		$this->db->join('kategori_galeri','kategori_galeri.id_kategori_galeri = stock.id_kategori_galeri','LEFT');
+		$this->db->join('users','users.id_user = stock.id_user','LEFT');
+		// End join
+		$this->db->where(array(	'stock.id_user'	=> $id_user));
+		$this->db->order_by('id_galeri','DESC');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
 	// Detail data
 	public function detail($id_galeri) {
 		$this->db->select('*');

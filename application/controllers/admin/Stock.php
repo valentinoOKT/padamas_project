@@ -50,6 +50,16 @@ class Stock extends CI_Controller {
    		}
 	}
 
+	public function author($id_user)	{
+		$stock 	= $this->stock_model->author_admin($id_user);
+		$user 	= $this->user_model->detail($id_user);
+
+		$data = array(	'title'			=> 'Penulis Galeri Stock: '.$user->nama.' ('.count($stock).')',
+						'stock'			=> $stock,
+						'isi'			=> 'admin/stock/list');
+		$this->load->view('admin/layout/wrapper', $data, FALSE);		
+	}
+
 	// Tambah galeri
 	public function tambah()	{
 		$kategori_galeri = $this->kategori_galeri_model->listing();

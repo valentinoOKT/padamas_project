@@ -46,7 +46,9 @@ echo form_open_multipart(base_url('admin/sold/edit/'.$sold->id_galeri));
 <div class="col-md-4">
 		<div class="form-group">
 			<label>Jenis Galeri</label>
-			<input type="text" name=jenis_galeri" class="form-control" value="<?php echo $sold->jenis_galeri ?>" readonly>
+			<select name="jenis_galeri" class="form-control">
+				<option value="Galeri" <?php if($sold->jenis_galeri=="Galeri") { echo "selected"; } ?>>Galeri</option>
+			</select>
 		</div>
 </div>
 

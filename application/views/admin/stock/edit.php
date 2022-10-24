@@ -44,10 +44,13 @@ echo form_open_multipart(base_url('admin/stock/edit/'.$stock->id_galeri));
 </div>
 
 <div class="col-md-4">
-		<div class="form-group">
-			<label>Jenis Galeri</label>
-			<input type="text" name=jenis_galeri" class="form-control" value="<?php echo $stock->jenis_galeri ?>" readonly>
-		</div>
+
+<div class="form-group">
+<label>Jenis Galeri</label>
+<select name="jenis_galeri" class="form-control">
+	<option value="Galeri" <?php if($stock->jenis_galeri=="Galeri") { echo "selected"; } ?>>Galeri</option>
+</select>
+</div>
 </div>
 
 <div class="col-md-4">
