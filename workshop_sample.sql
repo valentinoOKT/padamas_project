@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2022 at 11:52 AM
+-- Generation Time: Oct 26, 2022 at 11:06 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -292,7 +292,7 @@ INSERT INTO `sold` (`id_galeri`, `id_kategori_galeri`, `id_user`, `judul_galeri`
 (59, 4, 1, 'RMD59', 'Galeri', '<p>-</p>', 'rmd59.jpg', NULL, 'Publish', 1, 'Tidak', '2022-10-12 09:59:09'),
 (60, 4, 1, 'RMD60', 'Galeri', '<p>-</p>', 'rmd60.jpg', NULL, 'Publish', 1, 'Tidak', '2022-10-12 09:59:17'),
 (61, 4, 1, 'RMD61', 'Galeri', '<p>-</p>', 'rmd61.jpg', NULL, 'Publish', 1, 'Tidak', '2022-10-12 09:59:26'),
-(62, 4, 1, 'RMD62', 'Galeri', '<p>-</p>', 'rmd62.jpg', NULL, 'Publish', 1, 'Tidak', '2022-10-12 09:59:35');
+(62, 4, 1, 'RMD62', 'Galeri', '<p>-</p>', 'rmd62.jpg', NULL, 'Publish', 1, 'Tidak', '2022-10-24 08:51:30');
 
 -- --------------------------------------------------------
 
@@ -346,7 +346,6 @@ CREATE TABLE `users` (
   `password` varchar(64) NOT NULL,
   `akses_level` varchar(20) NOT NULL,
   `gambar` varchar(255) DEFAULT NULL,
-  `keterangan` text,
   `tanggal_post` datetime NOT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -355,8 +354,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id_user`, `nama`, `email`, `username`, `password`, `akses_level`, `gambar`, `keterangan`, `tanggal_post`, `tanggal`) VALUES
-(1, 'admin', 'admin@gmail.com', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Admin', 'default.jpg', '', '2022-10-17 04:25:21', '2022-10-17 02:25:21');
+INSERT INTO `users` (`id_user`, `nama`, `email`, `username`, `password`, `akses_level`, `gambar`, `tanggal_post`, `tanggal`) VALUES
+(1, 'admin', 'admin@gmail.com', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Admin', 'default.jpg', '2022-10-17 04:25:21', '2022-10-26 03:50:20');
 
 --
 -- Indexes for dumped tables
@@ -436,7 +435,7 @@ ALTER TABLE `konfigurasi`
 -- AUTO_INCREMENT for table `layanan`
 --
 ALTER TABLE `layanan`
-  MODIFY `id_layanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_layanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `produk`
@@ -448,19 +447,19 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `sold`
 --
 ALTER TABLE `sold`
-  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `stock`
 --
 ALTER TABLE `stock`
-  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

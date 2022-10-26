@@ -38,7 +38,6 @@ class User extends CI_Controller {
 	// Tambah
 	public function tambah()
 	{
-
 		
 		// Validasi
 		$validasi 	= $this->form_validation;
@@ -70,7 +69,6 @@ class User extends CI_Controller {
 							'username'		=> $inp->post('username'),
 							'password'		=> sha1($inp->post('password')),
 							'akses_level'	=> $inp->post('akses_level'),
-							'keterangan'	=> $inp->post('keterangan'),
 							'tanggal_post'	=> date('Y-m-d H:i:s')
 						);
 			$this->user_model->tambah($data);

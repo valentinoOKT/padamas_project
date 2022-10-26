@@ -43,11 +43,6 @@ echo form_open(base_url('admin/user/tambah'));
 
 	<div class="col-md-12">
 		<div class="form-group">
-			<label>Deskripsi User</label>
-			<textarea name="keterangan" class="form-control textarea" placeholder="Keterangan" rows="5"><?php echo set_value('keterangan') ?></textarea>
-		</div>
-
-		<div class="form-group">
 			<div class="btn-group">
 				<button class="btn btn-success btn-lg" name="submit" type="submit">
 					<i class="fa fa-save"></i> Simpan

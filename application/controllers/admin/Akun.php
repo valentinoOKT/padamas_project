@@ -34,7 +34,7 @@ class Akun extends CI_Controller {
 
 		if($valid->run()) {
 			if(!empty($_FILES['gambar']['name'])) {
-			$config['upload_path'] 		= './assets/upload/user/';
+			$config['upload_path'] 		= './assets/upload/user/thumbs/';
 			$config['allowed_types'] 	= 'gif|jpg|png|jpeg';
 			$config['max_size']  		= '2400'; // KB
 			$config['max_width']  		= '3000'; // Pixel
