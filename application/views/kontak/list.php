@@ -50,7 +50,7 @@ if($this->session->flashdata('sukses')) {
                             <div class="form-group">
                                 <input type="text" class="form-control" id="subjectId" name="subject" placeholder="Subject">
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                             <select name="location" class="form-control">
                                 <option value="Choose Location">Choose Location</option>
                                 <option value="DKI Jakarta">DKI Jakrata</option>
@@ -83,7 +83,7 @@ if($this->session->flashdata('sukses')) {
                                 <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
                                 <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
                             </select>
-                            </div>
+                            </div> -->
                             <textarea class="form-control text-area" name="pesan" rows="3" placeholder="Message"></textarea>
                             <button type="submit" class="btn btn-default">Send Email</button>
                         </form>

@@ -42,6 +42,7 @@ class Kontak extends CI_Controller {
 			$email		= $i->post('email');
 			$subject	= $i->post('subject').' - '.$site->namaweb;
 			$message	= 'Nama pengirim: '.$i->post('nama').'<br>'.
+						  'Nama perusahaan: '.$i->post('nama_company').'<br>'.
 						  'Nomor telepon: '.$i->post('telepon').'<br>
 						  Email: '.$i->post('email').'<br>
 						  Berikut isi pesan:<hr>'.
