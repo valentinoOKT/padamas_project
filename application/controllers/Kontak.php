@@ -60,7 +60,7 @@ class Kontak extends CI_Controller {
 			$config['charset']      = 'utf-8';
 			$config['newline']      = "\r\n";
 			$config['mailtype']     = 'html'; // or html
-			$config['validation']   = TRUE;
+			$config['validate']   = TRUE;
 
 			$this->email->initialize($config);
 			$this->email->from($email, $nama);
@@ -74,7 +74,7 @@ class Kontak extends CI_Controller {
 			$this->email->send();
 			
 			// Redirect page
-			$this->session->set_flashdata('sukses','Terimakasih, pesan Anda sudah terkirim');
+			$this->session->set_flashdata('sukses','Pesan Anda sudah terkirim, Terima kasih');
 			redirect(base_url('kontak'));
 		}
 		// End kirim
@@ -82,5 +82,5 @@ class Kontak extends CI_Controller {
 
 }
 
-/* End of file Contact.php */
+/* End of file Kontak.php */
 /* Location: ./application/controllers/Kontak.php */
