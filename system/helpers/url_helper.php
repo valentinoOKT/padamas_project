@@ -561,7 +561,7 @@ if ( ! function_exists('redirect'))
 				header('Refresh:0;url='.$uri);
 				break;
 			default:
-				header('Location: '.$uri, TRUE, $code);
+				header('Location:'.$uri, TRUE, $code);
 				break;
 		}
 		exit;
