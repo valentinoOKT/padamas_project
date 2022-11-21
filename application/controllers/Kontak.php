@@ -42,7 +42,7 @@ class Kontak extends CI_Controller {
 						'site'		=> $site,
 						'isi'		=> 'kontak/list');
 		$this->load->view('layout/wrapper', $data, FALSE);
-		//Kirim ke pemilik website
+		
 		}else{
 			$i 			= $this->input;
 			$email		= $i->post('email');
@@ -55,7 +55,7 @@ class Kontak extends CI_Controller {
 						  $i->post('pesan');
 			$nama		= $i->post('nama');
 			
-			// $this->load->library('email');
+			
 
 			$mail->SMTPDebug = $site->smtp_timeout;                                       
 			$mail->isSMTP(true);                                            
@@ -75,35 +75,11 @@ class Kontak extends CI_Controller {
 			$mail->AltBody = $message;
 			$mail->send();
 				
-			// $config['protocol']     = $site->protocol;
-			// $config['smtp_host']    = $site->smtp_host;
-			// $config['smtp_port']    = $site->smtp_port;
-			// $config['smtp_timeout'] = $site->smtp_timeout;
-			// $config['smtp_user']    = $site->smtp_user;
-			// $config['smtp_pass']    = $site->smtp_pass;
-			// $config['charset']      = 'utf-8';
-			// $config['newline']      = "\r\n";
-			// $config['mailtype']     = 'html'; // or html
-			// $config['validate']   = TRUE;
-
-			// $this->email->initialize($config);
-			// $this->email->from($email, $nama);
-			// $this->email->to($site->email);
-			// $this->email->cc($email);
-			// $this->email->bcc($site->email);
-			
-			// $this->email->subject($subject);
-			// $this->email->message($message);
-			
-			// $this->email->send();
-			
 			// Redirect page
 			$this->session->set_flashdata('sukses','Pesan Anda sudah terkirim, Terima kasih');
 			redirect(base_url('kontak'));
 		}
-		// End kirim
 	}
-
 }
 
 /* End of file Kontak.php */
