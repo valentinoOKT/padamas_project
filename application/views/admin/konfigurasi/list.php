@@ -65,7 +65,7 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
     
      <div class="form-group">
     <label>Phone number <i class="fa fa-mobile"></i></label>
-    <input type="text" name="telepon" placeholder="021-000000" value="<?php echo $site->telepon ?>" class="form-control">
+    <input type="text" name="telepon" placeholder="081-000000" value="<?php echo $site->telepon ?>" class="form-control">
     </div>
     
       <div class="form-group">
