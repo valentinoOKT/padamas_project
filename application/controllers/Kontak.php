@@ -17,7 +17,7 @@ class Kontak extends CI_Controller {
 	// Main page kontak
 	public function index()	{
 		$mail = new PHPMailer(true);
-		$site 			= $this->konfigurasi_model->listing();
+		$site = $this->konfigurasi_model->listing();
 		
 		// Validasi
 		$valid = $this->form_validation;
