@@ -37,8 +37,7 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
     <label>SMTP Debug</label>
     <input type="number" name="smtp_debug" placeholder="SMTP Debug" value="<?php echo $site->smtp_debug ?>" class="form-control" required>
     </div>
-    
-    
+  
      <div class="form-group">
     <label>SMTP Username (Email)</label>
     <input type="email" name="smtp_user" placeholder="SMTP User" value="<?php echo $site->smtp_user ?>" class="form-control">
@@ -55,8 +54,6 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
 	</div>
     </div>
 </div>
-
-
 </div>
 </form>
 

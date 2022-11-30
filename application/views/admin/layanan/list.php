@@ -89,7 +89,6 @@ if($this->uri->segment(3) != "") {
       </div>
     </td>
 </tr>
-
 <?php $i++; } ?>
 
 </tbody>
