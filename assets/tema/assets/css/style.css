@@ -462,27 +462,20 @@ hr {
     margin: 0 0 1.75em;
 }
 ul, li{
-	list-style: none;
 	margin: 0;
-	padding:0;
+	padding: 0;
 }
 ul,
 ol {
     margin: 0;
-    padding: 0;
-}
- 
-ul {
-    list-style: none;
-}
- 
-ol {
-    list-style: none;
+    padding:  0;
 }
  
 li > ul,
 li > ol {
     margin-bottom: 0;
+	line-height: 28px;
+	text-align: justify;
 }
  
 dl {
@@ -2674,6 +2667,12 @@ section{
 .about-greenforest-content .btn-default:hover {
     color: #fff;
 }
+.about-greenforest-content ul{
+	padding:  0 30px 30px 40px;
+}
+.about-greenforest-content ol{
+	padding:  0 30px 30px 40px;
+}
 
 
 /*=======================
@@ -4276,6 +4275,12 @@ div#filters {
 .single-event-content p{
 	line-height: 28px;
 	text-align: justify;
+}
+.single-event-content ul{
+	padding:  0 30px 30px 40px;
+}
+.single-event-content ol{
+	padding:  0 30px 30px 40px;
 }
 .single-event-content{}
 .single-event-content{}

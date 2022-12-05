@@ -149,8 +149,7 @@ class Layanan extends CI_Controller {
 		if(count(array($kategori)) < 1) {
 			redirect(base_url('oops'),'refresh');
 		}
-		
-		
+
 		$id_kategori	= $kategori->id_kategori;
 
 

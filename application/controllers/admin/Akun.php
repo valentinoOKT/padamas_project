@@ -125,7 +125,6 @@ class Akun extends CI_Controller {
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
 		// Masuk database
 		}else{
-			
 			$i = $this->input;
 			$this->session->set_userdata('nama',$i->post('nama'));
 			$data = array(	'id_user'			=> $id_user,
@@ -136,7 +135,6 @@ class Akun extends CI_Controller {
 			redirect(base_url('admin/akun'),'refresh');
 		}
 	}
-
 }
 
 /* End of file Akun.php */

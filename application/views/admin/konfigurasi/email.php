@@ -56,4 +56,3 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
 </div>
 </div>
 </form>
-

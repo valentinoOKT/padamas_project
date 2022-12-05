@@ -98,7 +98,6 @@ class Kategori extends CI_Controller {
 		// Ambil check login dari simple_login
 		$this->simple_login->check_login($pengalihan);
 
-
 		$data = array('id_kategori'	=> $id_kategori);
 		$this->kategori_model->delete($data);
 		$this->session->set_flashdata('sukses', 'Data telah dihapus');

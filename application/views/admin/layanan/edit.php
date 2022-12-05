@@ -106,7 +106,6 @@ echo form_close();
     </div>
     <!-- /.modal-dialog -->
 </div>
-
    <!-- Modal -->
 <div class="modal fade" id="gambar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -115,5 +114,4 @@ echo form_close();
     </div>
     <!-- /.modal-dialog -->
 </div>
-
 </div>
