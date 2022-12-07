@@ -17,13 +17,11 @@ class Dashboard extends CI_Controller {
 	// Halaman Dashboard
 	public function index()
 	{
-
 		$data = array(	'title'					=> 'Halaman Dashboard',
 						'isi'					=> 'admin/Dashboard/list'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
 	}
-
 }
 
 /* End of file Dashboard.php */

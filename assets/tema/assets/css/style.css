@@ -743,7 +743,7 @@ blockquote:after,
 [class^="flaticon-"]:after, 
 [class*=" flaticon-"]:after{
 	display: inline-block;
-	color: #0099cc;
+	color: #DC3535;
 	font-size: 50px;
 	margin-left: 0;
 	-webkit-transition: all .3s ease-in-out;
@@ -885,7 +885,7 @@ section{
 	height: 40px;
 	line-height: 44px;
 	text-align: center;
-	background: #0099cc;
+	background: #F49D1A;
 	right: 3%;
 	bottom: 30%;
 	cursor: pointer;
@@ -1740,7 +1740,7 @@ section{
 	height: 50px;
 	font-size: 24px;
     line-height: 52px;
-	background: #0099cc;
+	background: #F49D1A;
 }
 .carousel-control:focus, 
 .carousel-control:hover {
@@ -2427,16 +2427,16 @@ section{
 	line-height: 41px;
 	text-align:center;
 	font-size: 18px;
-	color: #0099cc;
-	border: 2px solid #0099cc;
+	color: #DC3535;
+	border: 2px solid #DC3535;
 	border-radius: 100%;
 	overflow: hidden;
 }
 
 
 .social-icon-rounded li a:hover{
-	background: #0099cc;
-	border: 2px solid #0099cc;
+	background: #F49D1A;
+	border: 2px solid #F49D1A;
 	color: #fff;
 } 
 
@@ -2518,10 +2518,10 @@ section{
 }
 .header-style-2 .main-menu .nav>li>a:hover, 
 .header-style-3 .main-menu .nav>li>a:hover{
-	color: #0099cc;
+	color: #F49D1A;
 }
 .header-style-2 .main-menu .nav>li.active a{
-	color: #0099cc;
+	color: #F49D1A;
 }
 .header-style-2 .sub-menu, 
 .header-style-3 .sub-menu,
@@ -2548,16 +2548,16 @@ section{
 }
 .header-style-2 .main-menu .sub-menu li a:hover, 
 .header-style-3 .main-menu .sub-menu li a:hover{
-	background: #0099cc;
+	background: #F49D1A;
 	color: #fff;
 }
 .header-style-2 .navbar-nav li .active, 
 .header-style-3 .navbar-nav li .active {
-    color: #0099cc!important;
+    color: #F49D1A!important;
 }
 .header-style-2 .sub-active a, 
 .header-style-3 .sub-active a {
-    background: #0099cc;
+    background: #F49D1A;
     color: #fff!important;
 }
 .header-style-2 .cart-icon .fa,
@@ -2567,7 +2567,7 @@ section{
 .header-style-2 .count-cart,
 .header-style-3 .count-cart{
 	color: #fff;
-	background: #0099cc;
+	background: #F49D1A;
 }
 
 .header-style-2 .cart-option, 
@@ -6011,9 +6011,6 @@ div#filters {
     margin: auto;
     background-color: #fff;
 }
-
-
-
 
 .box-layout {
     background: #fff;

@@ -17,7 +17,6 @@ class Kategori_galeri extends CI_Controller {
 
 	// Halaman utama
 	public function index()	{
-
 		// Validasi
 		$valid = $this->form_validation;
 
