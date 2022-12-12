@@ -24,9 +24,6 @@ class Kategori_galeri extends CI_Controller {
 			array(	'required'		=> 'Nama kategori_galeri harus diisi',
 					'is_unique'		=> 'Nama kategori_galeri sudah ada. Buat Nama kategori_galeri baru!'));
 
-		$valid->set_rules('urutan','Urutan','required',
-			array(	'required'		=> 'Urutan harus diisi'));
-
 		if($valid->run()===FALSE) {
 		// End validasi
 
@@ -41,7 +38,6 @@ class Kategori_galeri extends CI_Controller {
 
 			$data = array(	'nama_kategori_galeri'	=> $i->post('nama_kategori_galeri'),
 							'slug_kategori_galeri'	=> $slug,
-							'urutan'				=> $i->post('urutan'),
 						);
 			$this->kategori_galeri_model->tambah($data);
 			$this->session->set_flashdata('sukses', 'Data telah ditambah');
@@ -59,9 +55,6 @@ class Kategori_galeri extends CI_Controller {
 		$valid->set_rules('nama_kategori_galeri','Nama kategori_galeri','required',
 			array(	'required'		=> 'Nama kategori_galeri harus diisi'));
 
-		$valid->set_rules('urutan','Urutan','required',
-			array(	'required'		=> 'Urutan harus diisi'));
-
 		if($valid->run()===FALSE) {
 		// End validasi
 
@@ -77,7 +70,6 @@ class Kategori_galeri extends CI_Controller {
 			$data = array(	'id_kategori_galeri'	=> $id_kategori_galeri,
 							'nama_kategori_galeri'	=> $i->post('nama_kategori_galeri'),
 							'slug_kategori_galeri'	=> $slug,
-							'urutan'				=> $i->post('urutan'),
 						);
 			$this->kategori_galeri_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Data telah diedit');

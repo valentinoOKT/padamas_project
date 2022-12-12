@@ -55,8 +55,6 @@ class Kontak extends CI_Controller {
 						  $i->post('pesan');
 			$nama		= $i->post('nama');
 			
-			
-
 			$mail->SMTPDebug = $site->smtp_timeout;                                       
 			$mail->isSMTP(true);                                            
 			$mail->Host       = $site->smtp_host;                    

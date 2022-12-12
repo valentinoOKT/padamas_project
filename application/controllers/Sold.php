@@ -51,9 +51,6 @@ class Sold extends CI_Controller {
 
 		$id_kategori_galeri		= $kategori_galeri->id_kategori_galeri;
 
-		
-		
-		
 		// Layanan dan paginasi
 		$this->load->library('pagination');
 		$config['base_url'] 		= base_url().'sold/kategori/'.$slug_kategori_galeri.'/index/';

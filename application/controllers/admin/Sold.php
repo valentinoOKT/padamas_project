@@ -79,7 +79,7 @@ class Sold extends CI_Controller {
       		$config['max_size']      = '12000'; // KB  
 			$this->load->library('upload', $config);
       		if(! $this->upload->do_upload('gambar')) {
-		// End validasi
+		
 
 		$data = array(	'title'				=> 'Tambah Sold',
 						'kategori_galeri'	=> $kategori_galeri,
@@ -105,7 +105,6 @@ class Sold extends CI_Controller {
 	        $this->image_lib->resize();
 
 	        $i 		= $this->input;
-
 	        $data = array(	'id_kategori_galeri'	=> $i->post('id_kategori_galeri'),
 	        				'id_user'				=> $this->session->userdata('id_user'),
 	        				'judul_galeri'			=> $i->post('judul_galeri'),
@@ -131,7 +130,6 @@ class Sold extends CI_Controller {
 		$kategori_galeri 	= $this->kategori_galeri_model->listing();
 		$sold 	= $this->sold_model->detail($id_galeri); 
 
-		// Validasi
 		$valid = $this->form_validation;
 
 		$valid->set_rules('judul_galeri','Judul','required',
@@ -149,7 +147,6 @@ class Sold extends CI_Controller {
       		$config['max_size']      = '12000'; // KB  
 			$this->load->library('upload', $config);
       		if(! $this->upload->do_upload('gambar')) {
-		// End validasi
 
 		$data = array(	'title'				=> 'Edit Sold',
 						'kategori_galeri'	=> $kategori_galeri,
@@ -157,7 +154,7 @@ class Sold extends CI_Controller {
 						'error'    			=> $this->upload->display_errors(),
 						'isi'				=> 'admin/sold/edit');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
-		// Masuk database
+
 		}else{
 			$upload_data        		= array('uploads' =>$this->upload->data());
 	        // Image Editor
@@ -224,11 +221,11 @@ class Sold extends CI_Controller {
 
 	// Delete
 	public function delete($id_galeri) {
-		// Tambahkan proteksi halaman
-$url_pengalihan = str_replace('index.php/', '', current_url());
-$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
-// Ambil check login dari simple_login
-$this->simple_login->check_login($pengalihan);
+
+		$url_pengalihan = str_replace('index.php/', '', current_url());
+		$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
+		// Ambil check login dari simple_login
+		$this->simple_login->check_login($pengalihan);
 
 		$sold = $this->sold_model->detail($id_galeri);
 		// Proses hapus gambar

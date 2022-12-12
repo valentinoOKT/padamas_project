@@ -289,6 +289,9 @@ class Layanan extends CI_Controller {
 						'site'		=> $site,
 						'listing'	=> $rental,
 						'isi'		=> 'layanan/rental');
+		if(count(array($layanan)) < 1) {
+			redirect(base_url('oops'),'refresh');
+		}
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
 

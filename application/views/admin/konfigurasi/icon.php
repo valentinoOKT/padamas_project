@@ -49,14 +49,14 @@ echo validation_errors('<div class="alert alert-success">','</div>');
 
 <?php echo form_open_multipart(base_url('admin/konfigurasi/icon')) ?>
 <div class="row">
-	<input type="hidden" name="id_konfigurasi" value="<?php echo $site->id_konfigurasi ?>">
+    <input type="hidden" name="id_konfigurasi" value="<?php echo $site->id_konfigurasi ?>">
 	
     <div class="col-md-6">
-    <div class="form-group">
-    	<label>Upload new icon</label>
-        <input type="file" name="icon" class="form-control" id="file">
-        <div id="imagePreview"></div>
-    </div>
+        <div class="form-group">
+            <label>Upload new icon</label>
+            <input type="file" name="icon" class="form-control" id="file">
+            <div id="imagePreview"></div>
+        </div>
     </div>
     
     <div class="col-md-6">
@@ -65,8 +65,8 @@ echo validation_errors('<div class="alert alert-success">','</div>');
     </div>
     
     <div class="col-md-12">
-	<input type="submit" name="submit" value="Save new icon" class="btn btn-primary">
-    <input type="reset" name="reset" value="Reset" class="btn btn-primary">
-</div>
+        <input type="submit" name="submit" value="Save new icon" class="btn btn-primary">
+        <input type="reset" name="reset" value="Reset" class="btn btn-primary">
+    </div>
 </div>
 </form>

@@ -52,11 +52,11 @@ echo validation_errors('<div class="alert alert-success">','</div>');
 	<input type="hidden" name="id_konfigurasi" value="<?php echo $site->id_konfigurasi ?>">
 	
     <div class="col-md-6">
-    <div class="form-group">
-    	<label>Upload a new company profile photo</label>
-        <input type="file" name="gambar" class="form-control" id="file">
-        <div id="imagePreview"></div>
-    </div>
+        <div class="form-group">
+            <label>Upload a new company profile photo</label>
+            <input type="file" name="gambar" class="form-control" id="file">
+            <div id="imagePreview"></div>
+        </div>
     </div>
     
     <div class="col-md-6">
@@ -65,8 +65,8 @@ echo validation_errors('<div class="alert alert-success">','</div>');
     </div>
     
     <div class="col-md-12">
-	<input type="submit" name="submit" value="Simpan Gambar Baru" class="btn btn-primary">
-    <input type="reset" name="reset" value="Reset" class="btn btn-primary">
-</div>
+        <input type="submit" name="submit" value="Simpan Gambar Baru" class="btn btn-primary">
+        <input type="reset" name="reset" value="Reset" class="btn btn-primary">
+    </div>
 </div>
 </form>

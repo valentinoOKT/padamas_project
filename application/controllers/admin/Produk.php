@@ -15,7 +15,6 @@ class Produk extends CI_Controller {
 		$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
 		// Ambil check login dari simple_login
 		$this->simple_login->check_login($pengalihan);
-
 	}
 
 	// Halaman produk
@@ -303,7 +302,6 @@ class Produk extends CI_Controller {
 						'isi'			=> 'admin/produk/edit');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
 	}
-
 
 	// Delete
 	public function delete($id_produk) {

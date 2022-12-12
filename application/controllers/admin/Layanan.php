@@ -330,6 +330,5 @@ class Layanan extends CI_Controller {
 	    redirect(base_url('admin/layanan'),'refresh');
 	}
 }
-
 /* End of file Layanan.php */
 /* Location: ./application/controllers/admin/Layanan.php */

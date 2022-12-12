@@ -17,16 +17,12 @@ class Kategori extends CI_Controller {
 
 	// Halaman utama
 	public function index()	{
-
 		// Validasi
 		$valid = $this->form_validation;
 
 		$valid->set_rules('nama_kategori','Nama kategori','required|is_unique[kategori.nama_kategori]',
 			array(	'required'		=> 'Nama kategori harus diisi',
 					'is_unique'		=> 'Nama kategori sudah ada. Buat Nama kategori baru!'));
-
-		$valid->set_rules('urutan','Urutan','required',
-			array(	'required'		=> 'Urutan harus diisi'));
 
 		if($valid->run()===FALSE) {
 		// End validasi
@@ -43,7 +39,6 @@ class Kategori extends CI_Controller {
 			$data = array(	'id_user'		=> $this->session->userdata('id_user'),
 							'nama_kategori'	=> $i->post('nama_kategori'),
 							'slug_kategori'	=> $slug,
-							'urutan'		=> $i->post('urutan'),
 						);
 			$this->kategori_model->tambah($data);
 			$this->session->set_flashdata('sukses', 'Data telah ditambah');
@@ -61,9 +56,6 @@ class Kategori extends CI_Controller {
 		$valid->set_rules('nama_kategori','Nama kategori','required',
 			array(	'required'		=> 'Nama kategori harus diisi'));
 
-		$valid->set_rules('urutan','Urutan','required',
-			array(	'required'		=> 'Urutan harus diisi'));
-
 		if($valid->run()===FALSE) {
 		// End validasi
 
@@ -80,7 +72,6 @@ class Kategori extends CI_Controller {
 							'id_user'		=> $this->session->userdata('id_user'),
 							'nama_kategori'	=> $i->post('nama_kategori'),
 							'slug_kategori'	=> $slug,
-							'urutan'		=> $i->post('urutan'),
 						);
 			$this->kategori_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Data telah diedit');

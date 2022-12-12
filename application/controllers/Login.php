@@ -27,7 +27,6 @@ class Login extends CI_Controller {
 			$this->simple_login->login($username,$password);
 		}
 		// End validasi
-
 		$data = array(	'title'		=> 'Halaman Login');
 		$this->load->view('login/list', $data, FALSE);
 	}
@@ -37,7 +36,6 @@ class Login extends CI_Controller {
 	{
 		$this->simple_login->logout();
 	}
-
 }
 
 /* End of file Login.php */

@@ -106,7 +106,6 @@ class User extends CI_Controller {
 		// Masuk ke database
 		}else{
 			$inp = $this->input;
-
 			$data = array(	'id_user'		=> $id_user,
 							'nama'			=> $inp->post('nama'),
 							'email'			=> $inp->post('email'),

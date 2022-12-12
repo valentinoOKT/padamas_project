@@ -84,7 +84,6 @@ echo form_open_multipart(base_url('admin/stock/edit/'.$stock->id_galeri));
 <textarea name="isi" id="isi" class="form-control konten" placeholder="Isi galeri"><?php echo $stock->isi ?></textarea>
 </div>
 
-
 <div class="form-group">
 <input type="submit" name="submit" class="btn btn-success btn-lg" value="Simpan Data">
 <input type="reset" name="reset" class="btn btn-default btn-lg" value="Reset">

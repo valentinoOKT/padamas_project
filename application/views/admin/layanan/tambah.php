@@ -16,7 +16,7 @@ echo form_open_multipart(base_url('admin/layanan/tambah'));
 
 <div class="row">
 
-<div class="col-md-8">
+<div class="col-md-6">
 
 <div class="form-group form-group-lg">
 <label>Judul layanan</label>

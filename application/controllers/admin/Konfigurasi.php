@@ -80,7 +80,7 @@ class Konfigurasi extends CI_Controller {
 							'smtp_pass'			=> $i->post('smtp_pass'),
 							);
 			$this->konfigurasi_model->edit($data);
-			$this->session->set_flashdata('sukses','Data Email telah diupdate');
+			$this->session->set_flashdata('sukses','Data email konfigurasi telah diupdate');
 			redirect(base_url('admin/konfigurasi/email_setting'));
 		}
 	}
@@ -213,30 +213,30 @@ class Konfigurasi extends CI_Controller {
 						'isi'	=> 'admin/konfigurasi/icon');
 		$this->load->view('admin/layout/wrapper',$data);
 		}else{
-				$upload_data				= array('uploads' =>$this->upload->data());
-				// Image Editor
-				$config['image_library']	= 'gd2';
-				$config['source_image'] 	= './assets/upload/image/'.$upload_data['uploads']['file_name']; 
-				$config['new_image'] 		= './assets/upload/image/thumbs/';
-				$config['create_thumb'] 	= TRUE;
-				$config['maintain_ratio'] 	= TRUE;
-				$config['width'] 			= 150; // Pixel
-				$config['height'] 			= 150; // Pixel
-				$config['thumb_marker'] 	= '';
-				$this->load->library('image_lib', $config);
-				// Hapus gambar lama
-				unlink('./assets/upload/image/'.$site->icon);
-				unlink('./assets/upload/image/thumbs/'.$site->icon);
-				// End hapus gambar lama
-				$this->image_lib->resize();
-				// Masuk ke database
-				$i = $this->input;
-				$data = array(	'id_konfigurasi'	=> $i->post('id_konfigurasi'),
-								'icon'				=> $upload_data['uploads']['file_name'],
-								'id_user'			=> $this->session->userdata('id'));
-				$this->konfigurasi_model->edit($data);
-				$this->session->set_flashdata('sukses','Icon changed');
-				redirect(base_url('admin/konfigurasi/icon'));
+			$upload_data				= array('uploads' =>$this->upload->data());
+			// Image Editor
+			$config['image_library']	= 'gd2';
+			$config['source_image'] 	= './assets/upload/image/'.$upload_data['uploads']['file_name']; 
+			$config['new_image'] 		= './assets/upload/image/thumbs/';
+			$config['create_thumb'] 	= TRUE;
+			$config['maintain_ratio'] 	= TRUE;
+			$config['width'] 			= 150; // Pixel
+			$config['height'] 			= 150; // Pixel
+			$config['thumb_marker'] 	= '';
+			$this->load->library('image_lib', $config);
+			// Hapus gambar lama
+			unlink('./assets/upload/image/'.$site->icon);
+			unlink('./assets/upload/image/thumbs/'.$site->icon);
+			// End hapus gambar lama
+			$this->image_lib->resize();
+			// Masuk ke database
+			$i = $this->input;
+			$data = array(	'id_konfigurasi'	=> $i->post('id_konfigurasi'),
+							'icon'				=> $upload_data['uploads']['file_name'],
+							'id_user'			=> $this->session->userdata('id'));
+			$this->konfigurasi_model->edit($data);
+			$this->session->set_flashdata('sukses','Icon changed');
+			redirect(base_url('admin/konfigurasi/icon'));
 		}}
 		// Default page
 		$data = array(	'title'	=> 'New Icon',

@@ -1744,7 +1744,7 @@ section{
 }
 .carousel-control:focus, 
 .carousel-control:hover {
-	background: #97b182;
+	background: #DC3535;
 }
 .slider-item:after{
 	position:absolute;
@@ -2548,7 +2548,7 @@ section{
 }
 .header-style-2 .main-menu .sub-menu li a:hover, 
 .header-style-3 .main-menu .sub-menu li a:hover{
-	background: #F49D1A;
+	background: #DC3535;
 	color: #fff;
 }
 .header-style-2 .navbar-nav li .active, 
@@ -2645,7 +2645,7 @@ section{
 ====================================================*/
 
 .about-greenforest{
-	padding: 110px 0 75px 0;
+	padding: 100px 20px 75px 20px;
 }
 .about-greenforest-content h2{
 	text-transform: uppercase;

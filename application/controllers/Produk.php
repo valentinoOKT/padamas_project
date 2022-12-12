@@ -350,7 +350,6 @@ class Produk extends CI_Controller {
 						'isi'		=> 'produk/accecories');
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
-
 }
 
 /* End of file Produk.php */

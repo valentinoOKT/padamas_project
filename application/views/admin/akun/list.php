@@ -32,7 +32,6 @@
 		<div class="form-group row">
 			<label class="col-sm-3 control-label text-right">Upload Foto Profil</label>
 			<div class="col-sm-9">
-
 				<input type="file" name="gambar" id="gambar" class="form-control" placeholder="gambar" value="<?php echo $user->gambar ?>">
 			</div>
 		</div>
@@ -54,8 +53,6 @@
 	<div class="col-md-5">
 		<h4 class="alert alert-info">Ganti Password</h4>
 
-
-
 		<?php echo form_open_multipart(base_url('admin/akun/password'),'id="tambah"') ?>
 
 		<div class="form-group row">
@@ -73,13 +70,11 @@
 		</div>
 
 		<div class="form-group row">
-			<label class="col-sm-4 control-label text-right"></label>
-			
+			<label class="col-sm-4 control-label text-right"></label>		
 				<div class="form-group btn-group text-right">
 					<button type="submit" name="submit" class="btn btn-success btn-lg"><i class="fa fa-save"></i> Ganti Password</button>&nbsp&nbsp
 					<button type="reset" name="reset" class="btn btn-info btn-lg"><i class="fa fa-cut"></i> Reset</button>
 				</div>
-
 		</div>
 
 		<?php echo form_close(); ?>

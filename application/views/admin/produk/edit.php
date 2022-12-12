@@ -14,7 +14,7 @@ if(isset($error)) {
 echo form_open_multipart(base_url('admin/produk/edit/'.$produk->id_produk));
 ?>
 <div class="row">
-<div class="col-md-8">
+<div class="col-md-6">
 
 <div class="form-group form-group-lg">
 <label>Judul produk</label>

@@ -92,7 +92,6 @@ class Home extends CI_Controller {
 	public function oops()
 	{
 		$site 			= $this->konfigurasi_model->listing();
-
 		$data = array(	'title'				=> 'Not found',
 						'deskripsi'			=> $site->deskripsi,
 						'keywords'			=> $site->keywords,
