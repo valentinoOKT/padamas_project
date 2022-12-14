@@ -81,7 +81,6 @@ class User extends CI_Controller {
 	// Edit
 	public function edit($id_user)
 	{
-
 		// Ambil data user yg akan diedit
 		$user 		= $this->user_model->detail($id_user);
 
@@ -99,7 +98,6 @@ class User extends CI_Controller {
 
 		$data = array(	'title'		=> 'Edit User: '.$user->nama,
 						'user'		=> $user,
-
 						'isi'		=> 'admin/user/edit'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);

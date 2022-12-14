@@ -94,7 +94,6 @@ class Layanan extends CI_Controller {
 		$site 		= $this->konfigurasi_model->listing();
 		
 		// Layanan dan paginasi
-		// Layanan dan paginasi
 		$this->load->library('pagination');
 		$config['base_url'] 		= base_url().'layanan/search?s='.$keywords.'/index/';
 		$config['total_rows'] 		= count(array($this->layanan_model->total_search($keywords)));
@@ -151,7 +150,6 @@ class Layanan extends CI_Controller {
 		}
 
 		$id_kategori	= $kategori->id_kategori;
-
 
 		// Layanan dan paginasi
 		$this->load->library('pagination');

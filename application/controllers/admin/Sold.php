@@ -196,7 +196,6 @@ class Sold extends CI_Controller {
 	        redirect(base_url('admin/sold'),'refresh');
 		}}else{
 			$i 		= $this->input;
-
 	        $data = array(	'id_galeri'				=> $id_galeri,
 	        				'id_kategori_galeri'	=> $i->post('id_kategori_galeri'),
 	        				'id_user'				=> $this->session->userdata('id_user'),
@@ -217,7 +216,6 @@ class Sold extends CI_Controller {
 						'isi'				=> 'admin/sold/edit');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
 	}
-
 
 	// Delete
 	public function delete($id_galeri) {

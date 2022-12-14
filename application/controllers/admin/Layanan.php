@@ -307,7 +307,6 @@ class Layanan extends CI_Controller {
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
 	}
 
-
 	// Delete
 	public function delete($id_layanan) {
 		// Tambahkan proteksi halaman

@@ -77,7 +77,6 @@ class Kategori extends CI_Controller {
 			$this->session->set_flashdata('sukses', 'Data telah diedit');
 			redirect(base_url('admin/kategori'),'refresh');
 		}
-		// End proses masuk database
 	}
 
 	// Delete user

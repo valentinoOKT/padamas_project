@@ -15,7 +15,6 @@
     </div>
     <!-- /.info-box -->
 </div>
-
   <!-- fix for small devices only -->
   <div class="clearfix hidden-md-up"></div>
   <!-- /.col -->

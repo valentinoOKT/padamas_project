@@ -199,7 +199,6 @@ class Stock extends CI_Controller {
 	        redirect(base_url('admin/stock'),'refresh');
 		}}else{
 			$i 		= $this->input;
-
 	        $data = array(	'id_galeri'				=> $id_galeri,
 	        				'id_kategori_galeri'	=> $i->post('id_kategori_galeri'),
 	        				'id_user'				=> $this->session->userdata('id_user'),

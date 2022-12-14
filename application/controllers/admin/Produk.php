@@ -217,7 +217,6 @@ class Produk extends CI_Controller {
 			array(	'required'	=> 'Isi produk harus diisi'));
 
 		if($valid->run()) {
-
 			if(!empty($_FILES['gambar']['name'])) {
 
 			$config['upload_path']   = './assets/upload/image/';
@@ -310,7 +309,6 @@ class Produk extends CI_Controller {
 		$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
 		// Ambil check login dari simple_login
 		$this->simple_login->check_login($pengalihan);
-
 		
 		$produk = $this->produk_model->detail($id_produk);
 		// Proses hapus gambar
