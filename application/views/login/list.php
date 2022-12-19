@@ -34,7 +34,7 @@
   <div class="card">
     <div class="card-body login-card-body">
       <div class="login-logo">
-        <img src="<?php echo $this->website->icon(); ?>" alt="<?php echo $this->website->namaweb(); ?>" class="img img-responsive img-thumbnail" style="max-width: 30%; height: auto;">
+        <img src="<?php echo $this->website->logo(); ?>" alt="<?php echo $this->website->namaweb(); ?>" class="img img-responsive img-thumbnail" style="max-width: 80%; height: auto;">
         <br>
         <h2 style="font-weight: bold; font-size: 18px; margin-top: 20px;"><?php echo $this->website->namaweb() ?></h2>
       </div>

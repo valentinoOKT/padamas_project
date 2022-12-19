@@ -43,7 +43,6 @@ echo form_open_multipart(base_url('admin/sold/tambah'));
 
 </div>
 
-
 <div class="col-md-4">
 		<div class="form-group">
 			<label>Jenis galeri</label>

@@ -82,6 +82,7 @@ class Produk extends CI_Controller {
 
    			$this->session->set_flashdata('sukses', 'Data telah diset untuk tidak dipublikasikan');
    			redirect(base_url('admin/produk'),'refresh');
+			
    		// PROSES SETTING PUBLISH
    		}elseif(isset($_POST['publish'])) {
    			$inp 				= $this->input;
