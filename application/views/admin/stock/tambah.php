@@ -86,8 +86,8 @@ echo form_open_multipart(base_url('admin/stock/tambah'));
 </button>
 <input type="reset" name="reset" class="btn btn-default btn-lg" value="Reset">
 <a href="<?php echo base_url('admin/stock') ?>" class="btn btn-warning btn-lg">
-					<i class="fa fa-backward"></i> Kembali
-				</a>
+	<i class="fa fa-backward"></i> Kembali
+</a>
 </div>
 
 </div>
