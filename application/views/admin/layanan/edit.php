@@ -89,6 +89,9 @@ echo form_open_multipart(base_url('admin/layanan/edit/'.$layanan->id_layanan));
   <i class="fa fa-save"></i> Simpan Data
 </button>
 <input type="reset" name="reset" class="btn btn-default btn-lg" value="Reset">
+<a href="<?php echo base_url('admin/layanan') ?>" class="btn btn-warning btn-lg">
+					<i class="fa fa-backward"></i> Kembali
+				</a>
 </div>
 
 </div>

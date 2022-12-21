@@ -153,7 +153,7 @@ class Sold_model extends CI_Model {
 		$this->db->join('users','users.id_user = sold.id_user','LEFT');
 		// End join
 		$this->db->where(array(	'sold.id_kategori_galeri'	=> $id_kategori_galeri,
-								'sold.jenis_galeri'			=> 'Sold'));
+								'sold.jenis_galeri'			=> 'Galeri'));
 		$this->db->order_by('id_galeri','DESC');
 		$query = $this->db->get();
 		return $query->result();

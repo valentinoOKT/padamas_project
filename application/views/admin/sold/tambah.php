@@ -77,9 +77,14 @@ echo form_open_multipart(base_url('admin/sold/tambah'));
 <textarea name="isi" id="isi" class="form-control konten" placeholder="Isi galeri"><?php echo set_value('isi') ?></textarea>
 </div>
 
-<div class="form-group">
-<input type="submit" name="submit" class="btn btn-success btn-lg" value="Simpan Data">
+<div class="form-group text-right">
+<button type="submit" name="submit" class="btn btn-success btn-lg">
+  <i class="fa fa-save"></i> Simpan Data
+</button>
 <input type="reset" name="reset" class="btn btn-default btn-lg" value="Reset">
+<a href="<?php echo base_url('admin/sold') ?>" class="btn btn-warning btn-lg">
+				<i class="fa fa-backward"></i> Kembali
+			</a>
 </div>
 
 </div>

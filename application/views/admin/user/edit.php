@@ -8,8 +8,8 @@ echo form_open(base_url('admin/user/edit/'.$user->id_user));
 <div class="row">
 	<div class="col-md-6">
 		<div class="form-group">
-			<label>Nama User <span class="text-danger">*</span></label>
-			<input type="text" name="nama" class="form-control form-control-lg" value="<?php echo $user->nama ?>" placeholder="Nama User" required>
+			<label>Nama Admin <span class="text-danger">*</span></label>
+			<input type="text" name="nama" class="form-control form-control-lg" value="<?php echo $user->nama ?>" placeholder="Nama Admin" required>
 		</div>
 	</div>
 	<div class="col-md-3">

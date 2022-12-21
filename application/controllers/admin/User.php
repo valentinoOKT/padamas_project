@@ -28,7 +28,7 @@ class User extends CI_Controller {
 		$user 	= $this->user_model->listing();
 		$total 	= $this->user_model->total();
 
-		$data = array(	'title'		=> 'User ('.$total->total.' data)',
+		$data = array(	'title'		=> 'Admin ('.$total->total.' data)',
 						'user'		=> $user,
 						'isi'		=> 'admin/user/list'
 					);
@@ -55,7 +55,7 @@ class User extends CI_Controller {
 		if($validasi->run()===FALSE) {
 		// End validasi
 
-		$data = array(	'title'		=> 'Tambah User Baru',
+		$data = array(	'title'		=> 'Tambah Admin Baru',
 						'isi'		=> 'admin/user/tambah'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
@@ -96,7 +96,7 @@ class User extends CI_Controller {
 		if($validasi->run()===FALSE) {
 		// End validasi
 
-		$data = array(	'title'		=> 'Edit User: '.$user->nama,
+		$data = array(	'title'		=> 'Edit Admin: '.$user->nama,
 						'user'		=> $user,
 						'isi'		=> 'admin/user/edit'
 					);

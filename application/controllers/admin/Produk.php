@@ -195,7 +195,7 @@ class Produk extends CI_Controller {
 	        redirect(base_url('admin/produk/jenis_produk/'.$i->post('jenis_produk')),'refresh');
 		}}
 		// End masuk database
-		$data = array(	'title'			=> 'Tambah Layanan/Profil',
+		$data = array(	'title'			=> 'Tambah Produk',
 						'kategori'		=> $kategori,
 						'isi'			=> 'admin/produk/tambah');
 		$this->load->view('admin/layout/wrapper', $data, FALSE);		
@@ -227,7 +227,7 @@ class Produk extends CI_Controller {
       		if(! $this->upload->do_upload('gambar')) {
 		// End validasi
 
-		$data = array(	'title'			=> 'Edit Produk/Profil',
+		$data = array(	'title'			=> 'Edit Produk',
 						'kategori'		=> $kategori,
 						'produk'		=> $produk,
 						'error'    		=> $this->upload->display_errors(),
@@ -296,7 +296,7 @@ class Produk extends CI_Controller {
 	        redirect(base_url('admin/produk/jenis_produk/'.$i->post('jenis_produk')),'refresh');
 		}}
 		// End masuk database
-		$data = array(	'title'			=> 'Edit Produk/Profil',
+		$data = array(	'title'			=> 'Edit Produk',
 						'kategori'		=> $kategori,
 						'produk'		=> $produk,
 						'isi'			=> 'admin/produk/edit');
